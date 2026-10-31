@@ -13,7 +13,7 @@ function mapUrl([lon, lat]) {
 
 function Fact({ label, value }) {
   return (
-    <div className="rounded-xl bg-ink/[.03] p-3">
+    <div className="glass-inset rounded-xl p-3">
       <dt className="text-xs text-muted">{label}</dt>
       <dd className="mt-0.5 font-semibold text-ink">{value}</dd>
     </div>

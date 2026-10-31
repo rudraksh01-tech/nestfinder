@@ -79,7 +79,7 @@ function Figures() {
 
 function RentPreview() {
   return (
-    <div className="mt-6 rounded-2xl bg-white/70 p-4">
+    <div className="mt-6 glass-inset rounded-2xl p-4">
       <div className="flex items-baseline justify-between text-sm">
         <span className="text-ink-2">2BHK · HSR Layout</span>
         <span className="rounded-full bg-warn/10 px-2 py-0.5 font-mono text-[0.7rem] text-warn">14% above median</span>
@@ -99,7 +99,7 @@ function RentPreview() {
 function ComparePreview() {
   const rows = [['Monthly', '₹18,000', '₹21,500'], ['Deposit', '3 mo', '2 mo'], ['Metro', '1.2 km', '0.8 km']]
   return (
-    <div className="mt-6 overflow-hidden rounded-2xl bg-white/70 text-sm">
+    <div className="mt-6 overflow-hidden glass-inset rounded-2xl text-sm">
       {rows.map(([k, a, b]) => (
         <div key={k} className="grid grid-cols-3 border-b border-ink/5 px-4 py-2.5 last:border-0">
           <span className="text-muted">{k}</span>
@@ -132,7 +132,7 @@ function Features() {
           </div>
           <p className="mt-4 font-display text-3xl leading-tight">“Does it fit my life?”</p>
           <p className="mt-2 text-[0.95rem] leading-relaxed text-ink-2">A percentage for every flat, with the reasons: commute, metro, pets, noise, who the owner will rent to.</p>
-          <div className="mt-6 flex items-center gap-4 rounded-2xl bg-white/70 p-4">
+          <div className="mt-6 flex items-center gap-4 glass-inset rounded-2xl p-4">
             <span className="grid size-14 place-items-center rounded-2xl bg-good/10 font-display text-2xl text-good">86</span>
             <ul className="space-y-1 text-sm">
               <li><span className="text-good">✓</span> ₹7,000 under budget</li>
