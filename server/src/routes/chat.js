@@ -5,6 +5,7 @@ import { httpError } from '../lib/errors.js';
 import { techParks } from '../lib/geo.js';
 import { completeJson, completeText, llmEnabled } from '../lib/llm.js';
 import { scoreListing } from '../lib/match.js';
+import { withTrace } from '../lib/tracing.js';
 import { parsePrefs } from './match.js';
 
 const router = Router();
@@ -87,6 +88,12 @@ router.post('/', chatLimiter, async (req, res) => {
     current = {};
   }
 
+  const out = await withTrace('chat', { input: { messages: history, prefs: current } }, (trace) => answer(history, current, trace));
+  res.json(out);
+});
+
+// One chat turn in three steps. Returns the JSON for the client, which is also the trace output.
+async function answer(history, current, trace) {
   // 1. Understand: plain words -> structured preferences.
   const extracted = await completeJson(
     [
@@ -96,6 +103,7 @@ router.post('/', chatLimiter, async (req, res) => {
     ],
     'flat_preferences',
     EXTRACT_SCHEMA,
+    { trace },
   );
   const { onTopic, ...fields } = extracted;
   delete fields.language;
@@ -148,13 +156,13 @@ router.post('/', chatLimiter, async (req, res) => {
       role: 'system',
       content: `LANGUAGE: ${language}\nON_TOPIC: ${onTopic}\nPREFERENCES: ${JSON.stringify(safePrefs)}\nKEY_MISSING: ${keyMissing.join(', ') || 'none'}\nTOP_MATCHES: ${JSON.stringify(facts)}`,
     },
-  ]);
+  ], 600, { trace, name: 'chat_reply' });
 
-  res.json({
+  return {
     reply: reply.trim(),
     prefs: safePrefs,
     matches: top.map((l) => ({ code: l.code, locality: l.locality, bhk: l.bhk, rent: l.rent, score: l.match.score })),
-  });
-});
+  };
+}
 
 export default router;

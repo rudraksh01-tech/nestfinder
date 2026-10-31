@@ -5,6 +5,7 @@ import { httpError } from '../lib/errors.js';
 import { checkRent } from '../lib/fairRent.js';
 import { localities } from '../lib/geo.js';
 import { completeJson, completeText, llmEnabled } from '../lib/llm.js';
+import { withTrace } from '../lib/tracing.js';
 
 const router = Router();
 
@@ -74,14 +75,19 @@ const toNumber = (v) => (v === '' || v == null ? null : Number(v));
 // POST /api/rent-check  { text?, fields?: { locality, bhk, rent, depositMonths, furnishing, maintenance }, language?: 'English'|'Hinglish' }
 router.post('/', limiter, async (req, res) => {
   const text = String(req.body?.text ?? '').trim().slice(0, 1500);
-  const given = req.body?.fields ?? {};
   const language = req.body?.language === 'Hinglish' ? 'Hinglish' : 'English';
+  const input = { text, fields: req.body?.fields ?? {}, language, exclude: req.body?.exclude };
+  const { status, json } = await withTrace('rent-check', { input }, (trace) => runCheck(input, trace), (r) => ({ status: r.status, ...r.json }));
+  res.status(status).json(json);
+});
 
+// Returns { status, json } so every outcome (422, not enough data, full result) is traced the same way.
+async function runCheck({ text, fields: given, language, exclude: rawExclude }, trace) {
   // 1. Read the broker's message (only when there is one; edits to the fields skip this).
   let fields = {};
   if (text) {
     if (!llmEnabled()) throw httpError(503, 'Reading messages needs the AI assistant, which is not set up. Fill in the details instead.');
-    const x = await completeJson([{ role: 'system', content: EXTRACT_PROMPT }, { role: 'user', content: text }], 'rental_offer', EXTRACT_SCHEMA);
+    const x = await completeJson([{ role: 'system', content: EXTRACT_PROMPT }, { role: 'user', content: text }], 'rental_offer', EXTRACT_SCHEMA, { trace });
     fields = {
       locality: x.locality,
       bhk: x.bhk,
@@ -98,14 +104,14 @@ router.post('/', limiter, async (req, res) => {
   for (const key of ['locality', 'bhk', 'rent', 'depositMonths', 'furnishing', 'maintenance']) fields[key] ??= null;
 
   const missing = validate(fields);
-  if (missing.length) return res.status(422).json({ error: 'Some details are missing or unclear', fields, missing });
+  if (missing.length) return { status: 422, json: { error: 'Some details are missing or unclear', fields, missing } };
 
   // 2. Compare with similar sample flats (rules, no LLM).
   // When checking one of our own flats, leave it out so it is not compared with itself.
-  const exclude = typeof req.body?.exclude === 'string' ? req.body.exclude : null;
+  const exclude = typeof rawExclude === 'string' ? rawExclude : null;
   const listings = await Listing.find(exclude ? { code: { $ne: exclude } } : {}, 'code locality bhk rent depositMonths furnishing sqft').lean();
   const result = checkRent(fields, listings, localities);
-  if (!result.enough) return res.json({ fields, result, message: null });
+  if (!result.enough) return { status: 200, json: { fields, result, message: null } };
 
   // 3. Draft a negotiation message only when there is something to negotiate.
   const rentHigh = ['slightly_high', 'high'].includes(result.rent.verdict.level);
@@ -128,11 +134,11 @@ router.post('/', limiter, async (req, res) => {
       await completeText([
         { role: 'system', content: `${LANGUAGE_RULE[language]}\n\n${NEGOTIATE_PROMPT}` },
         { role: 'user', content: `RENT_IS_HIGH: ${rentHigh}\nFACTS: ${JSON.stringify(facts)}\n\nRemember: ${LANGUAGE_RULE[language]}` },
-      ], 400)
+      ], 400, { trace, name: 'negotiation_message' })
     ).trim();
   }
 
-  res.json({ fields, result, message, language });
-});
+  return { status: 200, json: { fields, result, message, language } };
+}
 
 export default router;

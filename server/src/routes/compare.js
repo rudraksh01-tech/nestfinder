@@ -4,6 +4,7 @@ import { Listing } from '../models/Listing.js';
 import { httpError } from '../lib/errors.js';
 import { completeJson, llmEnabled } from '../lib/llm.js';
 import { scoreListing } from '../lib/match.js';
+import { withTrace } from '../lib/tracing.js';
 import { parsePrefs } from './match.js';
 
 const router = Router();
@@ -100,19 +101,22 @@ router.post('/decide', decideLimiter, async (req, res) => {
       watchOut: { type: 'string' },
     },
   };
-  const decision = await completeJson(
-    [
-      { role: 'system', content: DECIDE_PROMPT },
-      {
-        role: 'user',
-        content:
-          `PREFERENCES: ${JSON.stringify(prefs)}\nFLATS: ${JSON.stringify(facts)}\n\n` +
-          'Return: pick (best flat), headline (one sentence why), reasons (exactly 3), runnerUp (a different flat), ' +
-          'runnerUpWhen (one sentence: when the runner-up would be the better choice), watchOut (one thing to check before paying a deposit for the pick).',
-      },
-    ],
-    'flat_decision',
-    schema,
+  const decision = await withTrace('compare-decide', { input: { codes, prefs } }, (trace) =>
+    completeJson(
+      [
+        { role: 'system', content: DECIDE_PROMPT },
+        {
+          role: 'user',
+          content:
+            `PREFERENCES: ${JSON.stringify(prefs)}\nFLATS: ${JSON.stringify(facts)}\n\n` +
+            'Return: pick (best flat), headline (one sentence why), reasons (exactly 3), runnerUp (a different flat), ' +
+            'runnerUpWhen (one sentence: when the runner-up would be the better choice), watchOut (one thing to check before paying a deposit for the pick).',
+        },
+      ],
+      'flat_decision',
+      schema,
+      { trace },
+    ),
   );
   if (decision.runnerUp === decision.pick) decision.runnerUp = items.find((i) => i.code !== decision.pick).code;
   decision.reasons = decision.reasons.slice(0, 3);
