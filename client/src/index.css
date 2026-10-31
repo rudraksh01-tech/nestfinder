@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* NestFinder palette: deep navy base, metro purple, mint for good matches, amber for warnings. */
+@theme {
+  --color-ink: #0f172a;
+  --color-ink-2: #111c33;
+  --color-violet: #7c3aed;
+  --color-violet-soft: #a78bfa;
+  --color-mint: #10b981;
+  --color-amber: #f59e0b;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(60% 50% at 85% 0%, rgb(124 58 237 / .28), transparent 70%),
+    radial-gradient(50% 40% at 0% 100%, rgb(16 185 129 / .16), transparent 70%),
+    var(--color-ink);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+}
+
+.glass {
+  background: rgb(255 255 255 / .05);
+  border: 1px solid rgb(255 255 255 / .1);
+  backdrop-filter: blur(16px);
+}
