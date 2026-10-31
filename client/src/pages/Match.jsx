@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { savePrefs } from '../context/ShortlistContext.jsx'
-import { Sparkles } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 import ChatPanel from '../components/ChatPanel.jsx'
 import ListingCard from '../components/ListingCard.jsx'
 import { useFetch } from '../lib/useFetch.js'
@@ -105,10 +105,10 @@ export default function Match() {
         <section aria-live="polite">
           <ChatPanel prefs={Object.fromEntries(prefs)} onPrefs={applyPrefs} />
           {!hasPrefs && (
-            <div className="glass rounded-2xl p-10 text-center">
-              <Sparkles className="mx-auto text-signal" size={32} />
-              <p className="mt-3 font-semibold text-ink">Tell the assistant about yourself, or pick a few filters</p>
-              <p className="mt-1 text-sm text-muted">Where you work and your budget are the best place to start.</p>
+            <div className="glass rounded-3xl p-10 text-center sm:p-12">
+              <MapPin className="mx-auto text-signal" size={32} />
+              <p className="mt-4 text-lg font-semibold text-ink sm:text-xl">Tell the assistant about yourself, or pick a few filters</p>
+              <p className="mt-1.5 text-[0.95rem] text-muted">Where you work and your budget are the best place to start.</p>
             </div>
           )}
           {error && <p className="glass rounded-2xl p-6 text-warn">{error}</p>}

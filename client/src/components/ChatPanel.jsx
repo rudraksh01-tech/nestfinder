@@ -202,30 +202,30 @@ export default function ChatPanel({ prefs, onPrefs }) {
   }
 
   return (
-    <section className="glass mb-6 rounded-2xl p-4 sm:p-5">
-      <h2 className="flex flex-wrap items-center gap-x-2 gap-y-1 font-bold text-ink">
-        <Bot size={18} className="text-signal" /> Ask the assistant
-        <span className="text-xs font-normal text-muted">Find flats, check a rent, compare, book a visit · English, Hindi or Hinglish</span>
+    <section className="glass mb-6 rounded-3xl p-5 sm:p-7">
+      <h2 className="flex items-center gap-2.5 text-xl font-bold text-ink sm:text-2xl">
+        <Bot size={24} className="text-signal" /> Ask the assistant
       </h2>
+      <p className="mt-1.5 text-[0.95rem] text-muted">Find flats, check a rent, compare, book a visit · English, Hindi or Hinglish</p>
 
       {messages.length === 0 ? (
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2.5">
           {EXAMPLES.map((e) => (
             <button
               key={e}
               type="button"
               onClick={() => send(e)}
-              className="rounded-full border border-ink/10 px-3 py-1.5 text-left text-xs text-ink-2 transition hover:border-signal/60 hover:text-ink"
+              className="rounded-full border border-ink/10 px-4 py-2 text-left text-sm text-ink-2 transition hover:border-signal/60 hover:text-ink"
             >
               {e}
             </button>
           ))}
         </div>
       ) : (
-        <ol ref={listRef} className="mt-4 max-h-[28rem] space-y-3 overflow-y-auto pr-1" aria-live="polite">
+        <ol ref={listRef} className="mt-5 max-h-[32rem] space-y-3 overflow-y-auto pr-1" aria-live="polite">
           {messages.map((m, i) => (
             <li key={i} className={m.role === 'user' ? 'flex justify-end' : 'flex'}>
-              <div className={`max-w-[92%] rounded-2xl px-4 py-2.5 text-sm ${m.role === 'user' ? 'bg-signal text-white' : 'bg-ink/[.045] text-ink'}`}>
+              <div className={`max-w-[92%] rounded-2xl px-4 py-3 text-[0.95rem] leading-relaxed ${m.role === 'user' ? 'bg-signal text-white' : 'bg-ink/[.045] text-ink'}`}>
                 {m.cards?.length > 0 && <div className="mb-2 space-y-2">{m.cards.map((c, j) => <ToolCard key={j} card={c} />)}</div>}
                 {m.content && <p className="whitespace-pre-line">{plain(m.content)}</p>}
                 {i === messages.length - 1 && status.busy && status.step && (
@@ -240,7 +240,7 @@ export default function ChatPanel({ prefs, onPrefs }) {
       {status.error && <p className="mt-3 text-sm text-warn" role="alert">{status.error}</p>}
 
       <form
-        className="mt-4 flex gap-2"
+        className="mt-5 flex gap-2.5"
         onSubmit={(e) => {
           e.preventDefault()
           send(input)
@@ -249,7 +249,7 @@ export default function ChatPanel({ prefs, onPrefs }) {
         <label htmlFor="chat-input" className="sr-only">Message</label>
         <input
           id="chat-input"
-          className={fieldClass}
+          className={`${fieldClass} py-3.5! text-base!`}
           placeholder="e.g. Is 30k fair for a 1BHK in Indiranagar?"
           maxLength={600}
           value={input}
@@ -260,12 +260,12 @@ export default function ChatPanel({ prefs, onPrefs }) {
           type="submit"
           disabled={status.busy || !input.trim()}
           aria-label="Send"
-          className="grid size-10 shrink-0 place-items-center rounded-lg bg-signal text-white transition hover:bg-signal-deep disabled:opacity-40"
+          className="grid size-[3.25rem] shrink-0 place-items-center rounded-xl bg-signal text-white transition hover:bg-signal-deep disabled:opacity-40"
         >
-          <SendHorizontal size={18} />
+          <SendHorizontal size={20} />
         </button>
       </form>
-      <p className="mt-2 text-xs text-faint">AI can make mistakes. Scores and rent verdicts come from fixed rules; visits are only requested when you confirm.</p>
+      <p className="mt-3 text-[0.8rem] text-faint">AI can make mistakes. Scores and rent verdicts come from fixed rules; visits are only requested when you confirm.</p>
     </section>
   )
 }
