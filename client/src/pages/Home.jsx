@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { motion } from 'motion/react'
+import { ArrowRight, ArrowUp, ArrowUpRight, Building2, Home as HomeIcon, Lightbulb, PiggyBank, Wallet } from 'lucide-react'
 import Globe from '../components/Globe.jsx'
 import PhoneStory from '../components/home/PhoneStory.jsx'
 
@@ -165,22 +166,77 @@ function Features() {
   )
 }
 
-function Honest() {
+// The numbers below are what the real Fair Rent Check returns for this offer in the demo data.
+const ANSWER_ROWS = [
+  { icon: HomeIcon, label: 'Rent asked', value: '₹48,000', delta: '14%', fill: 1, tone: 'bg-warn' },
+  { icon: Building2, label: 'Median nearby', value: '₹42,000', fill: 0.875, tone: 'bg-ink/25' },
+  { icon: Wallet, label: 'Deposit asked', value: '10 mo', delta: '+7', fill: 1, tone: 'bg-warn' },
+  { icon: PiggyBank, label: 'Usual deposit', value: '3 mo', fill: 0.3, tone: 'bg-ink/25' },
+]
+
+function AnswerRow({ icon: Icon, label, value, delta, fill, tone, index }) {
+  return (
+    <li className="border-b border-ink/[.07] px-3 py-3 last:border-0 sm:px-3.5">
+      <div className="flex items-center gap-3 text-[0.85rem]">
+        <span className="grid size-7 shrink-0 place-items-center rounded-lg border border-ink/10 text-ink-2"><Icon size={14} /></span>
+        <span className="flex-1 text-ink">{label}</span>
+        <span className="font-mono text-ink-2">{value}</span>
+        {delta && <span className="w-11 text-right font-mono text-[0.72rem] text-bad">↗ {delta}</span>}
+        {!delta && <span className="w-11" />}
+      </div>
+      <div className="ml-10 mt-2 h-1.5 overflow-hidden rounded-full bg-ink/[.06]">
+        <motion.div
+          className={`h-full origin-left rounded-full ${tone}`}
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: fill }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.9, delay: 0.15 + index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+        />
+      </div>
+    </li>
+  )
+}
+
+function AskAnything() {
   return (
     <section className="mx-auto max-w-6xl px-5 sm:px-8">
-      <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-14 text-porcelain sm:px-14 sm:py-20">
-        <div className="absolute -right-24 -top-24 size-96 rounded-full bg-signal/40 blur-[100px]" />
-        <div className="relative grid gap-10 lg:grid-cols-2 lg:items-end">
-          <div>
-            <p className="font-mono text-[0.72rem] uppercase tracking-[0.08em] text-porcelain/60">04 · No black box</p>
-            <h2 className="mt-3 font-display text-4xl leading-[1.02] sm:text-6xl">
-              The AI listens. <em className="text-[#8ea6ff]">The maths decides.</em>
-            </h2>
-          </div>
-          <p className="max-w-md leading-relaxed text-porcelain/75">
-            The language model only turns what you say into preferences and explains the result. Scores and rent verdicts come from
-            plain rules you can read and test, so the same question always gets the same answer, and every number on screen is real.
+      <div className="relative overflow-hidden rounded-[2rem] bg-ink px-3 py-16 text-center text-porcelain sm:px-5 sm:py-20">
+        <div className="absolute -right-24 -top-24 size-96 rounded-full bg-signal/35 blur-[110px]" />
+        <div className="absolute -bottom-32 -left-20 size-80 rounded-full bg-signal/20 blur-[110px]" />
+
+        <div className="relative mx-auto max-w-[27rem]">
+          <svg viewBox="0 0 24 24" className="mx-auto size-7 text-[#8ea6ff]" aria-hidden="true">
+            <path fill="currentColor" d="M12 1.5c.5 5.6 4.9 10 10.5 10.5-5.6.5-10 4.9-10.5 10.5C11.5 16.9 7.1 12.5 1.5 12 7.1 11.5 11.5 7.1 12 1.5Z" />
+          </svg>
+          <h2 className="mt-4 font-display text-[3.2rem] italic leading-none sm:text-6xl">Ask anything</h2>
+          <p className="mx-auto mt-3 max-w-[22rem] text-[0.92rem] leading-relaxed text-porcelain/60">
+            Clear answers about rent, deposits and commutes, worked out from real flats and the Bengaluru metro map.
           </p>
+
+          <Link
+            to="/rent-check"
+            className="mt-10 flex items-center gap-3 rounded-full bg-white py-2 pl-4 pr-2 text-left text-[0.86rem] sm:pl-5 sm:text-[0.92rem] text-ink shadow-[0_20px_50px_-20px_rgb(0_0_0/0.6)] transition hover:shadow-[0_20px_50px_-12px_rgb(30_79_255/0.55)]"
+          >
+            <span className="flex-1">Is ₹48,000 fair for a 2BHK in HSR?</span>
+            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-ink text-white"><ArrowUp size={17} /></span>
+          </Link>
+
+          <div className="mt-4 rounded-3xl bg-white p-4 text-left sm:p-5 text-ink shadow-[0_30px_60px_-30px_rgb(0_0_0/0.7)]">
+            <p className="font-semibold">This rent is 14% above similar flats</p>
+            <p className="mt-1 text-[0.85rem] leading-snug text-ink-2">
+              Seven 2BHKs in and around HSR Layout have a median rent of ₹42,000, and the deposit is more than three times the usual.
+            </p>
+            <ul className="mt-4 rounded-2xl border border-ink/10">
+              {ANSWER_ROWS.map((row, i) => <AnswerRow key={row.label} {...row} index={i} />)}
+            </ul>
+            <p className="mt-3 flex gap-2.5 rounded-2xl border border-ink/10 bg-porcelain/60 px-3.5 py-3 text-[0.82rem] leading-snug text-ink-2">
+              <Lightbulb size={15} className="mt-0.5 shrink-0 text-signal" />
+              Counter with ₹42,000 rent and a 3-month deposit. A polite message is ready to copy.
+            </p>
+            <p className="mt-3 border-t border-ink/[.07] pt-3 text-[0.7rem] text-faint">
+              Based on the sample listings in this demo. Distances are straight-line.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -206,7 +262,7 @@ export default function Home() {
       <Figures />
       <PhoneStory />
       <Features />
-      <Honest />
+      <AskAnything />
       <Closing />
     </main>
   )
