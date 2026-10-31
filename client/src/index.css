@@ -1,33 +1,110 @@
 @import "tailwindcss";
 
-/* NestFinder palette: deep navy base, metro purple, mint for good matches, amber for warnings. */
+/*
+  NestFinder palette: Porcelain paper, Signal Blue ink for anything you can act on,
+  deep navy for text. Green and amber are kept for match/warning meaning only.
+*/
 @theme {
-  --color-ink: #0f172a;
-  --color-ink-2: #111c33;
-  --color-violet: #7c3aed;
-  --color-violet-soft: #a78bfa;
-  --color-mint: #10b981;
-  --color-amber: #f59e0b;
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-porcelain: #f4f3ee;
+  --color-porcelain-2: #ebe9e2;
+  --color-ink: #0d1321;
+  --color-ink-2: #3b4254;
+  --color-muted: #6b7284;
+  --color-faint: #9aa0ad;
+  --color-signal: #1e4fff;
+  --color-signal-deep: #1238c7;
+  --color-signal-soft: #dde5ff;
+  --color-good: #0e8f63;
+  --color-warn: #b5650a;
+  --color-bad: #c0352b;
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --shadow-soft: 0 1px 2px rgb(13 19 33 / 0.04), 0 8px 24px -12px rgb(13 19 33 / 0.12);
+  --shadow-lift: 0 2px 6px rgb(13 19 33 / 0.05), 0 24px 48px -24px rgb(13 19 33 / 0.25);
 }
 
-html { color-scheme: dark; }
+html {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+  /* Soft colour behind the glass, so the frosted panels have something to blur. */
   background:
-    radial-gradient(60% 50% at 85% 0%, rgb(124 58 237 / .28), transparent 70%),
-    radial-gradient(50% 40% at 0% 100%, rgb(16 185 129 / .16), transparent 70%),
-    var(--color-ink);
-  color: #e2e8f0;
+    radial-gradient(42rem 28rem at 88% -6%, rgb(30 79 255 / 0.13), transparent 70%),
+    radial-gradient(36rem 30rem at -8% 38%, rgb(30 79 255 / 0.07), transparent 70%),
+    radial-gradient(30rem 24rem at 70% 105%, rgb(14 143 99 / 0.06), transparent 70%),
+    var(--color-porcelain);
+  background-attachment: fixed;
+  color: var(--color-ink);
   font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* A faint paper grain over everything; it keeps large flat areas from looking digital. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+::selection {
+  background: var(--color-signal);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 /* In the components layer so utilities like hover:border-* can override it. */
 @layer components {
+  /* Frosted glass panel. */
   .glass {
-    background: rgb(255 255 255 / .05);
-    border: 1px solid rgb(255 255 255 / .1);
-    backdrop-filter: blur(16px);
+    background: rgb(255 255 255 / 0.58);
+    border: 1px solid rgb(255 255 255 / 0.75);
+    box-shadow: var(--shadow-soft), inset 0 1px 0 rgb(255 255 255 / 0.6);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+  }
+
+  /* Small all-caps mono label, used for section kickers and metadata. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  /* Page titles: serif, large, slightly tight. */
+  .page-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    color: var(--color-ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -71,21 +71,21 @@ export default function PushCard() {
 
   let body
   if (!supported) {
-    body = <p className="text-sm text-slate-400">This browser does not support push notifications. On iPhone, add NestFinder to your home screen first.</p>
+    body = <p className="text-sm text-muted">This browser does not support push notifications. On iPhone, add NestFinder to your home screen first.</p>
   } else if (info && !info.enabled) {
-    body = <p className="text-sm text-slate-400">Push notifications are not set up on this server yet.</p>
+    body = <p className="text-sm text-muted">Push notifications are not set up on this server yet.</p>
   } else if (subscription) {
     body = (
       <div className="flex flex-wrap items-center gap-3">
-        <p className="mr-auto flex items-center gap-2 text-sm text-mint"><CheckCircle2 size={16} /> On for this device. New leads pop up even when NestFinder is closed.</p>
+        <p className="mr-auto flex items-center gap-2 text-sm text-good"><CheckCircle2 size={16} /> On for this device. New leads pop up even when NestFinder is closed.</p>
         <button type="button" disabled={status.busy} onClick={test} className={ghostButton}><Send size={16} /> Send test</button>
-        <button type="button" disabled={status.busy} onClick={disable} className="flex items-center gap-1 text-sm text-slate-400 hover:text-amber"><BellOff size={14} /> Turn off</button>
+        <button type="button" disabled={status.busy} onClick={disable} className="flex items-center gap-1 text-sm text-muted hover:text-warn"><BellOff size={14} /> Turn off</button>
       </div>
     )
   } else {
     body = (
       <div className="flex flex-wrap items-center gap-3">
-        <p className="mr-auto text-sm text-slate-400">
+        <p className="mr-auto text-sm text-muted">
           Get a notification on this phone or laptop the moment someone enquires or books a visit.
           {broker.isDemo && ' On the shared demo account, visitor numbers are masked.'}
         </p>
@@ -98,10 +98,10 @@ export default function PushCard() {
 
   return (
     <section className="glass mt-6 rounded-2xl p-5">
-      <h2 className="mb-3 flex items-center gap-2 font-bold text-white"><Bell size={18} className="text-violet-soft" /> Lead alerts</h2>
+      <h2 className="mb-3 flex items-center gap-2 font-bold text-ink"><Bell size={18} className="text-signal" /> Lead alerts</h2>
       {body}
-      {status.error && <p className="mt-3 text-sm text-amber" role="alert">{status.error}</p>}
-      {status.note && <p className="mt-3 text-sm text-mint">{status.note}</p>}
+      {status.error && <p className="mt-3 text-sm text-warn" role="alert">{status.error}</p>}
+      {status.note && <p className="mt-3 text-sm text-good">{status.note}</p>}
     </section>
   )
 }

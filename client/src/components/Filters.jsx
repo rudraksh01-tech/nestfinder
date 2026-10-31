@@ -25,8 +25,8 @@ export default function Filters({ meta, params, set, onReset }) {
   return (
     <aside className="glass rounded-2xl p-5">
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="font-bold text-white">Filters</h2>
-        <button type="button" onClick={onReset} className="flex items-center gap-1 text-xs text-slate-400 hover:text-white">
+        <h2 className="font-bold text-ink">Filters</h2>
+        <button type="button" onClick={onReset} className="flex items-center gap-1 text-xs text-muted hover:text-ink">
           <RotateCcw size={12} /> Reset
         </button>
       </div>
@@ -47,7 +47,7 @@ export default function Filters({ meta, params, set, onReset }) {
                 aria-pressed={bhks.includes(b)}
                 onClick={() => toggleBhk(b)}
                 className={`flex-1 rounded-lg border px-3 py-2 text-sm font-semibold transition ${
-                  bhks.includes(b) ? 'border-violet bg-violet text-white' : 'border-white/10 text-slate-300 hover:border-white/30'
+                  bhks.includes(b) ? 'border-signal bg-signal text-white' : 'border-ink/10 text-ink-2 hover:border-ink/25'
                 }`}
               >
                 {b} BHK
@@ -90,10 +90,10 @@ export default function Filters({ meta, params, set, onReset }) {
           </Select>
         </div>
 
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
+        <label className="flex cursor-pointer items-center gap-2 text-sm text-ink-2">
           <input
             type="checkbox"
-            className="size-4 accent-violet"
+            className="size-4 accent-signal"
             checked={get('pets') === 'true'}
             onChange={(e) => set('pets', e.target.checked ? 'true' : '')}
           />

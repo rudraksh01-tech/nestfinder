@@ -80,7 +80,7 @@ function Form({ initial, code }) {
   return (
     <form onSubmit={submit} className="mt-6 space-y-6">
       <section className="glass grid gap-4 rounded-2xl p-5 sm:grid-cols-2 lg:grid-cols-3">
-        <h2 className="font-bold text-white sm:col-span-2 lg:col-span-3">Basics</h2>
+        <h2 className="font-bold text-ink sm:col-span-2 lg:col-span-3">Basics</h2>
         <Field id="locality" label="Area">
           <select id="locality" required className={fieldClass} value={form.locality} onChange={set('locality')}>
             <option value="" disabled>Pick an area</option>
@@ -98,17 +98,17 @@ function Form({ initial, code }) {
       </section>
 
       <section className="glass grid gap-4 rounded-2xl p-5 sm:grid-cols-2 lg:grid-cols-4">
-        <h2 className="font-bold text-white sm:col-span-2 lg:col-span-4">Money</h2>
+        <h2 className="font-bold text-ink sm:col-span-2 lg:col-span-4">Money</h2>
         <Field id="rent" label="Rent / month (₹)">{number('rent', { min: 1000, max: 1000000, step: 500 })}</Field>
         <Field id="depositMonths" label="Deposit (months)">{number('depositMonths', { min: 0, max: 12 })}</Field>
         <Field id="maintenance" label="Maintenance (₹)">{number('maintenance', { min: 0, max: 100000 })}</Field>
-        <div className="self-end pb-2 text-sm text-slate-400">
-          Deposit: <span className="font-semibold text-white">₹{(Number(form.rent) * Number(form.depositMonths) || 0).toLocaleString('en-IN')}</span>
+        <div className="self-end pb-2 text-sm text-muted">
+          Deposit: <span className="font-semibold text-ink">₹{(Number(form.rent) * Number(form.depositMonths) || 0).toLocaleString('en-IN')}</span>
         </div>
       </section>
 
       <section className="glass grid gap-4 rounded-2xl p-5 sm:grid-cols-2 lg:grid-cols-3">
-        <h2 className="font-bold text-white sm:col-span-2 lg:col-span-3">Tenant and building</h2>
+        <h2 className="font-bold text-ink sm:col-span-2 lg:col-span-3">Tenant and building</h2>
         <Field id="tenantPreference" label="Tenant">{select('tenantPreference', TENANT, { Any: 'Anyone' })}</Field>
         <Field id="parking" label="Parking">{select('parking', PARKING)}</Field>
         <Field id="waterSource" label="Water">{select('waterSource', WATER)}</Field>
@@ -116,8 +116,8 @@ function Form({ initial, code }) {
         <Field id="availableFrom" label="Available from">
           <input id="availableFrom" type="date" required className={fieldClass} value={form.availableFrom} onChange={set('availableFrom')} />
         </Field>
-        <label className="flex cursor-pointer items-center gap-2 self-end pb-2 text-sm text-slate-300">
-          <input type="checkbox" className="size-4 accent-violet" checked={form.petsAllowed} onChange={set('petsAllowed')} />
+        <label className="flex cursor-pointer items-center gap-2 self-end pb-2 text-sm text-ink-2">
+          <input type="checkbox" className="size-4 accent-signal" checked={form.petsAllowed} onChange={set('petsAllowed')} />
           Pets allowed
         </label>
         <fieldset className="sm:col-span-2 lg:col-span-3">
@@ -130,7 +130,7 @@ function Form({ initial, code }) {
                 aria-pressed={form.amenities.includes(a)}
                 onClick={() => toggleAmenity(a)}
                 className={`rounded-full border px-3 py-1.5 text-sm transition ${
-                  form.amenities.includes(a) ? 'border-violet bg-violet/20 text-white' : 'border-white/10 text-slate-300 hover:border-white/30'
+                  form.amenities.includes(a) ? 'border-signal bg-signal/20 text-ink' : 'border-ink/10 text-ink-2 hover:border-ink/25'
                 }`}
               >
                 {a}
@@ -145,8 +145,8 @@ function Form({ initial, code }) {
         </div>
       </section>
 
-      <p className="text-xs text-slate-500">The flat is pinned to the centre of the chosen area; nearest metro and tech-park distances are calculated automatically.</p>
-      {status.error && <p className="text-sm text-amber" role="alert">{status.error}</p>}
+      <p className="text-xs text-faint">The flat is pinned to the centre of the chosen area; nearest metro and tech-park distances are calculated automatically.</p>
+      {status.error && <p className="text-sm text-warn" role="alert">{status.error}</p>}
       <div className="flex gap-3">
         <button type="submit" disabled={status.saving} className={primaryButton}>
           <Save size={16} /> {status.saving ? 'Saving…' : code ? 'Save changes' : 'Publish listing'}
@@ -163,11 +163,11 @@ export default function ListingForm() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
-      <Link to="/broker?tab=listings" className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white">
+      <Link to="/broker?tab=listings" className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-ink">
         <ArrowLeft size={16} /> My listings
       </Link>
-      <h1 className="mt-4 text-3xl font-extrabold text-white">{code ? `Edit ${code}` : 'Add a listing'}</h1>
-      {error && <p className="glass mt-6 rounded-2xl p-6 text-amber">{error}</p>}
+      <h1 className="mt-4 page-title text-4xl sm:text-5xl">{code ? `Edit ${code}` : 'Add a listing'}</h1>
+      {error && <p className="glass mt-6 rounded-2xl p-6 text-warn">{error}</p>}
       {code && !listing && !error && <div className="glass mt-6 h-96 animate-pulse rounded-2xl" />}
       {/* key remounts the form once the listing arrives, so its fields start from the saved values. */}
       {(!code || listing) && <Form key={listing?.code ?? 'new'} initial={listing ? toForm(listing) : EMPTY} code={code} />}

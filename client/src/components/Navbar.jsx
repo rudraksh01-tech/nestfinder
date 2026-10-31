@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
-import { Heart, Home as HomeIcon, LogOut, Menu, X } from 'lucide-react'
+import { ArrowUpRight, Heart, LogOut, Menu, X } from 'lucide-react'
+import Logo from './Logo.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 import { useShortlist } from '../context/ShortlistContext.jsx'
 
 const linkClass = ({ isActive }) =>
-  `rounded-lg px-3 py-2 text-sm font-semibold transition ${isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:text-white'}`
+  `rounded-full px-3.5 py-1.5 text-[0.9rem] transition ${isActive ? 'bg-ink text-porcelain' : 'text-ink-2 hover:bg-ink/[.05] hover:text-ink'}`
 
+// Floating glass bar. Below `lg` the links fold into a menu (they overflow a phone otherwise).
 export default function Navbar() {
   const { broker, logout } = useAuth()
   const { codes } = useShortlist()
@@ -28,7 +30,12 @@ export default function Navbar() {
       <NavLink to="/flats" end className={linkClass}>Flats</NavLink>
       <NavLink to="/compare" className={linkClass}>
         <span className="inline-flex items-center gap-1.5">
-          Compare{codes.length > 0 && <span className="inline-flex items-center gap-0.5 rounded-full bg-pink-500/20 px-1.5 text-xs text-pink-300"><Heart size={10} fill="currentColor" />{codes.length}</span>}
+          Compare
+          {codes.length > 0 && (
+            <span className="inline-flex items-center gap-0.5 rounded-full bg-rose-500/15 px-1.5 font-mono text-[0.7rem] text-rose-600">
+              <Heart size={9} fill="currentColor" />{codes.length}
+            </span>
+          )}
         </span>
       </NavLink>
       {broker ? (
@@ -40,31 +47,26 @@ export default function Navbar() {
   )
 
   return (
-    <header className="sticky top-0 z-20 border-b border-white/10 bg-ink/80 backdrop-blur-lg">
-      <nav className="mx-auto flex max-w-6xl items-center gap-1 px-4 py-3 sm:px-6">
-        <Link to="/" className="mr-auto flex items-center gap-2 text-lg font-extrabold text-white">
-          <span className="grid size-8 place-items-center rounded-lg bg-violet">
-            <HomeIcon size={18} />
-          </span>
-          NestFinder
-        </Link>
+    <header className="sticky top-0 z-40 px-3 pt-3 sm:px-5">
+      <nav className="glass mx-auto flex max-w-6xl items-center gap-1 rounded-full py-2 pl-4 pr-2">
+        <div className="mr-auto"><Logo /></div>
 
-        <div className="hidden items-center gap-1 lg:flex">{links}</div>
+        <div className="hidden items-center gap-0.5 lg:flex">{links}</div>
         {broker && (
-          <button type="button" onClick={handleLogout} className="rounded-lg p-2 text-slate-300 hover:text-white" aria-label="Log out" title="Log out">
-            <LogOut size={18} />
+          <button type="button" onClick={handleLogout} className="rounded-full p-2 text-ink-2 hover:bg-ink/[.05] hover:text-ink" aria-label="Log out" title="Log out">
+            <LogOut size={17} />
           </button>
         )}
-        <span
-          className="ml-1 hidden rounded-full border border-amber/40 px-2.5 py-1 text-xs font-semibold text-amber sm:inline"
-          title="All listings are sample data for a portfolio demo"
+        <Link
+          to="/match"
+          className="ml-1 hidden items-center gap-1 rounded-full bg-signal px-4 py-2 text-[0.9rem] font-medium text-white transition hover:bg-signal-deep sm:inline-flex"
         >
-          Demo data
-        </span>
+          Find my match <ArrowUpRight size={15} />
+        </Link>
         <button
           type="button"
           onClick={() => setOpenOn(open ? null : pathname)}
-          className="rounded-lg p-2 text-slate-200 hover:bg-white/10 lg:hidden"
+          className="rounded-full p-2 text-ink hover:bg-ink/[.06] lg:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -73,8 +75,9 @@ export default function Navbar() {
         </button>
       </nav>
       {open && (
-        <div id="mobile-menu" className="mx-auto flex max-w-6xl flex-col gap-1 border-t border-white/10 px-4 py-3 lg:hidden">
+        <div id="mobile-menu" className="glass mx-auto mt-2 flex max-w-6xl flex-col gap-1 rounded-3xl p-3 lg:hidden">
           {links}
+          <Link to="/match" className="mt-1 rounded-full bg-signal px-4 py-2 text-center text-[0.9rem] font-medium text-white sm:hidden">Find my match</Link>
         </div>
       )}
     </header>

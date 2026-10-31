@@ -25,6 +25,17 @@ export function clearAuthCookie(res) {
   res.clearCookie(COOKIE_NAME, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production' });
 }
 
+// The logged-in broker's id from the cookie, or null when there is no valid session.
+export function brokerIdFrom(req) {
+  const token = req.cookies?.[COOKIE_NAME];
+  if (!token) return null;
+  try {
+    return jwt.verify(token, secret()).sub;
+  } catch {
+    return null;
+  }
+}
+
 // Puts the logged-in broker's id on req.brokerId, or rejects with 401.
 export function requireBroker(req, res, next) {
   const token = req.cookies?.[COOKIE_NAME];

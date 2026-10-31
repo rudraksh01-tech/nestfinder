@@ -16,7 +16,7 @@ export default function ShortlistButton({ code, withLabel = false, className = '
       aria-label={withLabel ? undefined : `${label}: ${code}`}
       title={label}
       className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-40 ${
-        active ? 'border-pink-400/50 bg-pink-500/15 text-pink-300' : 'border-white/10 bg-ink/60 text-slate-300 hover:border-pink-400/50 hover:text-pink-300'
+        active ? 'border-rose-400/50 bg-rose-500/10 text-rose-600' : 'border-ink/10 bg-porcelain/60 text-ink-2 hover:border-rose-400/50 hover:text-rose-600'
       } ${className}`}
     >
       <Heart size={15} fill={active ? 'currentColor' : 'none'} />

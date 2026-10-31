@@ -2,7 +2,7 @@ import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
 import { Broker } from '../models/Broker.js';
 import { httpError } from '../lib/errors.js';
-import { clearAuthCookie, requireBroker, setAuthCookie } from '../middleware/auth.js';
+import { brokerIdFrom, clearAuthCookie, setAuthCookie } from '../middleware/auth.js';
 
 const router = Router();
 
@@ -55,13 +55,12 @@ router.post('/logout', (req, res) => {
   res.json({ ok: true });
 });
 
-router.get('/me', requireBroker, async (req, res) => {
-  const broker = await Broker.findById(req.brokerId);
-  if (!broker) {
-    clearAuthCookie(res);
-    throw httpError(401, 'Please log in');
-  }
-  res.json({ broker });
+// Every page load asks this, so "not logged in" is a normal answer ({ broker: null }), not an error.
+router.get('/me', async (req, res) => {
+  const id = brokerIdFrom(req);
+  const broker = id && (await Broker.findById(id));
+  if (id && !broker) clearAuthCookie(res);
+  res.json({ broker: broker || null });
 });
 
 export default router;

@@ -33,8 +33,8 @@ export default function Listings() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-      <h1 className="text-3xl font-extrabold text-white">Flats in Bengaluru</h1>
-      <p className="mt-1 text-sm text-slate-400">Sample listings for a demo. Distances are straight-line and approximate.</p>
+      <h1 className="page-title text-4xl sm:text-5xl">Flats in Bengaluru</h1>
+      <p className="mt-1 text-sm text-muted">Sample listings for a demo. Distances are straight-line and approximate.</p>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[280px_1fr]">
         <div>
@@ -42,10 +42,10 @@ export default function Listings() {
             type="button"
             aria-expanded={showFilters}
             onClick={() => setShowFilters((v) => !v)}
-            className="glass flex w-full items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-white lg:hidden"
+            className="glass flex w-full items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-ink lg:hidden"
           >
             <SlidersHorizontal size={16} /> {showFilters ? 'Hide filters' : 'Filters'}
-            {activeFilters > 0 && <span className="rounded-full bg-violet px-2 text-xs">{activeFilters}</span>}
+            {activeFilters > 0 && <span className="rounded-full bg-signal px-2 text-xs">{activeFilters}</span>}
           </button>
           <div className={`${showFilters ? 'mt-3 block' : 'hidden'} lg:mt-0 lg:block`}>
             <Filters meta={meta} params={params} set={set} onReset={() => setParams({})} />
@@ -54,13 +54,13 @@ export default function Listings() {
 
         <section aria-live="polite">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-slate-300">
-              {data ? <><strong className="text-white">{data.total}</strong> flats found</> : ' '}
+            <p className="text-sm text-ink-2">
+              {data ? <><strong className="text-ink">{data.total}</strong> flats found</> : ' '}
             </p>
-            <label className="flex items-center gap-2 text-sm text-slate-400">
+            <label className="flex items-center gap-2 text-sm text-muted">
               Sort
               <select
-                className="rounded-lg border border-white/10 bg-ink-2 px-3 py-1.5 text-sm text-white outline-none focus:border-violet-soft"
+                className="rounded-lg border border-ink/10 bg-white/80 px-3 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
                 value={params.get('sort') ?? 'rent_asc'}
                 onChange={(e) => set('sort', e.target.value)}
               >
@@ -69,13 +69,13 @@ export default function Listings() {
             </label>
           </div>
 
-          {error && <p className="glass rounded-2xl p-6 text-amber">Could not load flats: {error}</p>}
+          {error && <p className="glass rounded-2xl p-6 text-warn">Could not load flats: {error}</p>}
 
           {!error && data?.total === 0 && (
             <div className="glass flex flex-col items-center rounded-2xl p-10 text-center">
-              <SearchX className="text-slate-400" size={32} />
-              <p className="mt-3 font-semibold text-white">No flats match these filters</p>
-              <p className="mt-1 text-sm text-slate-400">Try a higher budget or a wider distance.</p>
+              <SearchX className="text-muted" size={32} />
+              <p className="mt-3 font-semibold text-ink">No flats match these filters</p>
+              <p className="mt-1 text-sm text-muted">Try a higher budget or a wider distance.</p>
             </div>
           )}
 
@@ -92,16 +92,16 @@ export default function Listings() {
                 type="button"
                 disabled={page <= 1}
                 onClick={() => set('page', String(page - 1))}
-                className="glass flex items-center gap-1 rounded-lg px-3 py-2 text-slate-200 disabled:opacity-40"
+                className="glass flex items-center gap-1 rounded-lg px-3 py-2 text-ink disabled:opacity-40"
               >
                 <ChevronLeft size={16} /> Prev
               </button>
-              <span className="text-slate-400">Page {page} of {data.pages}</span>
+              <span className="text-muted">Page {page} of {data.pages}</span>
               <button
                 type="button"
                 disabled={page >= data.pages}
                 onClick={() => set('page', String(page + 1))}
-                className="glass flex items-center gap-1 rounded-lg px-3 py-2 text-slate-200 disabled:opacity-40"
+                className="glass flex items-center gap-1 rounded-lg px-3 py-2 text-ink disabled:opacity-40"
               >
                 Next <ChevronRight size={16} />
               </button>

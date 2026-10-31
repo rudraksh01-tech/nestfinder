@@ -45,9 +45,9 @@ export default function ChatPanel({ prefs, onPrefs }) {
 
   return (
     <section className="glass mb-6 rounded-2xl p-4 sm:p-5">
-      <h2 className="flex items-center gap-2 font-bold text-white">
-        <Bot size={18} className="text-violet-soft" /> Describe how you live
-        <span className="text-xs font-normal text-slate-400">English, Hindi or Hinglish</span>
+      <h2 className="flex items-center gap-2 font-bold text-ink">
+        <Bot size={18} className="text-signal" /> Describe how you live
+        <span className="text-xs font-normal text-muted">English, Hindi or Hinglish</span>
       </h2>
 
       {messages.length === 0 ? (
@@ -57,7 +57,7 @@ export default function ChatPanel({ prefs, onPrefs }) {
               key={e}
               type="button"
               onClick={() => send(e)}
-              className="rounded-full border border-white/10 px-3 py-1.5 text-left text-xs text-slate-300 transition hover:border-violet-soft/60 hover:text-white"
+              className="rounded-full border border-ink/10 px-3 py-1.5 text-left text-xs text-ink-2 transition hover:border-signal/60 hover:text-ink"
             >
               {e}
             </button>
@@ -69,7 +69,7 @@ export default function ChatPanel({ prefs, onPrefs }) {
             <li key={i} className={m.role === 'user' ? 'flex justify-end' : 'flex'}>
               <div
                 className={`max-w-[90%] whitespace-pre-line rounded-2xl px-4 py-2.5 text-sm ${
-                  m.role === 'user' ? 'bg-violet text-white' : 'bg-white/[.06] text-slate-200'
+                  m.role === 'user' ? 'bg-signal text-white' : 'bg-ink/[.045] text-ink'
                 }`}
               >
                 {m.content}
@@ -79,9 +79,9 @@ export default function ChatPanel({ prefs, onPrefs }) {
                       <Link
                         key={x.code}
                         to={`/flats/${x.code}`}
-                        className="rounded-lg border border-white/10 bg-ink-2 px-2.5 py-1 text-xs text-slate-200 hover:border-violet-soft/60"
+                        className="rounded-lg border border-ink/10 bg-white/80 px-2.5 py-1 text-xs text-ink hover:border-signal/60"
                       >
-                        <span className="font-bold text-mint">{x.score}%</span> {x.code} · {x.bhk}BHK {x.locality}
+                        <span className="font-bold text-good">{x.score}%</span> {x.code} · {x.bhk}BHK {x.locality}
                       </Link>
                     ))}
                   </div>
@@ -91,8 +91,8 @@ export default function ChatPanel({ prefs, onPrefs }) {
           ))}
           {status.busy && (
             <li className="flex">
-              <div className="flex items-center gap-2 rounded-2xl bg-white/[.06] px-4 py-2.5 text-sm text-slate-400">
-                <Sparkles size={14} className="animate-pulse text-violet-soft" /> Finding your matches…
+              <div className="flex items-center gap-2 rounded-2xl bg-ink/[.045] px-4 py-2.5 text-sm text-muted">
+                <Sparkles size={14} className="animate-pulse text-signal" /> Finding your matches…
               </div>
             </li>
           )}
@@ -100,7 +100,7 @@ export default function ChatPanel({ prefs, onPrefs }) {
         </ol>
       )}
 
-      {status.error && <p className="mt-3 text-sm text-amber" role="alert">{status.error}</p>}
+      {status.error && <p className="mt-3 text-sm text-warn" role="alert">{status.error}</p>}
 
       <form
         className="mt-4 flex gap-2"
@@ -123,12 +123,12 @@ export default function ChatPanel({ prefs, onPrefs }) {
           type="submit"
           disabled={status.busy || !input.trim()}
           aria-label="Send"
-          className="grid size-10 shrink-0 place-items-center rounded-lg bg-violet text-white transition hover:bg-violet/85 disabled:opacity-40"
+          className="grid size-10 shrink-0 place-items-center rounded-lg bg-signal text-white transition hover:bg-signal-deep disabled:opacity-40"
         >
           <SendHorizontal size={18} />
         </button>
       </form>
-      <p className="mt-2 text-xs text-slate-500">AI can make mistakes. Scores come from fixed rules, so check the reasons on each flat.</p>
+      <p className="mt-2 text-xs text-faint">AI can make mistakes. Scores come from fixed rules, so check the reasons on each flat.</p>
     </section>
   )
 }

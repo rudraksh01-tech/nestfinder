@@ -57,11 +57,9 @@ export default function Match() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-      <p className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-sm text-violet-soft">
-        <Sparkles size={16} /> AI Match Score
-      </p>
-      <h1 className="mt-4 text-3xl font-extrabold text-white">Find flats that fit how you live</h1>
-      <p className="mt-1 text-sm text-slate-400">Chat with the assistant or use the filters. Every flat gets a % match with the reasons behind it.</p>
+      <p className="eyebrow">Match score</p>
+      <h1 className="mt-4 page-title text-4xl sm:text-5xl">Find flats that fit how you live</h1>
+      <p className="mt-1 text-sm text-muted">Chat with the assistant or use the filters. Every flat gets a % match with the reasons behind it.</p>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[300px_1fr]">
         <aside className="glass h-fit space-y-4 rounded-2xl p-5">
@@ -93,14 +91,14 @@ export default function Match() {
           <fieldset className="space-y-2">
             <legend className={labelClass}>What else matters?</legend>
             {TOGGLES.map(([k, text]) => (
-              <label key={k} className="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
-                <input type="checkbox" className="size-4 accent-violet" checked={get(k) === 'true'} onChange={(e) => set(k, e.target.checked ? 'true' : '')} />
+              <label key={k} className="flex cursor-pointer items-center gap-2 text-sm text-ink-2">
+                <input type="checkbox" className="size-4 accent-signal" checked={get(k) === 'true'} onChange={(e) => set(k, e.target.checked ? 'true' : '')} />
                 {text}
               </label>
             ))}
           </fieldset>
           {hasPrefs && (
-            <button type="button" onClick={() => setParams({}, { replace: true })} className="text-xs text-slate-400 hover:text-white">Clear all</button>
+            <button type="button" onClick={() => setParams({}, { replace: true })} className="text-xs text-muted hover:text-ink">Clear all</button>
           )}
         </aside>
 
@@ -108,15 +106,15 @@ export default function Match() {
           <ChatPanel prefs={Object.fromEntries(prefs)} onPrefs={applyPrefs} />
           {!hasPrefs && (
             <div className="glass rounded-2xl p-10 text-center">
-              <Sparkles className="mx-auto text-violet-soft" size={32} />
-              <p className="mt-3 font-semibold text-white">Tell the assistant about yourself, or pick a few filters</p>
-              <p className="mt-1 text-sm text-slate-400">Where you work and your budget are the best place to start.</p>
+              <Sparkles className="mx-auto text-signal" size={32} />
+              <p className="mt-3 font-semibold text-ink">Tell the assistant about yourself, or pick a few filters</p>
+              <p className="mt-1 text-sm text-muted">Where you work and your budget are the best place to start.</p>
             </div>
           )}
-          {error && <p className="glass rounded-2xl p-6 text-amber">{error}</p>}
+          {error && <p className="glass rounded-2xl p-6 text-warn">{error}</p>}
           {hasPrefs && data && (
             <>
-              <p className="mb-4 text-sm text-slate-300">Top {data.items.length} of {data.total} flats, best match first</p>
+              <p className="mb-4 text-sm text-ink-2">Top {data.items.length} of {data.total} flats, best match first</p>
               <div className={`grid gap-4 sm:grid-cols-2 xl:grid-cols-3 transition-opacity ${loading ? 'opacity-50' : ''}`}>
                 {data.items.map((l) => <ListingCard key={l.code} listing={l} match={l.match} />)}
               </div>

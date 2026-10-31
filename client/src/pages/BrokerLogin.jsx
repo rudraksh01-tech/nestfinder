@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
-import { Briefcase, LogIn, UserPlus } from 'lucide-react'
+import { LogIn, UserPlus } from 'lucide-react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { fieldClass, labelClass, primaryButton, ghostButton } from '../lib/ui.js'
 
@@ -45,17 +45,15 @@ export default function BrokerLogin() {
   return (
     <main className="mx-auto grid max-w-5xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:items-center">
       <div>
-        <p className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-sm text-violet-soft">
-          <Briefcase size={16} /> For brokers
-        </p>
-        <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white">Manage your listings and leads in one place.</h1>
-        <p className="mt-4 text-slate-300">
+        <p className="eyebrow">For brokers</p>
+        <h1 className="mt-5 page-title text-5xl leading-tight">Manage your listings and leads in one place.</h1>
+        <p className="mt-4 text-ink-2">
           See every enquiry and visit booking, update lead status, and add or edit flats. New leads can also ping you on Telegram.
         </p>
         <div className="glass mt-6 rounded-2xl p-5">
-          <p className="font-semibold text-white">Just looking around?</p>
-          <p className="mt-1 text-sm text-slate-400">
-            Use the demo broker account: <span className="text-slate-200">{DEMO.email}</span> / <span className="text-slate-200">{DEMO.password}</span>.
+          <p className="font-semibold text-ink">Just looking around?</p>
+          <p className="mt-1 text-sm text-muted">
+            Use the demo broker account: <span className="text-ink">{DEMO.email}</span> / <span className="text-ink">{DEMO.password}</span>.
             Demo data is reset regularly.
           </p>
           <button type="button" disabled={status.busy} onClick={() => run(() => login(DEMO.email, DEMO.password))} className={`${ghostButton} mt-4`}>
@@ -65,7 +63,7 @@ export default function BrokerLogin() {
       </div>
 
       <form onSubmit={submit} className="glass space-y-4 rounded-2xl p-6">
-        <div className="flex rounded-xl bg-white/[.04] p-1" role="tablist">
+        <div className="flex rounded-xl bg-ink/[.03] p-1" role="tablist">
           {[['login', 'Log in'], ['register', 'Create account']].map(([m, text]) => (
             <button
               key={m}
@@ -73,7 +71,7 @@ export default function BrokerLogin() {
               role="tab"
               aria-selected={mode === m}
               onClick={() => { setMode(m); setStatus({ busy: false, error: null }) }}
-              className={`flex-1 rounded-lg py-2 text-sm font-semibold transition ${mode === m ? 'bg-violet text-white' : 'text-slate-400 hover:text-white'}`}
+              className={`flex-1 rounded-lg py-2 text-sm font-semibold transition ${mode === m ? 'bg-signal text-white' : 'text-muted hover:text-ink'}`}
             >
               {text}
             </button>
@@ -100,9 +98,9 @@ export default function BrokerLogin() {
           onChange={set('password')}
           autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
         />
-        {mode === 'register' && <p className="-mt-2 text-xs text-slate-500">At least 8 characters.</p>}
+        {mode === 'register' && <p className="-mt-2 text-xs text-faint">At least 8 characters.</p>}
 
-        {status.error && <p className="text-sm text-amber" role="alert">{status.error}</p>}
+        {status.error && <p className="text-sm text-warn" role="alert">{status.error}</p>}
         <button type="submit" disabled={status.busy} className={`${primaryButton} w-full`}>
           {mode === 'login' ? <LogIn size={16} /> : <UserPlus size={16} />}
           {status.busy ? 'Please wait…' : mode === 'login' ? 'Log in' : 'Create account'}

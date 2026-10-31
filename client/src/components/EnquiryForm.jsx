@@ -37,21 +37,21 @@ export default function EnquiryForm({ listingCode }) {
 
   if (status.sent) {
     return (
-      <section className="glass rounded-2xl border-mint/40 p-5">
-        <p className="flex items-center gap-2 font-bold text-white"><CheckCircle2 className="text-mint" size={20} /> Request sent</p>
-        <p className="mt-2 text-sm text-slate-300">
+      <section className="glass rounded-2xl border-good/40 p-5">
+        <p className="flex items-center gap-2 font-bold text-ink"><CheckCircle2 className="text-good" size={20} /> Request sent</p>
+        <p className="mt-2 text-sm text-ink-2">
           {form.bookVisit ? `Visit requested for ${new Date(form.visitDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}. ` : ''}
           The broker will call you on {form.phone}.
         </p>
-        <p className="mt-3 text-xs text-slate-500">Demo: this goes to a sample broker's dashboard.</p>
+        <p className="mt-3 text-xs text-faint">Demo: this goes to a sample broker's dashboard.</p>
       </section>
     )
   }
 
   return (
     <form onSubmit={submit} className="glass space-y-3 rounded-2xl p-5">
-      <h2 className="font-bold text-white">Contact the broker</h2>
-      <p className="-mt-1 text-xs text-slate-500">Demo site: these are sample brokers, so feel free to use a dummy number.</p>
+      <h2 className="font-bold text-ink">Contact the broker</h2>
+      <p className="-mt-1 text-xs text-faint">Demo site: these are sample brokers, so feel free to use a dummy number.</p>
       <div>
         <label htmlFor="enq-name" className={labelClass}>Name</label>
         <input id="enq-name" required maxLength={80} className={fieldClass} value={form.name} onChange={set('name')} autoComplete="name" />
@@ -82,8 +82,8 @@ export default function EnquiryForm({ listingCode }) {
           onChange={set('message')}
         />
       </div>
-      <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
-        <input type="checkbox" className="size-4 accent-violet" checked={form.bookVisit} onChange={set('bookVisit')} />
+      <label className="flex cursor-pointer items-center gap-2 text-sm text-ink-2">
+        <input type="checkbox" className="size-4 accent-signal" checked={form.bookVisit} onChange={set('bookVisit')} />
         I want to visit the flat
       </label>
       {form.bookVisit && (
@@ -92,7 +92,7 @@ export default function EnquiryForm({ listingCode }) {
           <input id="enq-date" type="date" required min={minDate} max={maxDate} className={fieldClass} value={form.visitDate} onChange={set('visitDate')} />
         </div>
       )}
-      {status.error && <p className="text-sm text-amber" role="alert">{status.error}</p>}
+      {status.error && <p className="text-sm text-warn" role="alert">{status.error}</p>}
       <button type="submit" disabled={status.sending} className={`${primaryButton} w-full`}>
         {form.bookVisit ? <CalendarCheck size={16} /> : <Send size={16} />}
         {status.sending ? 'Sending…' : form.bookVisit ? 'Book visit' : 'Send enquiry'}

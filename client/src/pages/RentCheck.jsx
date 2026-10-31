@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { AlertTriangle, BadgeIndianRupee, Check, Copy, RefreshCw, ScanText } from 'lucide-react'
+import { AlertTriangle, Check, Copy, RefreshCw, ScanText } from 'lucide-react'
 import { rupees } from '../lib/format.js'
 import { useFetch } from '../lib/useFetch.js'
 import { fieldClass, labelClass, primaryButton, ghostButton } from '../lib/ui.js'
@@ -8,10 +8,10 @@ import { fieldClass, labelClass, primaryButton, ghostButton } from '../lib/ui.js
 const EXAMPLE = 'Hi sir, 2BHK available in HSR Layout sector 2, semi furnished, rent 48k, maintenance 3k, deposit 10 months. Ready to move, visit anytime.'
 const EMPTY = { locality: '', bhk: '', rent: '', depositMonths: '', furnishing: '' }
 const VERDICT_STYLE = {
-  low: 'border-mint/40 bg-mint/10 text-mint',
-  fair: 'border-mint/40 bg-mint/10 text-mint',
-  slightly_high: 'border-amber/40 bg-amber/10 text-amber',
-  high: 'border-red-400/40 bg-red-400/10 text-red-300',
+  low: 'border-good/40 bg-good/10 text-good',
+  fair: 'border-good/40 bg-good/10 text-good',
+  slightly_high: 'border-warn/40 bg-warn/10 text-warn',
+  high: 'border-bad/40 bg-bad/10 text-bad',
 }
 const FIELD_LABELS = { locality: 'area', bhk: 'BHK', rent: 'rent', depositMonths: 'deposit', furnishing: 'furnishing' }
 
@@ -30,12 +30,12 @@ function RangeBar({ rent }) {
   const pos = (v) => `${((v - lo) / (hi - lo || 1)) * 100}%`
   return (
     <div className="mt-6">
-      <div className="relative h-3 rounded-full bg-white/10">
-        <div className="absolute inset-y-0 rounded-full bg-violet/50" style={{ left: pos(rent.low), width: `calc(${pos(rent.high)} - ${pos(rent.low)})` }} />
-        <div className="absolute -inset-y-1 w-0.5 bg-white" style={{ left: pos(rent.median) }} title="Median" />
-        <div className="absolute -top-2 size-7 -translate-x-1/2 rounded-full border-2 border-white bg-amber shadow" style={{ left: pos(rent.asked) }} title="Asked rent" />
+      <div className="relative h-3 rounded-full bg-ink/[.06]">
+        <div className="absolute inset-y-0 rounded-full bg-signal/50" style={{ left: pos(rent.low), width: `calc(${pos(rent.high)} - ${pos(rent.low)})` }} />
+        <div className="absolute -inset-y-1 w-0.5 bg-ink" style={{ left: pos(rent.median) }} title="Median" />
+        <div className="absolute -top-2 size-7 -translate-x-1/2 rounded-full border-2 border-white bg-warn shadow" style={{ left: pos(rent.asked) }} title="Asked rent" />
       </div>
-      <div className="mt-3 flex justify-between text-xs text-slate-400">
+      <div className="mt-3 flex justify-between text-xs text-muted">
         <span>{rupees(lo)}</span>
         <span>Middle half: {rupees(rent.low)} – {rupees(rent.high)} · median {rupees(rent.median)}</span>
         <span>{rupees(hi)}</span>
@@ -98,7 +98,7 @@ export default function RentCheck() {
   }, [initial]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
-  const fieldCls = (k) => `${fieldClass} ${missing.includes(k) ? 'border-amber' : ''}`
+  const fieldCls = (k) => `${fieldClass} ${missing.includes(k) ? 'border-warn' : ''}`
   const r = data?.result
 
   async function copy() {
@@ -108,11 +108,9 @@ export default function RentCheck() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
-      <p className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-sm text-violet-soft">
-        <BadgeIndianRupee size={16} /> Fair Rent Check
-      </p>
-      <h1 className="mt-4 text-3xl font-extrabold text-white">Is this rent fair?</h1>
-      <p className="mt-1 text-sm text-slate-400">Paste the broker's message. We compare it with similar flats in the area and draft a polite counter-offer.</p>
+      <p className="eyebrow">Fair rent check</p>
+      <h1 className="mt-4 page-title text-4xl sm:text-5xl">Is this rent fair?</h1>
+      <p className="mt-1 text-sm text-muted">Paste the broker's message. We compare it with similar flats in the area and draft a polite counter-offer.</p>
 
       <section className="glass mt-6 rounded-2xl p-5">
         <label htmlFor="broker-msg" className={labelClass}>Broker's message</label>
@@ -131,7 +129,7 @@ export default function RentCheck() {
           </button>
           <button type="button" onClick={() => setText(EXAMPLE)} className={ghostButton}>Use an example</button>
           {!showForm && (
-            <button type="button" onClick={() => setShowForm(true)} className="text-sm text-slate-400 hover:text-white">Or enter details yourself</button>
+            <button type="button" onClick={() => setShowForm(true)} className="text-sm text-muted hover:text-ink">Or enter details yourself</button>
           )}
         </div>
       </section>
@@ -163,7 +161,7 @@ export default function RentCheck() {
             <input id="rc-rent" type="number" required min={3000} max={500000} className={fieldCls('rent')} value={form.rent} onChange={set('rent')} />
           </div>
           <div>
-            <label htmlFor="rc-dep" className={labelClass}>Deposit (months)</label>
+            <label htmlFor="rc-dep" className={labelClass}>Deposit, mo</label>
             <input id="rc-dep" type="number" min={0} max={24} step={0.5} className={fieldCls('depositMonths')} value={form.depositMonths} onChange={set('depositMonths')} />
           </div>
           <div className="lg:col-span-2">
@@ -181,10 +179,10 @@ export default function RentCheck() {
         </form>
       )}
 
-      {status.error && <p className="mt-4 text-sm text-amber" role="alert">{status.error}</p>}
+      {status.error && <p className="mt-4 text-sm text-warn" role="alert">{status.error}</p>}
 
       {r && !r.enough && (
-        <p className="glass mt-6 rounded-2xl p-6 text-slate-300">
+        <p className="glass mt-6 rounded-2xl p-6 text-ink-2">
           Not enough similar flats to compare ({r.count} found for {r.scope}). Try a nearby area or a different BHK.
         </p>
       )}
@@ -194,9 +192,9 @@ export default function RentCheck() {
           <section className="glass rounded-2xl p-5">
             <div className="flex flex-wrap items-center gap-3">
               <span className={`rounded-xl border px-3 py-1 text-lg font-extrabold ${VERDICT_STYLE[r.rent.verdict.level]}`}>{r.rent.verdict.label}</span>
-              <p className="text-slate-200">
+              <p className="text-ink">
                 {rupees(r.rent.asked)} is{' '}
-                <strong className="text-white">{Math.abs(r.rent.diffPercent)}% {r.rent.diffPercent >= 0 ? 'above' : 'below'}</strong>{' '}
+                <strong className="text-ink">{Math.abs(r.rent.diffPercent)}% {r.rent.diffPercent >= 0 ? 'above' : 'below'}</strong>{' '}
                 the median of {r.count} {r.scope}.
               </p>
             </div>
@@ -204,39 +202,39 @@ export default function RentCheck() {
           </section>
 
           <div className="grid gap-4 md:grid-cols-2">
-            <section className={`glass rounded-2xl p-5 ${r.deposit?.aboveTypical ? 'border-amber/40' : ''}`}>
-              <h2 className="font-bold text-white">Deposit</h2>
+            <section className={`glass rounded-2xl p-5 ${r.deposit?.aboveTypical ? 'border-warn/40' : ''}`}>
+              <h2 className="font-bold text-ink">Deposit</h2>
               {r.deposit ? (
                 <>
-                  <p className="mt-2 text-2xl font-extrabold text-white">{rupees(r.deposit.amount)}</p>
-                  <p className="text-sm text-slate-400">{r.deposit.months} months · similar flats ask about {r.deposit.typicalMonths}</p>
+                  <p className="mt-2 text-2xl font-extrabold text-ink">{rupees(r.deposit.amount)}</p>
+                  <p className="text-sm text-muted">{r.deposit.months} months · similar flats ask about {r.deposit.typicalMonths}</p>
                   {r.deposit.aboveTypical && (
-                    <p className="mt-3 flex gap-2 rounded-lg bg-amber/10 p-3 text-sm text-amber">
+                    <p className="mt-3 flex gap-2 rounded-lg bg-warn/10 p-3 text-sm text-warn">
                       <AlertTriangle size={16} className="mt-0.5 shrink-0" />
                       {r.deposit.high ? 'Much higher than usual. Most Bengaluru owners accept 2–6 months.' : 'A bit higher than similar flats.'}
                     </p>
                   )}
                 </>
               ) : (
-                <p className="mt-2 text-sm text-slate-400">The message doesn't mention a deposit. Similar flats here usually ask a few months; confirm it before paying anything.</p>
+                <p className="mt-2 text-sm text-muted">The message doesn't mention a deposit. Similar flats here usually ask a few months; confirm it before paying anything.</p>
               )}
             </section>
 
             <section className="glass rounded-2xl p-5">
-              <h2 className="font-bold text-white">Fair counter-offer</h2>
-              <p className="mt-2 text-sm text-slate-300">Rent: <strong className="text-white">{rupees(r.target.rent)}</strong>{r.target.rent === r.rent.asked && ' (keep as asked)'}</p>
+              <h2 className="font-bold text-ink">Fair counter-offer</h2>
+              <p className="mt-2 text-sm text-ink-2">Rent: <strong className="text-ink">{rupees(r.target.rent)}</strong>{r.target.rent === r.rent.asked && ' (keep as asked)'}</p>
               {r.target.depositMonths != null && (
-                <p className="text-sm text-slate-300">Deposit: <strong className="text-white">{r.target.depositMonths} months</strong> ({rupees(r.target.depositMonths * r.target.rent)})</p>
+                <p className="text-sm text-ink-2">Deposit: <strong className="text-ink">{r.target.depositMonths} months</strong> ({rupees(r.target.depositMonths * r.target.rent)})</p>
               )}
-              <p className="mt-3 text-xs text-slate-500">Based on {r.count} sample listings (demo data).</p>
+              <p className="mt-3 text-xs text-faint">Based on {r.count} sample listings (demo data).</p>
             </section>
           </div>
 
           <section className="glass rounded-2xl p-5">
             <div className="flex flex-wrap items-center gap-3">
-              <h2 className="mr-auto font-bold text-white">Message to the broker</h2>
+              <h2 className="mr-auto font-bold text-ink">Message to the broker</h2>
               {data.message && (
-                <div className="flex rounded-lg bg-white/[.04] p-1 text-sm" role="tablist" aria-label="Message language">
+                <div className="flex rounded-lg bg-ink/[.03] p-1 text-sm" role="tablist" aria-label="Message language">
                   {['English', 'Hinglish'].map((l) => (
                     <button
                       key={l}
@@ -248,7 +246,7 @@ export default function RentCheck() {
                         setLanguage(l)
                         check({ lang: l })
                       }}
-                      className={`rounded-md px-3 py-1 font-semibold ${language === l ? 'bg-violet text-white' : 'text-slate-400 hover:text-white'}`}
+                      className={`rounded-md px-3 py-1 font-semibold ${language === l ? 'bg-signal text-white' : 'text-muted hover:text-ink'}`}
                     >
                       {l}
                     </button>
@@ -258,24 +256,24 @@ export default function RentCheck() {
             </div>
             {data.message ? (
               <>
-                <p className="mt-3 whitespace-pre-line rounded-xl bg-white/[.04] p-4 text-sm leading-relaxed text-slate-200">{data.message}</p>
+                <p className="mt-3 whitespace-pre-line rounded-xl bg-ink/[.03] p-4 text-sm leading-relaxed text-ink">{data.message}</p>
                 <button type="button" onClick={copy} className={`${ghostButton} mt-3`}>
-                  {copied ? <><Check size={16} className="text-mint" /> Copied</> : <><Copy size={16} /> Copy message</>}
+                  {copied ? <><Check size={16} className="text-good" /> Copied</> : <><Copy size={16} /> Copy message</>}
                 </button>
               </>
             ) : (
-              <p className="mt-3 flex items-center gap-2 text-sm text-mint"><Check size={16} /> Rent and deposit look fair. No need to negotiate.</p>
+              <p className="mt-3 flex items-center gap-2 text-sm text-good"><Check size={16} /> Rent and deposit look fair. No need to negotiate.</p>
             )}
           </section>
 
           <section className="glass rounded-2xl p-5">
-            <h2 className="font-bold text-white">Similar flats we compared</h2>
-            <ul className="mt-3 divide-y divide-white/10 text-sm">
+            <h2 className="font-bold text-ink">Similar flats we compared</h2>
+            <ul className="mt-3 divide-y divide-ink/10 text-sm">
               {r.comparables.map((c) => (
                 <li key={c.code}>
-                  <Link to={`/flats/${c.code}`} className="flex flex-wrap justify-between gap-2 py-2 hover:text-violet-soft">
-                    <span className="text-slate-300">{c.code} · {c.bhk}BHK {c.locality} · {c.furnishing} · {c.sqft} sqft</span>
-                    <span className="font-semibold text-white">{rupees(c.rent)} <span className="font-normal text-slate-400">· {c.depositMonths} mo deposit</span></span>
+                  <Link to={`/flats/${c.code}`} className="flex flex-wrap justify-between gap-2 py-2 hover:text-signal">
+                    <span className="text-ink-2">{c.code} · {c.bhk}BHK {c.locality} · {c.furnishing} · {c.sqft} sqft</span>
+                    <span className="font-semibold text-ink">{rupees(c.rent)} <span className="font-normal text-muted">· {c.depositMonths} mo deposit</span></span>
                   </Link>
                 </li>
               ))}

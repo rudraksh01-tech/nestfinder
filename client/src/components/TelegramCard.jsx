@@ -37,7 +37,7 @@ export default function TelegramCard() {
   let body
   if (broker.isDemo) {
     body = (
-      <p className="text-sm text-slate-400">
+      <p className="text-sm text-muted">
         Alerts are off for the shared demo account, so visitors' numbers are never sent to someone else's phone.
         Create your own broker account to try them.
       </p>
@@ -45,15 +45,15 @@ export default function TelegramCard() {
   } else if (broker.telegramChatId) {
     body = (
       <div className="flex flex-wrap items-center gap-3">
-        <p className="mr-auto flex items-center gap-2 text-sm text-mint"><CheckCircle2 size={16} /> Connected. New leads are sent to your Telegram.</p>
+        <p className="mr-auto flex items-center gap-2 text-sm text-good"><CheckCircle2 size={16} /> Connected. New leads are sent to your Telegram.</p>
         <button type="button" disabled={status.busy} onClick={test} className={ghostButton}><Send size={16} /> Send test</button>
-        <button type="button" disabled={status.busy} onClick={disconnect} className="text-sm text-slate-400 hover:text-amber">Disconnect</button>
+        <button type="button" disabled={status.busy} onClick={disconnect} className="text-sm text-muted hover:text-warn">Disconnect</button>
       </div>
     )
   } else if (link) {
     body = (
-      <div className="space-y-3 text-sm text-slate-300">
-        <p>1. Open the bot in Telegram and press <b className="text-white">Start</b>.</p>
+      <div className="space-y-3 text-sm text-ink-2">
+        <p>1. Open the bot in Telegram and press <b className="text-ink">Start</b>.</p>
         <a href={link} target="_blank" rel="noreferrer" className={primaryButton}><ExternalLink size={16} /> Open @{info?.botUsername}</a>
         <p>2. Come back here and verify.</p>
         <button type="button" disabled={status.busy} onClick={verify} className={ghostButton}>{status.busy ? 'Checking…' : "I've pressed Start, verify"}</button>
@@ -62,7 +62,7 @@ export default function TelegramCard() {
   } else {
     body = (
       <div className="flex flex-wrap items-center gap-3">
-        <p className="mr-auto text-sm text-slate-400">Get a Telegram message the moment someone enquires or books a visit.</p>
+        <p className="mr-auto text-sm text-muted">Get a Telegram message the moment someone enquires or books a visit.</p>
         <button type="button" disabled={status.busy || !info} onClick={connect} className={primaryButton}>Connect Telegram</button>
       </div>
     )
@@ -70,10 +70,10 @@ export default function TelegramCard() {
 
   return (
     <section className="glass mt-6 rounded-2xl p-5">
-      <h2 className="mb-3 flex items-center gap-2 font-bold text-white"><BellRing size={18} className="text-violet-soft" /> Telegram alerts</h2>
+      <h2 className="mb-3 flex items-center gap-2 font-bold text-ink"><BellRing size={18} className="text-signal" /> Telegram alerts</h2>
       {body}
-      {status.error && <p className="mt-3 text-sm text-amber" role="alert">{status.error}</p>}
-      {status.note && <p className="mt-3 text-sm text-mint">{status.note}</p>}
+      {status.error && <p className="mt-3 text-sm text-warn" role="alert">{status.error}</p>}
+      {status.note && <p className="mt-3 text-sm text-good">{status.note}</p>}
     </section>
   )
 }

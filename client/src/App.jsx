@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import CompareBar from './components/CompareBar.jsx'
+import Footer from './components/Footer.jsx'
 import Navbar from './components/Navbar.jsx'
 import RequireBroker from './components/RequireBroker.jsx'
 import { useShortlist } from './context/ShortlistContext.jsx'
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/broker/listings/:code/edit" element={<RequireBroker><ListingForm /></RequireBroker>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
       <CompareBar />
     </div>
   )
