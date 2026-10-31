@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import Listings from './pages/Listings.jsx'
 import ListingDetail from './pages/ListingDetail.jsx'
 import Match from './pages/Match.jsx'
+import RentCheck from './pages/RentCheck.jsx'
 import BrokerLogin from './pages/BrokerLogin.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import ListingForm from './pages/ListingForm.jsx'
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/flats" element={<Listings />} />
         <Route path="/flats/:code" element={<ListingDetail />} />
         <Route path="/match" element={<Match />} />
+        <Route path="/rent-check" element={<RentCheck />} />
         <Route path="/broker/login" element={<BrokerLogin />} />
         <Route path="/broker" element={<RequireBroker><Dashboard /></RequireBroker>} />
         <Route path="/broker/listings/new" element={<RequireBroker><ListingForm /></RequireBroker>} />

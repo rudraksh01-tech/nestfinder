@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Sparkles, Target, Scale, BadgeIndianRupee } from 'lucide-react'
 
 const FEATURES = [
-  { icon: Target, title: 'AI Match Score', text: 'Tell us how you live. Every flat gets a % match and the reasons behind it.' },
-  { icon: BadgeIndianRupee, title: 'Fair Rent Check', text: 'Paste a broker message. See if the rent and deposit are fair for the area.' },
+  { icon: Target, title: 'AI Match Score', text: 'Tell us how you live. Every flat gets a % match and the reasons behind it.', to: '/match' },
+  { icon: BadgeIndianRupee, title: 'Fair Rent Check', text: 'Paste a broker message. See if the rent and deposit are fair for the area.', to: '/rent-check' },
   { icon: Scale, title: 'Compare & Decide', text: 'Shortlist flats and get a clear, reasoned recommendation.' },
 ]
 
@@ -33,13 +33,21 @@ export default function Home() {
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-3">
-        {FEATURES.map(({ icon: Icon, title, text }) => (
-          <article key={title} className="glass rounded-2xl p-6">
-            <Icon className="text-mint" />
-            <h2 className="mt-4 text-lg font-bold text-white">{title}</h2>
-            <p className="mt-2 text-slate-300">{text}</p>
-          </article>
-        ))}
+        {FEATURES.map(({ icon: Icon, title, text, to }) => {
+          const body = (
+            <>
+              <Icon className="text-mint" />
+              <h2 className="mt-4 text-lg font-bold text-white">{title}</h2>
+              <p className="mt-2 text-slate-300">{text}</p>
+              {!to && <p className="mt-3 text-xs text-slate-500">Coming soon</p>}
+            </>
+          )
+          return to ? (
+            <Link key={title} to={to} className="glass rounded-2xl p-6 transition hover:border-violet-soft/50">{body}</Link>
+          ) : (
+            <article key={title} className="glass rounded-2xl p-6">{body}</article>
+          )
+        })}
       </div>
 
       <p className="mt-10 text-sm text-slate-400">

@@ -24,6 +24,7 @@ export default function Navbar() {
           NestFinder
         </Link>
         <NavLink to="/match" className={linkClass}>Match</NavLink>
+        <NavLink to="/rent-check" className={linkClass}><span className="hidden sm:inline">Rent </span>check</NavLink>
         <NavLink to="/flats" className={linkClass}>Flats</NavLink>
         {broker ? (
           <>

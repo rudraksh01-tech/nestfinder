@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { AlertTriangle, ArrowLeft, Briefcase, Check, MapPin, TrainFront } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, BadgeIndianRupee, Briefcase, Check, MapPin, TrainFront } from 'lucide-react'
 import EnquiryForm from '../components/EnquiryForm.jsx'
 import { useFetch } from '../lib/useFetch.js'
 import { floorLabel, formatDate, rupees } from '../lib/format.js'
@@ -105,6 +105,12 @@ export default function ListingDetail() {
                 Higher than usual. Many Bengaluru owners accept 2–6 months; worth negotiating.
               </p>
             )}
+            <Link
+              to={`/rent-check?${new URLSearchParams({ code: l.code, locality: l.locality, bhk: l.bhk, rent: l.rent, depositMonths: l.depositMonths, furnishing: l.furnishing })}`}
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-violet-soft hover:underline"
+            >
+              <BadgeIndianRupee size={15} /> Is this rent fair?
+            </Link>
           </section>
 
           <section className="glass rounded-2xl p-5">
