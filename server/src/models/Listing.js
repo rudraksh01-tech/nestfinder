@@ -6,6 +6,7 @@ const listingSchema = new Schema(
   {
     code: { type: String, required: true, unique: true }, // e.g. NF-001
     isDemo: { type: Boolean, default: true },
+    broker: { type: Schema.Types.ObjectId, ref: 'Broker', index: true },
     locality: { type: String, required: true, index: true },
     // GeoJSON point ([lon, lat] order) so we can run $near queries later.
     location: {

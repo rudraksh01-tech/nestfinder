@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import mongoose from 'mongoose';
 import { Listing } from '../models/Listing.js';
+import { httpError } from '../lib/errors.js';
 
 const router = Router();
 
@@ -15,7 +16,7 @@ const SORTS = {
 function num(query, key) {
   if (query[key] === undefined || query[key] === '') return undefined;
   const n = Number(query[key]);
-  if (!Number.isFinite(n)) throw Object.assign(new Error(`${key} must be a number`), { status: 400 });
+  if (!Number.isFinite(n)) throw httpError(400, `${key} must be a number`);
   return n;
 }
 const list = (value) => (value ? String(value).split(',').map((s) => s.trim()).filter(Boolean) : []);

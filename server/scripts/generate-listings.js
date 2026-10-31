@@ -1,14 +1,11 @@
 // Generates ~120 sample (demo) flat listings around real Bengaluru localities.
 // Uses a seeded random generator so the same data comes out every run.
 // Run: node scripts/generate-listings.js  (reads data/places.json + data/metro-stations.json, writes data/listings.json)
-import { readFile, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
+import { localities, nearestMetro, techParkDistances } from '../src/lib/geo.js';
 
 const SEED = 2026;
 const dataDir = new URL('../data/', import.meta.url);
-const readJson = async (file) => JSON.parse(await readFile(new URL(file, dataDir), 'utf8'));
-
-const { localities, techParks } = await readJson('places.json');
-const stations = await readJson('metro-stations.json');
 
 // mulberry32: tiny deterministic PRNG.
 function mulberry32(seed) {
@@ -30,16 +27,6 @@ const weighted = (pairs) => {
   return pairs.at(-1)[0];
 };
 const roundTo = (n, step) => Math.round(n / step) * step;
-
-// Straight-line distance in km between two lat/lon points.
-function haversineKm(a, b) {
-  const toRad = (d) => (d * Math.PI) / 180;
-  const dLat = toRad(b.lat - a.lat);
-  const dLon = toRad(b.lon - a.lon);
-  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLon / 2) ** 2;
-  return 2 * 6371 * Math.asin(Math.sqrt(h));
-}
-const km = (n) => Math.round(n * 10) / 10;
 
 // Approximate monthly rent (INR) for an unfurnished 1BHK, plus how busy the area is
 // and how family-oriented landlords there tend to be. Demo assumptions, not market data.
@@ -85,15 +72,6 @@ const BUILDING = {
 };
 const AMENITIES = ['Gym', 'Swimming pool', 'Power backup', 'Lift', '24x7 security', 'Clubhouse', "Children's play area", 'CCTV'];
 const WATER = [['Cauvery (BWSSB)', 4], ['Borewell', 2], ['Cauvery + borewell', 3], ['Tanker supply', 1]];
-
-function nearestMetro(point) {
-  let best = null;
-  for (const s of stations) {
-    const d = haversineKm(point, s);
-    if (!best || d < best.d) best = { s, d };
-  }
-  return { name: best.s.name, lines: best.s.lines, km: km(best.d) };
-}
 
 function describe(l) {
   const building = l.buildingType.toLowerCase();
@@ -170,7 +148,7 @@ for (const place of localities) {
       noise: chance(0.25) ? pick(['low', 'medium', 'high']) : area.noise,
       availableFrom,
       nearestMetro: nearestMetro(point),
-      techParks: techParks.map((t) => ({ name: t.name, km: km(haversineKm(point, t)) })),
+      techParks: techParkDistances(point),
     };
     listing.description = describe(listing);
     listings.push(listing);
