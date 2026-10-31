@@ -1,5 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 import { Sparkles } from 'lucide-react'
+import ChatPanel from '../components/ChatPanel.jsx'
 import ListingCard from '../components/ListingCard.jsx'
 import { useFetch } from '../lib/useFetch.js'
 import { fieldClass, labelClass } from '../lib/ui.js'
@@ -31,6 +32,13 @@ export default function Match() {
   const hasPrefs = [...prefs.keys()].length > 0
   const { data, error, loading } = useFetch(hasPrefs ? `/api/match?${prefs}` : null)
 
+  // The AI chat returns a full set of preferences; replace the form with them.
+  const applyPrefs = (next) => {
+    const out = new URLSearchParams()
+    for (const [k, v] of Object.entries(next)) if (PREF_KEYS.includes(k) && v !== undefined && v !== null) out.set(k, String(v))
+    setParams(out, { replace: true })
+  }
+
   const get = (k) => params.get(k) ?? ''
   const set = (k, v) => {
     const next = new URLSearchParams(params)
@@ -45,7 +53,7 @@ export default function Match() {
         <Sparkles size={16} /> AI Match Score
       </p>
       <h1 className="mt-4 text-3xl font-extrabold text-white">Find flats that fit how you live</h1>
-      <p className="mt-1 text-sm text-slate-400">Tell us what matters. Every flat gets a % match with the reasons behind it.</p>
+      <p className="mt-1 text-sm text-slate-400">Chat with the assistant or use the filters. Every flat gets a % match with the reasons behind it.</p>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[300px_1fr]">
         <aside className="glass h-fit space-y-4 rounded-2xl p-5">
@@ -89,11 +97,12 @@ export default function Match() {
         </aside>
 
         <section aria-live="polite">
+          <ChatPanel prefs={Object.fromEntries(prefs)} onPrefs={applyPrefs} />
           {!hasPrefs && (
             <div className="glass rounded-2xl p-10 text-center">
               <Sparkles className="mx-auto text-violet-soft" size={32} />
-              <p className="mt-3 font-semibold text-white">Pick a few preferences to see your matches</p>
-              <p className="mt-1 text-sm text-slate-400">Start with where you work and your budget.</p>
+              <p className="mt-3 font-semibold text-white">Tell the assistant about yourself, or pick a few filters</p>
+              <p className="mt-1 text-sm text-slate-400">Where you work and your budget are the best place to start.</p>
             </div>
           )}
           {error && <p className="glass rounded-2xl p-6 text-amber">{error}</p>}
