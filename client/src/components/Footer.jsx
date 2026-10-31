@@ -26,7 +26,7 @@ function LocalTime() {
 // Light, editorial footer in the same serif as the hero, ending in a big cropped wordmark.
 export default function Footer() {
   return (
-    <footer className="mt-32 overflow-hidden border-t border-ink/10">
+    <footer className="mt-20 overflow-hidden border-t border-ink/10">
       <div className="mx-auto max-w-6xl px-5 pt-16 sm:px-8 sm:pt-20">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
           <div>

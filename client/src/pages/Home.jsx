@@ -463,7 +463,7 @@ function Faq() {
 
 function Closing() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-28 text-center sm:px-8">
+    <section className="mx-auto max-w-6xl px-5 pb-4 pt-28 text-center sm:px-8">
       <h2 className="mx-auto max-w-3xl font-display text-5xl leading-[1] sm:text-7xl">Start with where you work.</h2>
       <p className="mx-auto mt-5 max-w-md text-ink-2">Everything else (budget, pets, the metro walk) can come up in conversation.</p>
       <Link to="/match" className="mt-8 inline-flex items-center gap-2 rounded-full bg-signal px-7 py-3.5 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.8)] transition hover:bg-signal-deep">
