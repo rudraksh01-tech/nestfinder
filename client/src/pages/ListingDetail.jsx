@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { AlertTriangle, ArrowLeft, Briefcase, Check, MapPin, TrainFront } from 'lucide-react'
-import { getJson } from '../lib/api.js'
+import EnquiryForm from '../components/EnquiryForm.jsx'
+import { useFetch } from '../lib/useFetch.js'
 import { floorLabel, formatDate, rupees } from '../lib/format.js'
 
 // Free OpenStreetMap embed: no API key needed.
@@ -21,21 +21,7 @@ function Fact({ label, value }) {
 
 export default function ListingDetail() {
   const { code } = useParams()
-  // `code` records which flat the result belongs to; a mismatch means we are loading.
-  const [result, setResult] = useState({ code: null, error: null, listing: null })
-
-  useEffect(() => {
-    const ctrl = new AbortController()
-    getJson(`/api/listings/${encodeURIComponent(code)}`, { signal: ctrl.signal })
-      .then((listing) => setResult({ code, error: null, listing }))
-      .catch((err) => {
-        if (err.name !== 'AbortError') setResult({ code, error: err.message, listing: null })
-      })
-    return () => ctrl.abort()
-  }, [code])
-
-  const loading = result.code !== code
-  const { error, listing: l } = result
+  const { data: l, error, loading } = useFetch(`/api/listings/${encodeURIComponent(code)}`)
   const back = (
     <Link to="/flats" className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white">
       <ArrowLeft size={16} /> All flats
@@ -59,7 +45,7 @@ export default function ListingDetail() {
             {l.bhk}BHK {l.furnishing.toLowerCase()} flat
           </h1>
         </div>
-        <div className="text-right">
+        <div className="sm:text-right">
           <p className="text-3xl font-extrabold text-white">{rupees(l.rent)}<span className="text-base font-medium text-slate-400"> /month</span></p>
           {l.maintenance > 0 && <p className="text-sm text-slate-400">+ {rupees(l.maintenance)} maintenance</p>}
         </div>
@@ -107,6 +93,8 @@ export default function ListingDetail() {
         </div>
 
         <aside className="space-y-6">
+          <EnquiryForm listingCode={l.code} />
+
           <section className={`glass rounded-2xl p-5 ${highDeposit ? 'border-amber/40' : ''}`}>
             <h2 className="font-bold text-white">Deposit</h2>
             <p className="mt-2 text-2xl font-extrabold text-white">{rupees(l.deposit)}</p>

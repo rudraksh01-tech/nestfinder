@@ -1,11 +1,9 @@
 import { RotateCcw } from 'lucide-react'
+import { fieldClass as field, labelClass as label } from '../lib/ui.js'
 
 const BUDGETS = [15000, 20000, 25000, 30000, 40000, 50000, 70000]
 const METRO_KM = [0.5, 1, 1.5, 2, 3, 5]
 const PARK_KM = [3, 5, 8, 10, 15]
-
-const field = 'w-full rounded-lg border border-white/10 bg-ink-2 px-3 py-2 text-sm text-white outline-none focus:border-violet-soft'
-const label = 'mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-400'
 
 function Select({ id, title, value, onChange, children }) {
   return (

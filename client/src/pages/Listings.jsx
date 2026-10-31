@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, SearchX, SlidersHorizontal } from 'lucide-react'
 import Filters from '../components/Filters.jsx'
 import ListingCard from '../components/ListingCard.jsx'
-import { getJson } from '../lib/api.js'
+import { useFetch } from '../lib/useFetch.js'
 
 const SORTS = [
   ['rent_asc', 'Rent: low to high'],
@@ -14,29 +14,10 @@ const SORTS = [
 
 export default function Listings() {
   const [params, setParams] = useSearchParams()
-  const [meta, setMeta] = useState(null)
   const [showFilters, setShowFilters] = useState(false) // mobile only; always visible on large screens
-  // `query` records which URL the data/error belongs to; a mismatch means we are loading.
-  const [result, setResult] = useState({ query: null, error: null, data: null })
-
-  useEffect(() => {
-    const ctrl = new AbortController()
-    getJson('/api/listings/meta', { signal: ctrl.signal }).then(setMeta).catch(() => {})
-    return () => ctrl.abort()
-  }, [])
-
-  // Refetch whenever the URL query changes. Aborting stops an older, slower
-  // response from overwriting a newer one when filters change quickly.
-  const query = params.toString()
-  useEffect(() => {
-    const ctrl = new AbortController()
-    getJson(`/api/listings?${query}`, { signal: ctrl.signal })
-      .then((data) => setResult({ query, error: null, data }))
-      .catch((err) => {
-        if (err.name !== 'AbortError') setResult({ query, error: err.message, data: null })
-      })
-    return () => ctrl.abort()
-  }, [query])
+  const { data: meta } = useFetch('/api/listings/meta')
+  // Refetches whenever the URL query changes; previous results stay on screen (dimmed) meanwhile.
+  const { data, error, loading } = useFetch(`/api/listings?${params}`)
 
   // Changing any filter goes back to page 1.
   const set = (key, value) => {
@@ -47,10 +28,6 @@ export default function Listings() {
     setParams(next)
   }
 
-  const loading = result.query !== query
-  const error = loading ? null : result.error
-  // Keep showing the previous results (dimmed) while the next page loads.
-  const data = result.data
   const page = data?.page ?? 1
   const activeFilters = [...params.keys()].filter((k) => k !== 'sort' && k !== 'page').length
 

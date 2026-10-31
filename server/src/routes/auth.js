@@ -6,18 +6,28 @@ import { clearAuthCookie, requireBroker, setAuthCookie } from '../middleware/aut
 
 const router = Router();
 
-// Slows down password guessing: 10 attempts per 15 minutes per IP.
-const authLimiter = rateLimit({
+// Slows down password guessing: 10 failed attempts per 15 minutes per IP.
+// Successful logins are not counted, so a real user is never locked out by logging in often.
+const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   limit: 10,
+  skipSuccessfulRequests: true,
   standardHeaders: 'draft-8',
   legacyHeaders: false,
-  message: { error: 'Too many attempts, please try again in a few minutes' },
+  message: { error: 'Too many failed attempts, please try again in a few minutes' },
+});
+// Limits account creation: 5 per hour per IP.
+const registerLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 5,
+  standardHeaders: 'draft-8',
+  legacyHeaders: false,
+  message: { error: 'Too many sign-ups from this network, please try again later' },
 });
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-router.post('/register', authLimiter, async (req, res) => {
+router.post('/register', registerLimiter, async (req, res) => {
   const { name, email, password, phone, agency } = req.body ?? {};
   if (!name?.trim()) throw httpError(400, 'Name is required');
   if (!EMAIL_RE.test(email ?? '')) throw httpError(400, 'Enter a valid email');
@@ -31,7 +41,7 @@ router.post('/register', authLimiter, async (req, res) => {
   res.status(201).json({ broker });
 });
 
-router.post('/login', authLimiter, async (req, res) => {
+router.post('/login', loginLimiter, async (req, res) => {
   const { email, password } = req.body ?? {};
   const broker = email && (await Broker.findOne({ email: String(email).toLowerCase().trim() }));
   // Same message for unknown email and wrong password, so emails cannot be probed.

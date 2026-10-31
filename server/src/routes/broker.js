@@ -46,7 +46,7 @@ router.patch('/leads/:id', async (req, res) => {
   const lead = await Lead.findOneAndUpdate(
     { _id: req.params.id, broker: req.brokerId },
     { status },
-    { new: true },
+    { returnDocument: 'after', runValidators: true },
   ).populate('listing', 'code locality bhk rent');
   if (!lead) throw httpError(404, 'Lead not found');
   res.json({ lead });
