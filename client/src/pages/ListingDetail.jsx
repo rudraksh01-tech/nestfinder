@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { AlertTriangle, ArrowLeft, BadgeIndianRupee, Briefcase, Check, MapPin, TrainFront } from 'lucide-react'
 import EnquiryForm from '../components/EnquiryForm.jsx'
+import ShortlistButton from '../components/ShortlistButton.jsx'
 import { useFetch } from '../lib/useFetch.js'
 import { floorLabel, formatDate, rupees } from '../lib/format.js'
 
@@ -44,6 +45,7 @@ export default function ListingDetail() {
           <h1 className="mt-1 text-3xl font-extrabold text-white sm:text-4xl">
             {l.bhk}BHK {l.furnishing.toLowerCase()} flat
           </h1>
+          <ShortlistButton code={l.code} withLabel className="mt-3" />
         </div>
         <div className="sm:text-right">
           <p className="text-3xl font-extrabold text-white">{rupees(l.rent)}<span className="text-base font-medium text-slate-400"> /month</span></p>

@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { savePrefs } from '../context/ShortlistContext.jsx'
 import { Sparkles } from 'lucide-react'
 import ChatPanel from '../components/ChatPanel.jsx'
 import ListingCard from '../components/ListingCard.jsx'
@@ -31,6 +33,12 @@ export default function Match() {
   const prefs = new URLSearchParams([...params].filter(([k]) => PREF_KEYS.includes(k)))
   const hasPrefs = [...prefs.keys()].length > 0
   const { data, error, loading } = useFetch(hasPrefs ? `/api/match?${prefs}` : null)
+
+  // Remember these preferences so Compare can score the shortlist the same way.
+  const prefsQuery = prefs.toString()
+  useEffect(() => {
+    if (prefsQuery) savePrefs(prefsQuery)
+  }, [prefsQuery])
 
   // The AI chat returns a full set of preferences; replace the form with them.
   const applyPrefs = (next) => {
