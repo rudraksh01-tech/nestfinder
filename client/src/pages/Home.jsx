@@ -376,17 +376,47 @@ function AskAnything() {
   )
 }
 
-const FAQS = [
-  ['Are these real listings?', 'No. The 120 flats and the brokers are sample data made for this demo. The map, the 82 Namma Metro stations, the tech parks and every distance are real (from OpenStreetMap).'],
-  ['How is the match score worked out?', 'From fixed rules, not a guess. Budget, commute, metro, pets, tenant type and a few comforts each carry a weight, and anything you did not mention is left out. A flat that breaks a dealbreaker, like no pets when you have one, cannot score above 40%. The AI only turns your words into preferences and explains the result.'],
-  ['Can I type in Hindi or Hinglish?', 'Yes. Write the way you would text a friend, in English, Hindi or Hinglish, and the assistant replies in the same language.'],
-  ['How do you know if a rent is fair?', 'Your quote is compared with flats of the same size in the same area. If there are too few, nearby areas within 4 km, then 8 km, are added, and you are told how wide it looked. You get the median, the usual range and a fair counter-offer.'],
-  ['What happens to my phone number?', 'An enquiry goes only to the broker of that flat. On the shared demo broker account, visitor numbers are masked, and numbers are removed before anything is sent to the AI monitoring tools.'],
-  ['Does it cost anything?', 'No. There is no sign-up for flat seekers and no brokerage. It is a portfolio project.'],
+const FAQ_GROUPS = [
+  {
+    name: 'Finding a flat',
+    items: [
+      ['Are these real listings?', 'No. The 120 flats and the brokers are sample data made for this demo. The map, the 82 Namma Metro stations, the tech parks and every distance are real (from OpenStreetMap).'],
+      ['Which parts of Bengaluru does it cover?', '25 neighbourhoods, from Yelahanka and Hebbal in the north to Electronic City in the south, and from Whitefield in the east to Vijayanagar in the west. Distances are worked out to six tech parks: Manyata, ITPL Whitefield, Electronic City, Bagmane, Embassy Tech Village and Prestige Tech Park.'],
+      ['Can I type in Hindi or Hinglish?', 'Yes. Write the way you would text a friend, in English, Hindi or Hinglish, and the assistant replies in the same language.'],
+      ['How do you know if a rent is fair?', 'Your quote is compared with flats of the same size in the same area. If there are too few, nearby areas within 4 km, then 8 km, are added, and you are told how wide it looked. You get the median, the usual range and a fair counter-offer.'],
+      ['What deposit is normal in Bengaluru?', "Many owners accept two to six months' rent. NestFinder flags a deposit above six months, or above what similar flats nearby ask, and suggests what to counter with."],
+      ['Are the commute distances real travel times?', 'No. They are straight-line distances in kilometres, so treat them as a guide. The road distance is longer, and peak-hour traffic can make the same trip take twice as long.'],
+      ['How do I contact a broker or book a visit?', 'Open a flat and use "Contact the broker". Tick "I want to visit" to pick a date within the next 60 days, and the broker sees it on their dashboard. The brokers here are sample accounts, so a dummy number is fine.'],
+      ['Is my shortlist saved?', 'Yes, in your browser, with no login needed. You can shortlist up to four flats. Clearing your browser data or switching device starts a fresh list.'],
+      ['Does it cost anything?', 'No. There is no sign-up for flat seekers and no brokerage. It is a portfolio project.'],
+    ],
+  },
+  {
+    name: 'Data and AI',
+    items: [
+      ['How is the match score worked out?', 'From fixed rules, not a guess. Budget, commute, metro, pets, tenant type and a few comforts each carry a weight, and anything you did not mention is left out. A flat that breaks a dealbreaker, like no pets when you have one, cannot score above 40%. The AI only turns your words into preferences and explains the result.'],
+      ['Which AI does it use?', 'An open model (gpt-oss-120b) served by Groq. It reads your message, writes the replies and drafts counter-offers. Match scores and rent verdicts never come from the model; they come from rules in the code.'],
+      ['Can the AI make things up?', 'It only sees the facts passed to it for each answer, and when comparing it can only pick from your own shortlist. It can still word something badly, which is why every flat shows the reasons behind its score.'],
+      ['How does Compare pick one flat?', 'It weighs your preferences first, then value for money, the metro walk and the deposit. You get three reasons with real numbers, when the runner-up would be the better choice, and one thing to check before you pay.'],
+      ['What happens to my phone number?', 'An enquiry goes only to the broker of that flat. On the shared demo broker account, visitor numbers are masked, and numbers are removed before anything is sent to the AI monitoring tools.'],
+      ['Where does the map data come from?', 'OpenStreetMap. The metro stations, neighbourhoods and tech parks were pulled from its open data. Map © OpenStreetMap contributors.'],
+    ],
+  },
+  {
+    name: 'For brokers',
+    items: [
+      ['Can I list my flats here?', 'Yes. Create a broker account and add a flat with its area, rent and details. The nearest metro and the distance to every tech park are worked out for you.'],
+      ['How do I hear about new leads?', 'Every enquiry and visit booking shows on your dashboard, where you can mark it contacted, visit booked or closed. Turn on browser notifications to hear about a new lead straight away, even with the site closed.'],
+      ['Can I try it without signing up?', 'Yes. Use the demo broker login on the "For brokers" page. Demo data resets regularly, and visitors\' numbers are masked on that shared account.'],
+    ],
+  },
 ]
 
-// Native <details> keeps it accessible and works without JavaScript.
+// Native <details> keeps each answer accessible and working without JavaScript; tabs pick the group.
 function Faq() {
+  const [group, setGroup] = useState(0)
+  const { items } = FAQ_GROUPS[group]
+
   return (
     <section className="mx-auto max-w-6xl px-5 pt-28 sm:px-8" aria-labelledby="faq-title">
       <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
@@ -394,9 +424,26 @@ function Faq() {
           <p className="eyebrow">FAQ</p>
           <h2 id="faq-title" className="mt-3 font-display text-4xl leading-[1.02] sm:text-5xl">Questions people ask first.</h2>
           <p className="mt-4 max-w-xs text-[0.95rem] leading-relaxed text-ink-2">Something else on your mind? Ask the assistant; it knows the flats better than this page does.</p>
+          <div className="mt-8 flex flex-wrap gap-2 lg:flex-col lg:items-start" role="tablist" aria-label="FAQ topics">
+            {FAQ_GROUPS.map((g, i) => (
+              <button
+                key={g.name}
+                type="button"
+                role="tab"
+                aria-selected={group === i}
+                onClick={() => setGroup(i)}
+                className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[0.9rem] transition ${
+                  group === i ? 'bg-ink text-porcelain' : 'text-ink-2 hover:bg-ink/[.05] hover:text-ink'
+                }`}
+              >
+                {g.name}
+                <span className={`font-mono text-[0.7rem] ${group === i ? 'text-porcelain/60' : 'text-faint'}`}>{g.items.length}</span>
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="border-t border-ink/10">
-          {FAQS.map(([q, a]) => (
+        <div className="border-t border-ink/10" role="tabpanel" aria-label={FAQ_GROUPS[group].name}>
+          {items.map(([q, a]) => (
             <details key={q} className="group border-b border-ink/10">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[1.05rem] font-medium marker:hidden [&::-webkit-details-marker]:hidden">
                 {q}
