@@ -18,27 +18,28 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="relative mx-auto flex max-w-6xl justify-center">
-        <div className="relative -mt-4 w-[min(190vw,1060px)] shrink-0 sm:-mt-10">
+        <div className="relative -mt-4 w-[min(200vw,1180px)] shrink-0 sm:-mt-10">
           <div className="absolute inset-[12%] rounded-full bg-signal/25 blur-3xl" />
           <Globe />
           {/* Darker centre behind the words, so the dots never fight the text. */}
-          <div className="pointer-events-none absolute inset-[13%] rounded-full bg-[radial-gradient(circle,rgb(13_19_33/0.88)_32%,rgb(13_19_33/0.55)_52%,rgb(13_19_33/0)_72%)]" />
+          <div className="pointer-events-none absolute inset-[11%] rounded-full bg-[radial-gradient(circle,rgb(13_19_33/0.88)_32%,rgb(13_19_33/0.55)_52%,rgb(13_19_33/0)_72%)]" />
         </div>
 
         {/* Text layer: clicks pass through to the globe (so it can still be dragged) except on the buttons. */}
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-porcelain">
-          <p className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-porcelain/60">AI flat finder · Bengaluru</p>
-          <h1 className="mt-4 max-w-[17ch] font-display text-[2.8rem] leading-[0.98] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(13_19_33/0.6)] sm:text-[4.2rem] lg:text-[4.8rem]">
-            Tell the AI how you live. <em className="text-[#9db3ff]">It finds the flat.</em>
+          <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-porcelain/65 sm:text-[0.85rem]">AI flat finder · Bengaluru</p>
+          <h1 className="mt-5 max-w-[16ch] font-display sm:max-w-none text-[3.3rem] leading-[0.95] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(13_19_33/0.6)] sm:text-[5.4rem] lg:text-[6.6rem]">
+            Tell the AI how you live. <br className="hidden sm:block" />
+            <em className="text-[#9db3ff]">It finds the flat.</em>
           </h1>
-          <p className="mt-5 max-w-[30rem] text-[0.98rem] leading-relaxed text-porcelain/80 sm:text-[1.05rem]">
+          <p className="mt-7 max-w-[36rem] text-[1.08rem] leading-relaxed text-porcelain/85 sm:text-[1.3rem]">
             Type your office, budget and needs in plain words. The AI matches you to flats and checks if the rent is fair.
           </p>
-          <div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-3">
-            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
-              Ask the AI <ArrowRight size={18} />
+          <div className="pointer-events-auto mt-9 flex flex-wrap items-center justify-center gap-4">
+            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-8 py-4 text-lg font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
+              Ask the AI <ArrowRight size={20} />
             </Link>
-            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 font-medium text-porcelain backdrop-blur transition hover:bg-white/20">
+            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-8 py-4 text-lg font-medium text-porcelain backdrop-blur transition hover:bg-white/20">
               Check a rent
             </Link>
           </div>
