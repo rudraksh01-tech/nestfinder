@@ -51,11 +51,11 @@ Return every field. Use null when the conversation does not mention it; keep ear
   CV Raman Nagar/Old Airport Road -> Bagmane Tech Park; Outer Ring Road/Bellandur/Ecospace side -> Embassy Tech Village;
   Marathahalli/Kadubeesanahalli -> Prestige Tech Park. If they work from home or the office is elsewhere, null.
 - budget: monthly rent in rupees as an integer ("25k" = 25000, "1.2 lakh" = 120000). If they give a range, use the top.
-- bhk: 1, 2 or 3 ("single room"/"1RK" = 1).
+- bhk: 1, 2 or 3, only when they say it ("single room"/"1RK" = 1). Do not guess it from living alone or family size.
 - tenant: only when they say who will live there. "Bachelors" for someone living alone, students or friends sharing; "Family" for couples or families. Do not guess from their job.
 - pets: true if they have or plan to have a pet; false if they say no pets.
 - gym, quiet, car (needs car parking), metro (wants metro nearby): true only if they ask for it; false if they say they don't care.
-- language: the language of their latest message.
+- language: the language of their latest message. Choose "Hinglish" only when it clearly uses Hindi words in Latin letters; if unsure, "English".
 - onTopic: false only if the latest message has nothing to do with finding or renting a flat.`;
 
 const REPLY_PROMPT = `You are NestFinder, a friendly flat-finding assistant for Bengaluru. This is a demo with sample listings.

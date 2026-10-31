@@ -4,10 +4,12 @@ import { Bot, SendHorizontal, Sparkles } from 'lucide-react'
 import { sendJson } from '../lib/api.js'
 import { fieldClass } from '../lib/ui.js'
 
+// English first; one Hinglish example shows the assistant understands it too.
 const EXAMPLES = [
-  'Manyata me job hai, 25k budget, ek kutta hai, metro paas chahiye',
+  'I work at Manyata Tech Park, budget 25k, I have a dog and want the metro nearby',
   'Family of 4, office in Whitefield, need a quiet 3BHK with car parking under 50k',
-  'मुझे इलेक्ट्रॉनिक सिटी के पास 1BHK चाहिए, बजट 15 हज़ार',
+  'Electronic City office, 1BHK under 15k with a gym',
+  'Bagmane me job hai, 20k budget, akela rehta hoon',
 ]
 
 // Chat that turns plain words into match preferences. `prefs` is the current form (from the URL);
