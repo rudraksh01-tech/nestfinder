@@ -11,7 +11,7 @@ const LOCK = [0.3, 0.36, 0.44, 0.48]
 const CHAT = [0.44, 0.5]
 
 const STEPS = [
-  { from: 0.36, title: 'Say it your way', text: 'English, Hindi or Hinglish. “Manyata me job, 25k, ek kutta hai” is a perfectly good search.' },
+  { from: 0.36, title: 'Say it your way', text: 'Type it the way you would say it. English works, and so do Hindi and Hinglish.' },
   { from: 0.6, title: 'Get reasons, not just results', text: 'Every flat is scored against your day, and the catch is spelled out: the deposit, the metro walk, the owner who says family only.' },
   { from: 0.8, title: 'Decide, then negotiate', text: 'Shortlist a few, compare them side by side, and get a polite counter-offer ready to send the broker.' },
 ]
@@ -82,12 +82,12 @@ function Screen({ progress }) {
             Hi! You can ask me anything here: areas, rent, commute, deposits.
           </Reveal>
           <Reveal progress={progress} at={0.52} className="ml-auto w-[80%] rounded-2xl rounded-br-md bg-signal px-3 py-2 text-white">
-            Manyata me job hai, 25k budget, ek kutta bhi hai
+            I work at Manyata. My budget is 25k and I have a dog.
           </Reveal>
           {/* The typing dots sit in the reply's slot, so no gap is left once the reply arrives. */}
           <div className="relative">
             <Reveal progress={progress} at={0.61} className="w-[86%] rounded-2xl rounded-bl-md bg-white px-3 py-2 shadow-sm">
-              Samajh gaya. These three fit your budget, commute and your dog:
+              Got it. These three fit your budget, your commute and your dog:
             </Reveal>
             <div className="absolute left-0 top-0"><Typing progress={progress} /></div>
           </div>
