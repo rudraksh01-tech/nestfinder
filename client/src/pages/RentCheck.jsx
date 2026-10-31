@@ -33,7 +33,7 @@ function RangeBar({ rent }) {
       <div className="relative h-3 rounded-full bg-ink/[.06]">
         <div className="absolute inset-y-0 rounded-full bg-signal/50" style={{ left: pos(rent.low), width: `calc(${pos(rent.high)} - ${pos(rent.low)})` }} />
         <div className="absolute -inset-y-1 w-0.5 bg-ink" style={{ left: pos(rent.median) }} title="Median" />
-        <div className="absolute -top-2 size-7 -translate-x-1/2 rounded-full border-2 border-white bg-warn shadow" style={{ left: pos(rent.asked) }} title="Asked rent" />
+        <div className="absolute -top-2 size-7 -translate-x-1/2 rounded-full border-2 border-paper bg-warn shadow" style={{ left: pos(rent.asked) }} title="Asked rent" />
       </div>
       <div className="mt-3 flex justify-between text-xs text-muted">
         <span>{rupees(lo)}</span>

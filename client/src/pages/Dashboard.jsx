@@ -84,7 +84,7 @@ function Leads({ status, onChanged }) {
               aria-label={`Status for ${lead.name}`}
               value={lead.status}
               onChange={(e) => changeStatus(lead, e.target.value)}
-              className="rounded-lg border border-ink/10 bg-white/80 px-2 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
+              className="rounded-lg border border-ink/10 bg-paper/80 px-2 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
             >
               {Object.entries(STATUS_LABELS).map(([v, text]) => <option key={v} value={v}>{text}</option>)}
             </select>
@@ -178,7 +178,7 @@ export default function Dashboard() {
             aria-label="Filter leads by status"
             value={status}
             onChange={(e) => setParams(e.target.value ? { status: e.target.value } : {})}
-            className="ml-auto rounded-lg border border-ink/10 bg-white/80 px-3 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
+            className="ml-auto rounded-lg border border-ink/10 bg-paper/80 px-3 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
           >
             <option value="">All statuses</option>
             {Object.entries(STATUS_LABELS).map(([v, text]) => (

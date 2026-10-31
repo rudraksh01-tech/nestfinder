@@ -60,7 +60,7 @@ export default function Listings() {
             <label className="flex items-center gap-2 text-sm text-muted">
               Sort
               <select
-                className="rounded-lg border border-ink/10 bg-white/80 px-3 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
+                className="rounded-lg border border-ink/10 bg-paper/80 px-3 py-1.5 text-sm text-ink outline-none focus:border-signal-soft"
                 value={params.get('sort') ?? 'rent_asc'}
                 onChange={(e) => set('sort', e.target.value)}
               >

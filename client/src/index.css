@@ -17,6 +17,7 @@
   --color-good: #0e8f63;
   --color-warn: #b5650a;
   --color-bad: #c0352b;
+  --color-paper: #ffffff;
 
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
@@ -24,6 +25,61 @@
 
   --shadow-soft: 0 1px 2px rgb(13 19 33 / 0.04), 0 8px 24px -12px rgb(13 19 33 / 0.12);
   --shadow-lift: 0 2px 6px rgb(13 19 33 / 0.05), 0 24px 48px -24px rgb(13 19 33 / 0.25);
+}
+
+/*
+  Dark theme: the same token names with dark values, so every bg-porcelain / text-ink utility
+  follows. .theme-light puts a part of the page back on the light values (the phone mock, the
+  "Ask anything" panel, text on the white globe), because those are drawn to look the same in
+  both themes. The glass panels read their colours from variables for the same reason.
+*/
+:root,
+.theme-light {
+  --glass-top: rgb(255 255 255 / 0.82);
+  --glass-bottom: rgb(255 255 255 / 0.6);
+  --glass-edge: rgb(255 255 255 / 0.95);
+  --glass-highlight: rgb(255 255 255);
+  --glass-inset: rgb(255 255 255 / 0.85);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-porcelain: #0b0e15;
+  --color-porcelain-2: #141925;
+  --color-ink: #eceae3;
+  --color-ink-2: #c2c6d0;
+  --color-muted: #8f96a7;
+  --color-faint: #646b7c;
+  --color-signal: #3f66ff;
+  --color-signal-deep: #2c55f2;
+  --color-signal-soft: #1c2754;
+  --color-good: #2bb583;
+  --color-warn: #e08a2c;
+  --color-bad: #e5574c;
+  --color-paper: #151a25;
+  --glass-top: rgb(28 34 48 / 0.78);
+  --glass-bottom: rgb(20 25 37 / 0.62);
+  --glass-edge: rgb(255 255 255 / 0.08);
+  --glass-highlight: rgb(255 255 255 / 0.06);
+  --glass-inset: rgb(255 255 255 / 0.04);
+}
+
+[data-theme="dark"] .theme-light {
+  color-scheme: light;
+  --color-porcelain: #f4f3ee;
+  --color-porcelain-2: #ebe9e2;
+  --color-ink: #0d1321;
+  --color-ink-2: #3b4254;
+  --color-muted: #6b7284;
+  --color-faint: #9aa0ad;
+  --color-signal: #1e4fff;
+  --color-signal-deep: #1238c7;
+  --color-signal-soft: #dde5ff;
+  --color-good: #0e8f63;
+  --color-warn: #b5650a;
+  --color-bad: #c0352b;
+  --color-paper: #ffffff;
+  color: var(--color-ink);
 }
 
 html {
@@ -72,14 +128,14 @@ body::before {
 /* In the components layer so utilities like hover:border-* can override it. */
 @layer components {
   /*
-    Frosted white glass: nearly white at the top, a little clearer at the bottom, a bright
+    Frosted glass (white in the light theme): nearly white at the top, a little clearer at the bottom, a bright
     hairline edge with a highlight along the top, and a soft blue-tinted shadow underneath.
   */
   .glass {
-    background: linear-gradient(180deg, rgb(255 255 255 / 0.82) 0%, rgb(255 255 255 / 0.6) 100%);
-    border: 1px solid rgb(255 255 255 / 0.95);
+    background: linear-gradient(180deg, var(--glass-top) 0%, var(--glass-bottom) 100%);
+    border: 1px solid var(--glass-edge);
     box-shadow:
-      inset 0 1px 0 rgb(255 255 255),
+      inset 0 1px 0 var(--glass-highlight),
       0 0 0 1px rgb(13 19 33 / 0.035),
       0 2px 6px -2px rgb(13 19 33 / 0.05),
       0 16px 36px -18px rgb(24 44 130 / 0.22);
@@ -87,10 +143,10 @@ body::before {
     -webkit-backdrop-filter: blur(20px) saturate(170%);
   }
 
-  /* A white pane inside a glass panel (previews, fact tiles). */
+  /* A white pane (faint in the dark theme) inside a glass panel (previews, fact tiles). */
   .glass-inset {
-    background: rgb(255 255 255 / 0.85);
-    box-shadow: inset 0 1px 0 rgb(255 255 255), 0 0 0 1px rgb(13 19 33 / 0.05), 0 1px 3px rgb(13 19 33 / 0.04);
+    background: var(--glass-inset);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), 0 0 0 1px rgb(13 19 33 / 0.05), 0 1px 3px rgb(13 19 33 / 0.04);
   }
 
   /* Small all-caps mono label, used for section kickers and metadata. */

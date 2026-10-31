@@ -128,7 +128,7 @@ function Phone({ progress }) {
   const glow = useTransform(progress, WAKE, [0, 1])
 
   return (
-    <div className="relative grid place-items-center [perspective:1400px]">
+    <div className="theme-light relative grid place-items-center [perspective:1400px]">
       <motion.div style={{ opacity: glow }} className="absolute size-[30rem] rounded-full bg-signal/25 blur-[90px]" />
       <motion.div
         style={{ rotateZ, rotateX, scale, y }}

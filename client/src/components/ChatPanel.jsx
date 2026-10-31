@@ -47,7 +47,7 @@ function FlatChips({ matches }) {
   return (
     <div className="flex flex-wrap gap-2">
       {matches.map((x) => (
-        <Link key={x.code} to={`/flats/${x.code}`} className="rounded-lg border border-ink/10 bg-white/80 px-2.5 py-1 text-xs text-ink hover:border-signal/60">
+        <Link key={x.code} to={`/flats/${x.code}`} className="rounded-lg border border-ink/10 bg-paper/80 px-2.5 py-1 text-xs text-ink hover:border-signal/60">
           {x.score != null && <span className="font-bold text-good">{x.score}% </span>}
           {x.code} · {x.bhk}BHK {x.locality}
         </Link>
@@ -61,7 +61,7 @@ function RentCard({ data }) {
   const { ask } = data
   const query = new URLSearchParams({ locality: ask.locality, bhk: ask.bhk, rent: ask.rent, ...(ask.depositMonths && { depositMonths: ask.depositMonths }), ...(data.code && { code: data.code }) })
   return (
-    <div className="rounded-xl border border-ink/10 bg-white/80 p-3 text-xs">
+    <div className="rounded-xl border border-ink/10 bg-paper/80 p-3 text-xs">
       <div className="flex items-center justify-between gap-2">
         <span className="font-semibold text-ink">{ask.bhk}BHK · {ask.locality} · {rupees(ask.rent)}</span>
         <span className={`rounded-full px-2 py-0.5 font-mono ${VERDICT_STYLE[data.verdict.level]}`}>{data.verdict.label}</span>
@@ -76,9 +76,9 @@ function RentCard({ data }) {
 
 function CompareCard({ data }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-ink/10 bg-white/80 text-xs">
+    <div className="overflow-hidden rounded-xl border border-ink/10 bg-paper/80 text-xs">
       {data.flats.map((f) => (
-        <Link key={f.code} to={`/flats/${f.code}`} className="grid grid-cols-[1fr_auto_auto_auto] items-center gap-3 border-b border-ink/5 px-3 py-2 last:border-0 hover:bg-white">
+        <Link key={f.code} to={`/flats/${f.code}`} className="grid grid-cols-[1fr_auto_auto_auto] items-center gap-3 border-b border-ink/5 px-3 py-2 last:border-0 hover:bg-paper">
           <span className="text-ink">{f.code} · {f.bhk}BHK {f.locality}</span>
           <span className="font-mono">{rupees(f.rent)}</span>
           <span className="font-mono text-muted">{f.depositMonths} mo</span>
@@ -114,7 +114,7 @@ function VisitCard({ data }) {
     )
   }
   return (
-    <form onSubmit={confirm} className="space-y-2 rounded-xl border border-ink/10 bg-white/80 p-3 text-xs">
+    <form onSubmit={confirm} className="space-y-2 rounded-xl border border-ink/10 bg-paper/80 p-3 text-xs">
       <p className="flex items-center gap-1.5 font-semibold text-ink"><CalendarCheck size={14} className="text-signal" /> Confirm a visit to {data.code} · {data.bhk}BHK {data.locality}</p>
       <div className="grid gap-2 sm:grid-cols-3">
         <input required aria-label="Your name" placeholder="Your name" className={fieldClass} value={form.name} onChange={set('name')} autoComplete="name" />

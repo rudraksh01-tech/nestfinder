@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
-import { ArrowUpRight, Heart, LogOut, Menu, X } from 'lucide-react'
+import { ArrowUpRight, Heart, LogOut, Menu, Moon, Sun, X } from 'lucide-react'
 import Logo from './Logo.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 import { useShortlist } from '../context/ShortlistContext.jsx'
+import { useTheme } from '../context/ThemeContext.jsx'
 
 const linkClass = ({ isActive }) =>
   `rounded-full px-3.5 py-1.5 text-[0.9rem] transition ${isActive ? 'bg-ink text-porcelain' : 'text-ink-2 hover:bg-ink/[.05] hover:text-ink'}`
@@ -12,6 +13,7 @@ const linkClass = ({ isActive }) =>
 export default function Navbar() {
   const { broker, logout } = useAuth()
   const { codes } = useShortlist()
+  const { theme, toggle: toggleTheme } = useTheme()
   const navigate = useNavigate()
   const { pathname } = useLocation()
   // The mobile menu closes whenever the page changes: it is open only for the path it was opened on.
@@ -57,6 +59,15 @@ export default function Navbar() {
             <LogOut size={17} />
           </button>
         )}
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="rounded-full p-2 text-ink-2 hover:bg-ink/[.05] hover:text-ink"
+          aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+          title={theme === 'dark' ? 'Light theme' : 'Dark theme'}
+        >
+          {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+        </button>
         <Link
           to="/match"
           className="ml-1 hidden items-center gap-1 rounded-full bg-signal px-4 py-2 text-[0.9rem] font-medium text-white transition hover:bg-signal-deep sm:inline-flex"

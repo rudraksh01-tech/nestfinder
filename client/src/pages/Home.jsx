@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, ArrowUp, ArrowUpRight, Building2, Home as HomeIcon, Lightbulb, PiggyBank, Wallet } from 'lucide-react'
 import Globe from '../components/Globe.jsx'
+import { useTheme } from '../context/ThemeContext.jsx'
 import PhoneStory from '../components/home/PhoneStory.jsx'
 
 // Little floating notes either side of the globe: real distances from the demo data.
@@ -12,23 +13,21 @@ const NOTES = [
   { label: 'Deposit check', value: '10 months? Ask for 3', className: 'right-0 top-[44%]' },
 ]
 
-// Two looks for the hero, so they can be compared: the default puts a porcelain globe on a black
-// section; ?globe=black puts a near-black globe on the light page.
+// The hero follows the theme: a near-black globe on the light page, a porcelain globe on the dark one.
+// The words on the porcelain globe stay dark in the dark theme (theme-light), since they sit on white.
 const HERO_LOOKS = {
   white: {
-    section: '-mt-[4.25rem] rounded-b-[2.5rem] bg-ink pt-[4.25rem]',
+    text: 'theme-light text-ink',
     halo: 'bg-[#8ea2ff]/20',
     shade: 'bg-[radial-gradient(circle_at_50%_30%,rgb(244_243_238/0.9)_28%,rgb(244_243_238/0.55)_48%,rgb(244_243_238/0)_70%)]',
-    text: 'text-ink',
     eyebrow: 'text-ink/55',
     shadow: '[text-shadow:0_2px_24px_rgb(244_243_238/0.8)]',
     em: 'text-signal',
     line: 'text-ink-2',
     second: 'border-ink/15 bg-white/70 text-ink hover:bg-white',
-    caption: 'text-porcelain/45',
+    caption: 'text-faint',
   },
   black: {
-    section: '',
     halo: 'bg-signal/20',
     shade: 'bg-[radial-gradient(circle_at_50%_30%,rgb(13_19_33/0.9)_28%,rgb(13_19_33/0.55)_48%,rgb(13_19_33/0)_70%)]',
     text: 'text-porcelain',
@@ -43,14 +42,12 @@ const HERO_LOOKS = {
 
 // A big globe with the pitch written on top of it. The sphere is sized so the text always sits
 // inside the disc (on phones the globe is wider than the screen), which keeps the text readable.
-// In the white look the section is black and slides up under the floating navbar, so there is no
-// light strip above it.
 function Hero() {
-  const [params] = useSearchParams()
-  const lookName = params.get('globe') === 'black' ? 'black' : 'white'
+  const { theme } = useTheme()
+  const lookName = theme === 'dark' ? 'white' : 'black'
   const look = HERO_LOOKS[lookName]
   return (
-    <section className={`relative overflow-hidden ${look.section}`}>
+    <section className="relative overflow-hidden">
       <div className="relative mx-auto flex max-w-6xl justify-center">
         <div className="relative -mt-4 w-[min(200vw,1180px)] shrink-0 sm:-mt-10">
           <div className={`absolute inset-[12%] rounded-full blur-3xl ${look.halo}`} />
@@ -80,7 +77,7 @@ function Hero() {
         </div>
 
         {NOTES.map((n) => (
-          <div key={n.label} className={`glass absolute hidden rounded-2xl !bg-white/80 px-3.5 py-2.5 text-left xl:block ${n.className}`}>
+          <div key={n.label} className={`theme-light glass absolute hidden rounded-2xl !bg-white/80 px-3.5 py-2.5 text-left xl:block ${n.className}`}>
             <p className="eyebrow !text-[0.62rem]">{n.label}</p>
             <p className="mt-0.5 text-sm font-medium">{n.value}</p>
           </div>
@@ -366,7 +363,7 @@ function AnswerRow({ icon: Icon, label, value, delta, fill, tone, index }) {
 // Compact: question on the left, the answer card on the right (stacked on phones).
 function AskAnything() {
   return (
-    <section className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="theme-light mx-auto max-w-6xl px-5 sm:px-8">
       <div className="relative overflow-hidden rounded-[2rem] bg-ink px-4 py-10 text-porcelain sm:px-10 sm:py-12">
         <div className="absolute -right-24 -top-24 size-96 rounded-full bg-signal/35 blur-[110px]" />
         <div className="absolute -bottom-32 -left-20 size-80 rounded-full bg-signal/20 blur-[110px]" />

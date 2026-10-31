@@ -16,7 +16,7 @@ export default function ListingCard({ listing: l, match }) {
     <div className="relative">
       <Link
         to={`/flats/${l.code}`}
-        className="glass group flex h-full flex-col rounded-2xl p-5 transition hover:border-signal/50 hover:bg-white/75"
+        className="glass group flex h-full flex-col rounded-2xl p-5 transition hover:border-signal/50 hover:bg-paper/75"
       >
         {match && (
           <div className="mb-4 flex items-center gap-3 pr-12">

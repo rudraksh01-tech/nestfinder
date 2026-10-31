@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#F4F3EE" />
+    <!-- Apply a saved dark theme before the first paint, so the page never flashes light. -->
+    <script>
+      try {
+        if (localStorage.getItem('nf_theme') === 'dark') document.documentElement.dataset.theme = 'dark'
+      } catch {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
