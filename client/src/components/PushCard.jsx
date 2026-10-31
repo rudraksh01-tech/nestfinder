@@ -44,7 +44,18 @@ export default function PushCard() {
       const permission = await Notification.requestPermission()
       if (permission !== 'granted') throw new Error('Notifications are blocked. Allow them for this site in your browser settings, then try again.')
       const reg = await navigator.serviceWorker.ready
-      const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: keyToBytes(info.publicKey) })
+      let sub
+      try {
+        sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: keyToBytes(info.publicKey) })
+      } catch (err) {
+        // The browser could not reach its push service (Brave with push messaging off, a VPN, or a blocked network).
+        if (/push service/i.test(err.message)) {
+          throw new Error(
+            "Your browser couldn't reach its push service. In Brave, turn on \"Use Google services for push messaging\" in brave://settings/privacy and restart. Otherwise try another network, turn off VPN, or use Chrome or Edge.",
+          )
+        }
+        throw err
+      }
       await sendJson('/api/broker/push/subscribe', { body: { subscription: sub.toJSON() } })
       setSubscription(sub)
     }, 'Notifications are on for this device.')
