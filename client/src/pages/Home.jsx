@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, ArrowUp, ArrowUpRight, Building2, Home as HomeIcon, Lightbulb, PiggyBank, Wallet } from 'lucide-react'
 import Globe from '../components/Globe.jsx'
@@ -12,35 +12,68 @@ const NOTES = [
   { label: 'Deposit check', value: '10 months? Ask for 3', className: 'right-0 top-[44%]' },
 ]
 
+// Two looks for the hero, so they can be compared: the default puts a porcelain globe on a black
+// section; ?globe=black puts a near-black globe on the light page.
+const HERO_LOOKS = {
+  white: {
+    section: '-mt-[4.25rem] rounded-b-[2.5rem] bg-ink pt-[4.25rem]',
+    halo: 'bg-[#8ea2ff]/20',
+    shade: 'bg-[radial-gradient(circle_at_50%_30%,rgb(244_243_238/0.9)_28%,rgb(244_243_238/0.55)_48%,rgb(244_243_238/0)_70%)]',
+    text: 'text-ink',
+    eyebrow: 'text-ink/55',
+    shadow: '[text-shadow:0_2px_24px_rgb(244_243_238/0.8)]',
+    em: 'text-signal',
+    line: 'text-ink-2',
+    second: 'border-ink/15 bg-white/70 text-ink hover:bg-white',
+    caption: 'text-porcelain/45',
+  },
+  black: {
+    section: '',
+    halo: 'bg-signal/20',
+    shade: 'bg-[radial-gradient(circle_at_50%_30%,rgb(13_19_33/0.9)_28%,rgb(13_19_33/0.55)_48%,rgb(13_19_33/0)_70%)]',
+    text: 'text-porcelain',
+    eyebrow: 'text-porcelain/60',
+    shadow: '[text-shadow:0_2px_24px_rgb(13_19_33/0.6)]',
+    em: 'text-[#9db3ff]',
+    line: 'text-porcelain/75',
+    second: 'border-white/25 bg-white/10 text-porcelain hover:bg-white/20',
+    caption: 'text-faint',
+  },
+}
+
 // A big globe with the pitch written on top of it. The sphere is sized so the text always sits
-// inside the white disc (on phones the globe is wider than the screen), which keeps dark text readable.
-// The section sits on black and slides up under the floating navbar so there is no light strip above it.
+// inside the disc (on phones the globe is wider than the screen), which keeps the text readable.
+// In the white look the section is black and slides up under the floating navbar, so there is no
+// light strip above it.
 function Hero() {
+  const [params] = useSearchParams()
+  const lookName = params.get('globe') === 'black' ? 'black' : 'white'
+  const look = HERO_LOOKS[lookName]
   return (
-    <section className="relative -mt-[4.25rem] overflow-hidden rounded-b-[2.5rem] bg-ink pt-[4.25rem]">
+    <section className={`relative overflow-hidden ${look.section}`}>
       <div className="relative mx-auto flex max-w-6xl justify-center">
         <div className="relative -mt-4 w-[min(200vw,1180px)] shrink-0 sm:-mt-10">
-          <div className="absolute inset-[12%] rounded-full bg-[#8ea2ff]/20 blur-3xl" />
-          <Globe />
-          {/* Whiter area behind the words (upper half, where the text sits), so the dots never fight the text. */}
-          <div className="pointer-events-none absolute inset-[11%] rounded-full bg-[radial-gradient(circle_at_50%_30%,rgb(244_243_238/0.9)_28%,rgb(244_243_238/0.55)_48%,rgb(244_243_238/0)_70%)]" />
+          <div className={`absolute inset-[12%] rounded-full blur-3xl ${look.halo}`} />
+          <Globe tone={lookName === 'black' ? 'dark' : 'light'} />
+          {/* Calmer area behind the words (upper half, where the text sits), so the dots never fight the text. */}
+          <div className={`pointer-events-none absolute inset-[11%] rounded-full ${look.shade}`} />
         </div>
 
         {/* Text layer: clicks pass through to the globe (so it can still be dragged) except on the buttons. */}
-        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-start px-6 pt-[40%] sm:pt-[22%] lg:pt-[19%] text-center text-ink">
-          <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-ink/55 sm:text-[0.85rem]">AI flat finder · Bengaluru</p>
-          <h1 className="mt-5 max-w-[16ch] font-display sm:max-w-none text-[2.6rem] leading-[0.95] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(244_243_238/0.8)] sm:text-[4.2rem] lg:text-[5.2rem]">
+        <div className={`pointer-events-none absolute inset-0 flex flex-col items-center justify-start px-6 pt-[40%] sm:pt-[22%] lg:pt-[19%] text-center ${look.text}`}>
+          <p className={`font-mono text-[0.75rem] uppercase tracking-[0.12em] sm:text-[0.85rem] ${look.eyebrow}`}>AI flat finder · Bengaluru</p>
+          <h1 className={`mt-5 max-w-[16ch] font-display sm:max-w-none text-[2.6rem] leading-[0.95] tracking-[-0.015em] sm:text-[4.2rem] lg:text-[5.2rem] ${look.shadow}`}>
             Tell the AI how you live. <br className="hidden sm:block" />
-            <em className="text-signal">It finds the flat.</em>
+            <em className={look.em}>It finds the flat.</em>
           </h1>
-          <p className="mt-5 max-w-[30rem] text-[0.95rem] leading-relaxed text-ink-2 sm:text-[1.05rem]">
+          <p className={`mt-5 max-w-[30rem] text-[0.95rem] leading-relaxed sm:text-[1.05rem] ${look.line}`}>
             Say where you work and what you need. It shows the flats that fit, why they fit, and whether the rent is fair.
           </p>
           <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-12 sm:gap-4">
             <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-7 py-3.5 text-[1.05rem] font-medium text-white sm:px-9 sm:py-4 sm:text-lg shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
               Ask the AI <ArrowRight size={20} />
             </Link>
-            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/70 px-7 py-3.5 text-[1.05rem] font-medium text-ink sm:px-9 sm:py-4 sm:text-lg backdrop-blur transition hover:bg-white">
+            <Link to="/rent-check" className={`inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-[1.05rem] font-medium sm:px-9 sm:py-4 sm:text-lg backdrop-blur transition ${look.second}`}>
               Check a rent
             </Link>
           </div>
@@ -53,7 +86,7 @@ function Hero() {
           </div>
         ))}
       </div>
-      <p className="relative -mt-6 pb-10 text-center font-mono text-[0.7rem] text-porcelain/45 sm:-mt-12">Drag the globe · Arcs: where Bengaluru's newcomers come from</p>
+      <p className={`relative -mt-6 pb-10 text-center font-mono text-[0.7rem] sm:-mt-12 ${look.caption}`}>Drag the globe · Arcs: where Bengaluru's newcomers come from</p>
     </section>
   )
 }

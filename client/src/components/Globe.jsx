@@ -11,12 +11,42 @@ const CITIES = [
   [18.5204, 73.8567], // Pune
   [22.5726, 88.3639], // Kolkata
 ]
+// Two finishes. light: a porcelain globe with ink land dots, for the black hero.
+// dark: a near-black globe with porcelain dots, for the light hero.
+// Higher diffuse gives the sphere a lit side and a shaded side, so it reads as an object.
+const TONES = {
+  light: {
+    dark: 0,
+    diffuse: 2.2,
+    mapSamples: 24000,
+    mapBrightness: 3.6,
+    mapBaseBrightness: 0,
+    baseColor: [0.96, 0.95, 0.93],
+    markerColor: [0.12, 0.31, 1],
+    glowColor: [0.62, 0.68, 0.86],
+    arcColor: [0.12, 0.31, 1],
+    cityColor: [0.05, 0.075, 0.13],
+  },
+  dark: {
+    dark: 1,
+    diffuse: 1.8,
+    mapSamples: 24000,
+    mapBrightness: 11,
+    mapBaseBrightness: 0.02,
+    baseColor: [0.09, 0.1, 0.14],
+    markerColor: [0.38, 0.55, 1],
+    glowColor: [0.8, 0.82, 0.9],
+    arcColor: [0.45, 0.6, 1],
+    cityColor: [0.9, 0.9, 0.88],
+  },
+}
+
 // cobe's angle for a longitude so that it faces the viewer.
 const phiFor = (lon) => Math.PI - ((lon * Math.PI) / 180 - Math.PI / 2)
 
 // A slowly turning dotted globe, centred on India at first. Drag to spin it.
 // cobe v2 has no render callback, so we drive rotation ourselves with requestAnimationFrame.
-export default function Globe({ className = '' }) {
+export default function Globe({ tone = 'light', className = '' }) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -32,22 +62,12 @@ export default function Globe({ className = '' }) {
       height: size * dpr,
       phi: phiFor(BENGALURU[1]),
       theta: 0.22,
-      // A porcelain globe with ink land dots: warmer and softer than pure white on the black hero.
-      // Higher diffuse gives the sphere a lit side and a shaded side, so it reads as an object.
-      dark: 0,
-      diffuse: 2.2,
-      mapSamples: 24000,
-      mapBrightness: 3.6,
-      mapBaseBrightness: 0,
-      baseColor: [0.96, 0.95, 0.93],
-      markerColor: [0.12, 0.31, 1],
-      glowColor: [0.62, 0.68, 0.86],
+      ...TONES[tone],
       markers: [
         { location: BENGALURU, size: 0.075 },
-        ...CITIES.map((c) => ({ location: c, size: 0.022, color: [0.05, 0.075, 0.13] })),
+        ...CITIES.map((c) => ({ location: c, size: 0.022, color: TONES[tone].cityColor })),
       ],
       arcs: CITIES.map((c) => ({ from: c, to: BENGALURU })),
-      arcColor: [0.12, 0.31, 1],
       arcWidth: 0.7,
       arcHeight: 0.22,
       markerElevation: 0.01,
@@ -120,7 +140,7 @@ export default function Globe({ className = '' }) {
       window.removeEventListener('resize', onResize)
       globe.destroy()
     }
-  }, [])
+  }, [tone])
 
   return (
     <canvas
