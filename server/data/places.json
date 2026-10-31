@@ -1,0 +1,193 @@
+{
+ "source": "OpenStreetMap Nominatim",
+ "localities": [
+  {
+   "name": "Koramangala",
+   "lat": 12.935737,
+   "lon": 77.624081,
+   "osm": "node/429918282"
+  },
+  {
+   "name": "Indiranagar",
+   "lat": 12.973291,
+   "lon": 77.640467,
+   "osm": "node/448991617"
+  },
+  {
+   "name": "HSR Layout",
+   "lat": 12.911623,
+   "lon": 77.638862,
+   "osm": "relation/17168010"
+  },
+  {
+   "name": "BTM Layout",
+   "lat": 12.914001,
+   "lon": 77.610282,
+   "osm": "node/447032046"
+  },
+  {
+   "name": "Jayanagar",
+   "lat": 12.929273,
+   "lon": 77.582423,
+   "osm": "node/429853334"
+  },
+  {
+   "name": "JP Nagar",
+   "lat": 12.909694,
+   "lon": 77.586607,
+   "osm": "relation/17205864"
+  },
+  {
+   "name": "Whitefield",
+   "lat": 12.995743,
+   "lon": 77.757949,
+   "osm": "node/5760197744"
+  },
+  {
+   "name": "Marathahalli",
+   "lat": 12.955257,
+   "lon": 77.698416,
+   "osm": "relation/19884550"
+  },
+  {
+   "name": "Bellandur",
+   "lat": 12.932049,
+   "lon": 77.684292,
+   "osm": "relation/19884585"
+  },
+  {
+   "name": "Sarjapur Road",
+   "lat": 12.897774,
+   "lon": 77.674508,
+   "osm": "relation/19883435"
+  },
+  {
+   "name": "Electronic City",
+   "lat": 12.84876,
+   "lon": 77.648253,
+   "osm": "way/287685707"
+  },
+  {
+   "name": "Hebbal",
+   "lat": 13.038218,
+   "lon": 77.5919,
+   "osm": "relation/19883365"
+  },
+  {
+   "name": "Yelahanka",
+   "lat": 13.100698,
+   "lon": 77.596345,
+   "osm": "node/430143744"
+  },
+  {
+   "name": "Malleshwaram",
+   "lat": 13.002735,
+   "lon": 77.570325,
+   "osm": "node/427595936"
+  },
+  {
+   "name": "Rajajinagar",
+   "lat": 13.000536,
+   "lon": 77.5497,
+   "osm": "node/1565099120"
+  },
+  {
+   "name": "Banashankari",
+   "lat": 12.92782,
+   "lon": 77.556621,
+   "osm": "node/12816045429"
+  },
+  {
+   "name": "Basavanagudi",
+   "lat": 12.941726,
+   "lon": 77.575502,
+   "osm": "node/429937956"
+  },
+  {
+   "name": "Hennur",
+   "lat": 13.037077,
+   "lon": 77.641357,
+   "osm": "node/12468364695"
+  },
+  {
+   "name": "Kalyan Nagar",
+   "lat": 13.022142,
+   "lon": 77.640337,
+   "osm": "node/567772575"
+  },
+  {
+   "name": "KR Puram",
+   "lat": 13.007516,
+   "lon": 77.695935,
+   "osm": "node/442134548"
+  },
+  {
+   "name": "Mahadevapura",
+   "lat": 12.996545,
+   "lon": 77.692718,
+   "osm": "node/5760197764"
+  },
+  {
+   "name": "Hulimavu",
+   "lat": 12.877349,
+   "lon": 77.602803,
+   "osm": "node/4076243857"
+  },
+  {
+   "name": "Thanisandra",
+   "lat": 13.05225,
+   "lon": 77.631615,
+   "osm": "relation/19883250"
+  },
+  {
+   "name": "Domlur",
+   "lat": 12.962467,
+   "lon": 77.638196,
+   "osm": "node/347261886"
+  },
+  {
+   "name": "Vijayanagar",
+   "lat": 12.970954,
+   "lon": 77.537385,
+   "osm": "node/5760197784"
+  }
+ ],
+ "techParks": [
+  {
+   "name": "Manyata Tech Park",
+   "lat": 13.048289,
+   "lon": 77.6211,
+   "osm": "way/34121900"
+  },
+  {
+   "name": "ITPL Whitefield",
+   "lat": 12.98635,
+   "lon": 77.732581,
+   "osm": "way/1152481905"
+  },
+  {
+   "name": "Electronic City",
+   "lat": 12.845515,
+   "lon": 77.664968,
+   "osm": "node/5631135851"
+  },
+  {
+   "name": "Bagmane Tech Park",
+   "lat": 12.978774,
+   "lon": 77.658857,
+   "osm": "way/323047914"
+  },
+  {
+   "name": "Embassy Tech Village",
+   "lat": 12.930685,
+   "lon": 77.691417,
+   "osm": "way/232970396"
+  },
+  {
+   "name": "Prestige Tech Park",
+   "lat": 12.942272,
+   "lon": 77.693597,
+   "osm": "way/233001388"
+  }
+ ]
+}

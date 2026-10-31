@@ -1,0 +1,1745 @@
+{
+ "Koramangala": [
+  {
+   "place_id": 251982521,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 429918282,
+   "lat": "12.9357366",
+   "lon": "77.6240810",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Koramangala",
+   "display_name": "Koramangala, Sri Lakshmi Devi Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560095, India",
+   "boundingbox": [
+    "12.9157366",
+    "12.9557366",
+    "77.6040810",
+    "77.6440810"
+   ]
+  },
+  {
+   "place_id": 252162594,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4466385493,
+   "lat": "12.9438501",
+   "lon": "77.6189683",
+   "category": "amenity",
+   "type": "post_office",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "amenity",
+   "name": "Koramangala",
+   "display_name": "Koramangala, 67, Main Road, Koramangala 8th Block, Koramangala, Sri Lakshmi Devi Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560095, India",
+   "boundingbox": [
+    "12.9438001",
+    "12.9439001",
+    "77.6189183",
+    "77.6190183"
+   ]
+  },
+  {
+   "place_id": 252038613,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 7277381417,
+   "lat": "12.9251364",
+   "lon": "77.6348354",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "1st Block Koramangala",
+   "display_name": "1st Block Koramangala, Sarjapura Road, SBI Colony, Kormangala East, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560034, India",
+   "boundingbox": [
+    "12.9250864",
+    "12.9251864",
+    "77.6347854",
+    "77.6348854"
+   ]
+  }
+ ],
+ "Indiranagar": [
+  {
+   "place_id": 252970207,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 448991617,
+   "lat": "12.9732913",
+   "lon": "77.6404672",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Indiranagar",
+   "display_name": "Indiranagar, Jogpalya, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560008, India",
+   "boundingbox": [
+    "12.9532913",
+    "12.9932913",
+    "77.6204672",
+    "77.6604672"
+   ]
+  },
+  {
+   "place_id": 251854779,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883335,
+   "lat": "12.9810684",
+   "lon": "77.6443636",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "Indiranagar",
+   "display_name": "Indiranagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560038, India",
+   "boundingbox": [
+    "12.9684181",
+    "12.9938145",
+    "77.6308356",
+    "77.6567723"
+   ]
+  },
+  {
+   "place_id": 252914045,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 6400857551,
+   "lat": "12.9783325",
+   "lon": "77.6386612",
+   "category": "railway",
+   "type": "station",
+   "place_rank": 30,
+   "importance": 0.09078915819201436,
+   "addresstype": "railway",
+   "name": "Indiranagar",
+   "display_name": "Indiranagar, Chinmaya Mission Hospital Road, Indiranagar 1st Stage, Hoysala Nagara Central, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560038, India",
+   "boundingbox": [
+    "12.9733325",
+    "12.9833325",
+    "77.6336612",
+    "77.6436612"
+   ]
+  }
+ ],
+ "HSR Layout": [
+  {
+   "place_id": 252088523,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 17168010,
+   "lat": "12.9116225",
+   "lon": "77.6388622",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "HSR Layout",
+   "display_name": "HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India",
+   "boundingbox": [
+    "12.9011320",
+    "12.9262660",
+    "77.6236224",
+    "77.6610760"
+   ]
+  },
+  {
+   "place_id": 252068375,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883285,
+   "lat": "12.9136118",
+   "lon": "77.6347849",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "HSR Layout",
+   "display_name": "HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9021994",
+    "12.9246948",
+    "77.6227426",
+    "77.6501916"
+   ]
+  },
+  {
+   "place_id": 252018699,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4537369390,
+   "lat": "12.9220052",
+   "lon": "77.6486831",
+   "category": "amenity",
+   "type": "courthouse",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "amenity",
+   "name": "Hsr layout",
+   "display_name": "Hsr layout, 216, 24th Main Road, Agara, Sector 1, Iblur, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India",
+   "boundingbox": [
+    "12.9219552",
+    "12.9220552",
+    "77.6486331",
+    "77.6487331"
+   ]
+  }
+ ],
+ "BTM Layout": [
+  {
+   "place_id": 250470472,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 447032046,
+   "lat": "12.9140008",
+   "lon": "77.6102821",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "BTM Layout",
+   "display_name": "BTM Layout, Viswamanava Kuvempu Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+   "boundingbox": [
+    "12.8940008",
+    "12.9340008",
+    "77.5902821",
+    "77.6302821"
+   ]
+  },
+  {
+   "place_id": 250466723,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5760198226,
+   "lat": "12.9165878",
+   "lon": "77.6081182",
+   "category": "railway",
+   "type": "station",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "BTM Layout",
+   "display_name": "BTM Layout, Ragigudda-Silk Board Integrated Flyover, BTM Layout 1st Stage, New Tavarekere, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India",
+   "boundingbox": [
+    "12.9115878",
+    "12.9215878",
+    "77.6031182",
+    "77.6131182"
+   ]
+  },
+  {
+   "place_id": 250467764,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13046007575,
+   "lat": "12.9165980",
+   "lon": "77.6086222",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "BTM Layout",
+   "display_name": "BTM Layout, Ragigudda-Silk Board Integrated Flyover, BTM Layout 1st Stage, New Tavarekere, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India",
+   "boundingbox": [
+    "12.9165480",
+    "12.9166480",
+    "77.6085722",
+    "77.6086722"
+   ]
+  }
+ ],
+ "Jayanagar": [
+  {
+   "place_id": 252824199,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 429853334,
+   "lat": "12.9292731",
+   "lon": "77.5824229",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Jayanagar",
+   "display_name": "Jayanagar, Tilak Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India",
+   "boundingbox": [
+    "12.9092731",
+    "12.9492731",
+    "77.5624229",
+    "77.6024229"
+   ]
+  },
+  {
+   "place_id": 252949533,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1565099131,
+   "lat": "12.9295069",
+   "lon": "77.5801653",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "Jayanagar",
+   "display_name": "Jayanagar, Rashtriya Vidyalaya Road, Byrasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India",
+   "boundingbox": [
+    "12.9294569",
+    "12.9295569",
+    "77.5801153",
+    "77.5802153"
+   ]
+  },
+  {
+   "place_id": 252778578,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 6432710296,
+   "lat": "12.9295069",
+   "lon": "77.5801439",
+   "category": "railway",
+   "type": "station",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "Jayanagar",
+   "display_name": "Jayanagar, Rashtriya Vidyalaya Road, Byrasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India",
+   "boundingbox": [
+    "12.9245069",
+    "12.9345069",
+    "77.5751439",
+    "77.5851439"
+   ]
+  }
+ ],
+ "JP Nagar": [
+  {
+   "place_id": 252205978,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 17205864,
+   "lat": "12.9096941",
+   "lon": "77.5866067",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "JP Nagar",
+   "display_name": "JP Nagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.8975486",
+    "12.9175497",
+    "77.5730508",
+    "77.6018204"
+   ]
+  }
+ ],
+ "Whitefield": [
+  {
+   "place_id": 253173185,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5760197744,
+   "lat": "12.9957428",
+   "lon": "77.7579489",
+   "category": "railway",
+   "type": "station",
+   "place_rank": 30,
+   "importance": 0.3281491818164103,
+   "addresstype": "railway",
+   "name": "Whitefield (Kadugodi)",
+   "display_name": "Whitefield (Kadugodi), SH35, Belathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560067, India",
+   "boundingbox": [
+    "12.9907428",
+    "13.0007428",
+    "77.7529489",
+    "77.7629489"
+   ]
+  },
+  {
+   "place_id": 253168402,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1177705836,
+   "lat": "12.9963995",
+   "lon": "77.7614229",
+   "category": "railway",
+   "type": "station",
+   "place_rank": 30,
+   "importance": 0.25352702198722055,
+   "addresstype": "railway",
+   "name": "Whitefield",
+   "display_name": "Whitefield, Post Office Road, Kadugodi, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560067, India",
+   "boundingbox": [
+    "12.9913995",
+    "13.0013995",
+    "77.7564229",
+    "77.7664229"
+   ]
+  },
+  {
+   "place_id": 252071409,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883364,
+   "lat": "12.9696365",
+   "lon": "77.7497448",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.21080589711721126,
+   "addresstype": "suburb",
+   "name": "Whitefield",
+   "display_name": "Whitefield, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560066, India",
+   "boundingbox": [
+    "12.9515328",
+    "12.9767407",
+    "77.7309876",
+    "77.7646485"
+   ]
+  }
+ ],
+ "Marathahalli": [
+  {
+   "place_id": 381417739,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19884550,
+   "lat": "12.9552572",
+   "lon": "77.6984163",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Marathahalli",
+   "display_name": "Marathahalli, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9456404",
+    "12.9570756",
+    "77.6896353",
+    "77.7050279"
+   ]
+  },
+  {
+   "place_id": 250516801,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 6095249003,
+   "lat": "12.9569766",
+   "lon": "77.6999407",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Marathahalli",
+   "display_name": "Marathahalli, Varthur Road, Marathahalli, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560037, India",
+   "boundingbox": [
+    "12.9569266",
+    "12.9570266",
+    "77.6998907",
+    "77.6999907"
+   ]
+  },
+  {
+   "place_id": 250512815,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3205836976,
+   "lat": "12.9620664",
+   "lon": "77.7039389",
+   "category": "railway",
+   "type": "proposed",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "Marathahalli",
+   "display_name": "Marathahalli, Bagmane Solarium City Road, Ananda Nagara, Ashwath Nagar, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560037, India",
+   "boundingbox": [
+    "12.9620164",
+    "12.9621164",
+    "77.7038889",
+    "77.7039889"
+   ]
+  }
+ ],
+ "Bellandur": [
+  {
+   "place_id": 252050056,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19884585,
+   "lat": "12.9320495",
+   "lon": "77.6842915",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "Bellandur",
+   "display_name": "Bellandur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9225853",
+    "12.9414258",
+    "77.6677817",
+    "77.6904750"
+   ]
+  },
+  {
+   "place_id": 431155069,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1573762904,
+   "lat": "12.9371471",
+   "lon": "77.7068118",
+   "category": "landuse",
+   "type": "construction",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "construction",
+   "name": "Bellandur",
+   "display_name": "Bellandur, Panathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9362257",
+    "12.9380684",
+    "77.7066575",
+    "77.7069661"
+   ]
+  },
+  {
+   "place_id": 252689540,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19751547,
+   "lat": "12.9371445",
+   "lon": "77.6720227",
+   "category": "water",
+   "type": "lake",
+   "place_rank": 20,
+   "importance": 0.4294069168155019,
+   "addresstype": "lake",
+   "name": "Bellandur Lake",
+   "display_name": "Bellandur Lake, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9278660",
+    "12.9445961",
+    "77.6430676",
+    "77.6799066"
+   ]
+  }
+ ],
+ "Kasavanahalli": [
+  {
+   "place_id": 252403615,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883435,
+   "lat": "12.8977737",
+   "lon": "77.6745075",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.14670988097962917,
+   "addresstype": "suburb",
+   "name": "Kasavanahalli",
+   "display_name": "Kasavanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.8931400",
+    "12.9206043",
+    "77.6539103",
+    "77.7028873"
+   ]
+  },
+  {
+   "place_id": 253243165,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13630287403,
+   "lat": "12.9108663",
+   "lon": "77.6800040",
+   "category": "place",
+   "type": "neighbourhood",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "neighbourhood",
+   "name": "Kasavanahalli",
+   "display_name": "Kasavanahalli, Kaikondrahalli, Kasavanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560035, India",
+   "boundingbox": [
+    "12.9008663",
+    "12.9208663",
+    "77.6700040",
+    "77.6900040"
+   ]
+  },
+  {
+   "place_id": 252734574,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13062011336,
+   "lat": "12.9048811",
+   "lon": "77.6759314",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Kasavanahalli",
+   "display_name": "Kasavanahalli, Central Jail Road, Kasavanahalli, Kaikondrahalli, Kasavanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560035, India",
+   "boundingbox": [
+    "12.9048311",
+    "12.9049311",
+    "77.6758814",
+    "77.6759814"
+   ]
+  }
+ ],
+ "Electronic City": [
+  {
+   "place_id": 261785159,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 287685707,
+   "lat": "12.8487599",
+   "lon": "77.6482530",
+   "category": "landuse",
+   "type": "residential",
+   "place_rank": 24,
+   "importance": 0.08004832761120009,
+   "addresstype": "residential",
+   "name": "Prime City Apartments",
+   "display_name": "Prime City Apartments, Electronic City, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+   "boundingbox": [
+    "12.8482126",
+    "12.8493770",
+    "77.6471775",
+    "77.6504105"
+   ]
+  },
+  {
+   "place_id": 250431828,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 11598969428,
+   "lat": "12.8470967",
+   "lon": "77.6702848",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.000040000762951049326,
+   "addresstype": "highway",
+   "name": "Electronic City",
+   "display_name": "Electronic City, Electronic City Flyover, Wellington Paradise Layout, Singasandra, Bengaluru South City Corporation, Electronic City, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+   "boundingbox": [
+    "12.8470467",
+    "12.8471467",
+    "77.6702348",
+    "77.6703348"
+   ]
+  },
+  {
+   "place_id": 250434142,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13046007556,
+   "lat": "12.8567984",
+   "lon": "77.6632379",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.000040000762951049326,
+   "addresstype": "railway",
+   "name": "Electronic City",
+   "display_name": "Electronic City, Hosur Road, Chikkathoguru, Bengaluru South City Corporation, Electronic City, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+   "boundingbox": [
+    "12.8567484",
+    "12.8568484",
+    "77.6631879",
+    "77.6632879"
+   ]
+  }
+ ],
+ "Hebbal": [
+  {
+   "place_id": 252346258,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883365,
+   "lat": "13.0382184",
+   "lon": "77.5919000",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1570394422394589,
+   "addresstype": "suburb",
+   "name": "Hebbal",
+   "display_name": "Hebbal, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0280860",
+    "13.0416335",
+    "77.5861820",
+    "77.5982606"
+   ]
+  },
+  {
+   "place_id": 431706951,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1573699487,
+   "lat": "13.0414248",
+   "lon": "77.5918614",
+   "category": "landuse",
+   "type": "construction",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "construction",
+   "name": "Hebbal",
+   "display_name": "Hebbal, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0412459",
+    "13.0416657",
+    "77.5907647",
+    "77.5926295"
+   ]
+  },
+  {
+   "place_id": 252350884,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 430127791,
+   "lat": "13.0434496",
+   "lon": "77.5905160",
+   "category": "highway",
+   "type": "motorway_junction",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Hebbal",
+   "display_name": "Hebbal, Hebbal Flyover, Rajiv Gandhi Nagar, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560024, India",
+   "boundingbox": [
+    "13.0433996",
+    "13.0434996",
+    "77.5904660",
+    "77.5905660"
+   ]
+  }
+ ],
+ "Yelahanka": [
+  {
+   "place_id": 252454063,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 430143744,
+   "lat": "13.1006982",
+   "lon": "77.5963454",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Yelahanka",
+   "display_name": "Yelahanka, Yelahanka Old Town, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560064, India",
+   "boundingbox": [
+    "13.0806982",
+    "13.1206982",
+    "77.5763454",
+    "77.6163454"
+   ]
+  },
+  {
+   "place_id": 252505104,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 386182133,
+   "lat": "13.0986677",
+   "lon": "77.5703182",
+   "category": "landuse",
+   "type": "industrial",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "industrial",
+   "name": "Yelahanka",
+   "display_name": "Yelahanka, Atturu, Attur, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0981989",
+    "13.0991195",
+    "77.5698678",
+    "77.5707656"
+   ]
+  },
+  {
+   "place_id": 252168059,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1236276591,
+   "lat": "13.1018701",
+   "lon": "77.6006472",
+   "category": "landuse",
+   "type": "construction",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "construction",
+   "name": "Yelahanka (u/c)",
+   "display_name": "Yelahanka (u/c), Akash Ward, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.1014991",
+    "13.1024921",
+    "77.6002765",
+    "77.6009175"
+   ]
+  }
+ ],
+ "Malleshwaram": [
+  {
+   "place_id": 252391151,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 427595936,
+   "lat": "13.0027353",
+   "lon": "77.5703253",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Malleswaram",
+   "display_name": "Malleswaram, Malleshwaram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560003, India",
+   "boundingbox": [
+    "12.9827353",
+    "13.0227353",
+    "77.5503253",
+    "77.5903253"
+   ]
+  },
+  {
+   "place_id": 252296756,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883296,
+   "lat": "13.0076123",
+   "lon": "77.5646902",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "Malleshwaram",
+   "display_name": "Malleshwaram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9966088",
+    "13.0186376",
+    "77.5556064",
+    "77.5714565"
+   ]
+  },
+  {
+   "place_id": 252457526,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 9676004,
+   "lat": "13.0222347",
+   "lon": "77.5671832",
+   "category": "amenity",
+   "type": "university",
+   "place_rank": 30,
+   "importance": 0.5113978532928073,
+   "addresstype": "amenity",
+   "name": "Indian Institute of Science",
+   "display_name": "Indian Institute of Science, CV Raman Road, Malleswaram, Malleshwaram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560012, India",
+   "boundingbox": [
+    "13.0122928",
+    "13.0294474",
+    "77.5586420",
+    "77.5726673"
+   ]
+  }
+ ],
+ "Rajajinagar": [
+  {
+   "place_id": 252726355,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1565099120,
+   "lat": "13.0005359",
+   "lon": "77.5496996",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.23992860907835414,
+   "addresstype": "railway",
+   "name": "Rajajinagar",
+   "display_name": "Rajajinagar, Chord Road, Ketamaranahalli, Basaveshwaranagar, Kethamaranahalli, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560010, India",
+   "boundingbox": [
+    "13.0004859",
+    "13.0005859",
+    "77.5496496",
+    "77.5497496"
+   ]
+  },
+  {
+   "place_id": 253521241,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5760198632,
+   "lat": "13.0005232",
+   "lon": "77.5496166",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.23992860907835414,
+   "addresstype": "railway",
+   "name": "Rajajinagar",
+   "display_name": "Rajajinagar, Chord Road, Nagapura, Mahalakshmipuram, Nagapura, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560086, India",
+   "boundingbox": [
+    "13.0004732",
+    "13.0005732",
+    "77.5495666",
+    "77.5496666"
+   ]
+  },
+  {
+   "place_id": 253300353,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 429857523,
+   "lat": "12.9882338",
+   "lon": "77.5548830",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Rajajinagar",
+   "display_name": "Rajajinagar, Rajajinagara, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560010, India",
+   "boundingbox": [
+    "12.9682338",
+    "13.0082338",
+    "77.5348830",
+    "77.5748830"
+   ]
+  }
+ ],
+ "Banashankari": [
+  {
+   "place_id": 250461645,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 12816045429,
+   "lat": "12.9278196",
+   "lon": "77.5566210",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Banashankari",
+   "display_name": "Banashankari, Kathriguppe, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560085, India",
+   "boundingbox": [
+    "12.9078196",
+    "12.9478196",
+    "77.5366210",
+    "77.5766210"
+   ]
+  },
+  {
+   "place_id": 250457105,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1070314237,
+   "lat": "12.9152186",
+   "lon": "77.5736205",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "Banashankari",
+   "display_name": "Banashankari, Kanakapura Road, Shakambari Nagar, Shakambarinagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560078, India",
+   "boundingbox": [
+    "12.9151686",
+    "12.9152686",
+    "77.5735705",
+    "77.5736705"
+   ]
+  },
+  {
+   "place_id": 253919971,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5760198466,
+   "lat": "12.9152242",
+   "lon": "77.5735786",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "railway",
+   "name": "Banashankari",
+   "display_name": "Banashankari, Kanakapura Road, Shakambarinagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560078, India",
+   "boundingbox": [
+    "12.9151742",
+    "12.9152742",
+    "77.5735286",
+    "77.5736286"
+   ]
+  }
+ ],
+ "Basavanagudi": [
+  {
+   "place_id": 253323320,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 429937956,
+   "lat": "12.9417261",
+   "lon": "77.5755021",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Basavanagudi",
+   "display_name": "Basavanagudi, Sunkenahalli, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560004, India",
+   "boundingbox": [
+    "12.9217261",
+    "12.9617261",
+    "77.5555021",
+    "77.5955021"
+   ]
+  },
+  {
+   "place_id": 252052520,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2393706648,
+   "lat": "12.9406686",
+   "lon": "77.5751139",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Gunasheela Hospital, Krishna Rao Park",
+   "display_name": "Gunasheela Hospital, Krishna Rao Park, Kanakapura Road, Yediyuru, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560004, India",
+   "boundingbox": [
+    "12.9406186",
+    "12.9407186",
+    "77.5750639",
+    "77.5751639"
+   ]
+  }
+ ],
+ "Hennur": [
+  {
+   "place_id": 249477929,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 12468364695,
+   "lat": "13.0370770",
+   "lon": "77.6413572",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Hennur",
+   "display_name": "Hennur, HBR Layout, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560043, India",
+   "boundingbox": [
+    "13.0170770",
+    "13.0570770",
+    "77.6213572",
+    "77.6613572"
+   ]
+  },
+  {
+   "place_id": 250163328,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883360,
+   "lat": "13.0381482",
+   "lon": "77.6324299",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "Hennur",
+   "display_name": "Hennur, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0308457",
+    "13.0455085",
+    "77.6212086",
+    "77.6414719"
+   ]
+  },
+  {
+   "place_id": 432097252,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1573762910,
+   "lat": "13.0373062",
+   "lon": "77.6492511",
+   "category": "landuse",
+   "type": "construction",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "construction",
+   "name": "Hennur",
+   "display_name": "Hennur, Chellakere, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0365014",
+    "13.0379789",
+    "77.6486956",
+    "77.6499247"
+   ]
+  }
+ ],
+ "Kalyan Nagar": [
+  {
+   "place_id": 252212567,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 567772575,
+   "lat": "13.0221416",
+   "lon": "77.6403368",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Kalyan Nagar",
+   "display_name": "Kalyan Nagar, Kalyanagar, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560043, India",
+   "boundingbox": [
+    "13.0021416",
+    "13.0421416",
+    "77.6203368",
+    "77.6603368"
+   ]
+  },
+  {
+   "place_id": 252501675,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 599226618,
+   "lat": "13.0264671",
+   "lon": "77.6387345",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Kalyananagara Bus Stand",
+   "display_name": "Kalyananagara Bus Stand, Basbusabpalaya Service Road, Palm Grove, Chellakere, Bengaluru East City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560043, India",
+   "boundingbox": [
+    "13.0264171",
+    "13.0265171",
+    "77.6386845",
+    "77.6387845"
+   ]
+  }
+ ],
+ "KR Puram": [
+  {
+   "place_id": 252340693,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 442134548,
+   "lat": "13.0075160",
+   "lon": "77.6959350",
+   "category": "place",
+   "type": "suburb",
+   "place_rank": 19,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "KR Puram",
+   "display_name": "KR Puram, K.R Pura, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560036, India",
+   "boundingbox": [
+    "12.9875160",
+    "13.0275160",
+    "77.6759350",
+    "77.7159350"
+   ]
+  },
+  {
+   "place_id": 252335071,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 251082967,
+   "lat": "13.0003856",
+   "lon": "77.6762486",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "KR Puram Railway Station",
+   "display_name": "KR Puram Railway Station, Outer Ring Road, Darga Mohalla, K.S. Nissar Ahmed Ward, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560016, India",
+   "boundingbox": [
+    "13.0003356",
+    "13.0004356",
+    "77.6761986",
+    "77.6762986"
+   ]
+  }
+ ],
+ "Mahadevapura": [
+  {
+   "place_id": 251668032,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5760197764,
+   "lat": "12.9965445",
+   "lon": "77.6927176",
+   "category": "railway",
+   "type": "station",
+   "place_rank": 30,
+   "importance": 0.24632300460320036,
+   "addresstype": "railway",
+   "name": "Singayyanapalya",
+   "display_name": "Singayyanapalya, Whitefield Road, Devasandra, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560048, India",
+   "boundingbox": [
+    "12.9915445",
+    "13.0015445",
+    "77.6877176",
+    "77.6977176"
+   ]
+  },
+  {
+   "place_id": 250383529,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883376,
+   "lat": "12.9912395",
+   "lon": "77.6897334",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.14673761120012202,
+   "addresstype": "suburb",
+   "name": "Mahadevapura",
+   "display_name": "Mahadevapura, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9785066",
+    "12.9963293",
+    "77.6744595",
+    "77.6958493"
+   ]
+  }
+ ],
+ "Hulimavu": [
+  {
+   "place_id": 253049075,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4076243857,
+   "lat": "12.8773486",
+   "lon": "77.6028031",
+   "category": "place",
+   "type": "quarter",
+   "place_rank": 20,
+   "importance": 0.36902538090653614,
+   "addresstype": "quarter",
+   "name": "Hulimavu",
+   "display_name": "Hulimavu, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+   "boundingbox": [
+    "12.8673486",
+    "12.8873486",
+    "77.5928031",
+    "77.6128031"
+   ]
+  },
+  {
+   "place_id": 252859794,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883357,
+   "lat": "12.8770389",
+   "lon": "77.6021118",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "Hulimavu",
+   "display_name": "Hulimavu, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+   "boundingbox": [
+    "12.8717695",
+    "12.8826716",
+    "77.5942769",
+    "77.6100339"
+   ]
+  }
+ ],
+ "Thanisandra": [
+  {
+   "place_id": 252487250,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 19883250,
+   "lat": "13.0522499",
+   "lon": "77.6316152",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "suburb",
+   "name": "Thanisandra",
+   "display_name": "Thanisandra, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0407180",
+    "13.0637276",
+    "77.6239880",
+    "77.6384281"
+   ]
+  },
+  {
+   "place_id": 252496163,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2632734413,
+   "lat": "13.0547130",
+   "lon": "77.6339258",
+   "category": "place",
+   "type": "quarter",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "quarter",
+   "name": "Thanisandra",
+   "display_name": "Thanisandra, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560045, India",
+   "boundingbox": [
+    "13.0447130",
+    "13.0647130",
+    "77.6239258",
+    "77.6439258"
+   ]
+  },
+  {
+   "place_id": 431720008,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1573762917,
+   "lat": "13.0585904",
+   "lon": "77.6337986",
+   "category": "landuse",
+   "type": "construction",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "construction",
+   "name": "Thanisandra",
+   "display_name": "Thanisandra, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0579529",
+    "13.0592279",
+    "77.6330749",
+    "77.6345222"
+   ]
+  }
+ ],
+ "Domlur": [
+  {
+   "place_id": 252390574,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 347261886,
+   "lat": "12.9624669",
+   "lon": "77.6381958",
+   "category": "place",
+   "type": "quarter",
+   "place_rank": 20,
+   "importance": 0.1334042778667887,
+   "addresstype": "quarter",
+   "name": "Domlur",
+   "display_name": "Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India",
+   "boundingbox": [
+    "12.9524669",
+    "12.9724669",
+    "77.6281958",
+    "77.6481958"
+   ]
+  },
+  {
+   "place_id": 420205024,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13913736294,
+   "lat": "12.9611294",
+   "lon": "77.6369418",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Domlur",
+   "display_name": "Domlur, HAL Old Airport Road, Domlur Village, Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India",
+   "boundingbox": [
+    "12.9610794",
+    "12.9611794",
+    "77.6368918",
+    "77.6369918"
+   ]
+  },
+  {
+   "place_id": 252634199,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3299039166,
+   "lat": "12.9611661",
+   "lon": "77.6379762",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Domlur (Towards HAL)",
+   "display_name": "Domlur (Towards HAL), Domlur Water Tank Road, Domlur 1st Stage, Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India",
+   "boundingbox": [
+    "12.9611161",
+    "12.9612161",
+    "77.6379262",
+    "77.6380262"
+   ]
+  }
+ ],
+ "Vijayanagar": [
+  {
+   "place_id": 251863299,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5760197784,
+   "lat": "12.9709537",
+   "lon": "77.5373851",
+   "category": "railway",
+   "type": "stop",
+   "place_rank": 30,
+   "importance": 0.2432038182346074,
+   "addresstype": "railway",
+   "name": "Vijayanagar",
+   "display_name": "Vijayanagar, Chord Road, M C Layout, Dr. Vishnuvardhan Ward, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560040, India",
+   "boundingbox": [
+    "12.9709037",
+    "12.9710037",
+    "77.5373351",
+    "77.5374351"
+   ]
+  },
+  {
+   "place_id": 251911925,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2487658329,
+   "lat": "12.9738549",
+   "lon": "77.5359264",
+   "category": "amenity",
+   "type": "pharmacy",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "amenity",
+   "name": "Kottkkal Arya Vaidya Shala",
+   "display_name": "Kottkkal Arya Vaidya Shala, Vijayanagar Water Tank Road, M C Layout, Dr. Vishnuvardhan Ward, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560040, India",
+   "boundingbox": [
+    "12.9738049",
+    "12.9739049",
+    "77.5358764",
+    "77.5359764"
+   ]
+  },
+  {
+   "place_id": 251893698,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 9167850482,
+   "lat": "12.9731035",
+   "lon": "77.5381791",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Vijayanagar",
+   "display_name": "Vijayanagar, 17th Cross Road, M C Layout, Dr. Vishnuvardhan Ward, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560040, India",
+   "boundingbox": [
+    "12.9730535",
+    "12.9731535",
+    "77.5381291",
+    "77.5382291"
+   ]
+  }
+ ],
+ "Manyata Tech Park": [
+  {
+   "place_id": 252722460,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 34121900,
+   "lat": "13.0482891",
+   "lon": "77.6211004",
+   "category": "landuse",
+   "type": "commercial",
+   "place_rank": 24,
+   "importance": 0.18157831638402872,
+   "addresstype": "commercial",
+   "name": "Manyata Tech Park",
+   "display_name": "Manyata Tech Park, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "13.0412578",
+    "13.0554522",
+    "77.6161363",
+    "77.6252754"
+   ]
+  },
+  {
+   "place_id": 252647457,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 10291118230,
+   "lat": "13.0456346",
+   "lon": "77.6211950",
+   "category": "amenity",
+   "type": "coworking_space",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "amenity",
+   "name": "The Executive Centre",
+   "display_name": "The Executive Centre, Outer Ring Road, Nagavara, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560045, India",
+   "boundingbox": [
+    "13.0455846",
+    "13.0456846",
+    "77.6211450",
+    "77.6212450"
+   ]
+  }
+ ],
+ "International Tech Park Bangalore": [],
+ "ITPL Whitefield": [
+  {
+   "place_id": 254913956,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1152481905,
+   "lat": "12.9863497",
+   "lon": "77.7325809",
+   "category": "tourism",
+   "type": "hotel",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "tourism",
+   "name": "Holiday Inn Express Bengaluru Whitefield ITPL",
+   "display_name": "Holiday Inn Express Bengaluru Whitefield ITPL, Plot 4, Whitefield Road, Pattanduru Agrahara, S.M Krishna Ward, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560066, India",
+   "boundingbox": [
+    "12.9860926",
+    "12.9865821",
+    "77.7321387",
+    "77.7330605"
+   ]
+  },
+  {
+   "place_id": 250522633,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1101376586,
+   "lat": "12.9872951",
+   "lon": "77.7320776",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "amenity",
+   "name": "Whitefield Fire Station",
+   "display_name": "Whitefield Fire Station, 1st Main Road, Hoodi, Kaveri Nagara, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560066, India",
+   "boundingbox": [
+    "12.9871352",
+    "12.9875049",
+    "77.7318510",
+    "77.7323715"
+   ]
+  },
+  {
+   "place_id": 250523384,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2477322390,
+   "lat": "12.9804194",
+   "lon": "77.7275164",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "SJR Park ITPL",
+   "display_name": "SJR Park ITPL, 8th Road, Pattanduru Agrahara, S.M Krishna Ward, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560066, India",
+   "boundingbox": [
+    "12.9803694",
+    "12.9804694",
+    "77.7274664",
+    "77.7275664"
+   ]
+  }
+ ],
+ "Infosys Electronic City": [
+  {
+   "place_id": 252835771,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5631135851,
+   "lat": "12.8455152",
+   "lon": "77.6649677",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.000040000762951049326,
+   "addresstype": "highway",
+   "name": "State Bank of India",
+   "display_name": "State Bank of India, Infosys Avenue, Electronics City Phase 1, Electronic City, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+   "boundingbox": [
+    "12.8454652",
+    "12.8455652",
+    "77.6649177",
+    "77.6650177"
+   ]
+  },
+  {
+   "place_id": 252735329,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1152801237,
+   "lat": "12.8452765",
+   "lon": "77.6649125",
+   "category": "amenity",
+   "type": "bank",
+   "place_rank": 30,
+   "importance": 0.000040000762951049326,
+   "addresstype": "amenity",
+   "name": "State Bank of India",
+   "display_name": "State Bank of India, Infosys Avenue, Electronics City Phase 1, Electronic City, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+   "boundingbox": [
+    "12.8452265",
+    "12.8453265",
+    "77.6648625",
+    "77.6649625"
+   ]
+  }
+ ],
+ "Bagmane Tech Park": [
+  {
+   "place_id": 252175215,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 323047914,
+   "lat": "12.9787742",
+   "lon": "77.6588575",
+   "category": "landuse",
+   "type": "commercial",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "commercial",
+   "name": "Bagmane Tech Park",
+   "display_name": "Bagmane Tech Park, New Thippasandra, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9772965",
+    "12.9802703",
+    "77.6561701",
+    "77.6663697"
+   ]
+  },
+  {
+   "place_id": 250528219,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 343324577,
+   "lat": "12.9807706",
+   "lon": "77.6563527",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Bagmane Tech Park",
+   "display_name": "Bagmane Tech Park, Doctor APJ Abdul Kalam Road, Krishnappa Garden, Nagavarapalya, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560093, India",
+   "boundingbox": [
+    "12.9807206",
+    "12.9808206",
+    "77.6563027",
+    "77.6564027"
+   ]
+  },
+  {
+   "place_id": 250528205,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13016547169,
+   "lat": "12.9807418",
+   "lon": "77.6567531",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 0.00007094453345536,
+   "addresstype": "highway",
+   "name": "Bagmane Tech Park",
+   "display_name": "Bagmane Tech Park, Doctor APJ Abdul Kalam Road, Sudgunte Palya, C V Raman Nagar, Nagavarapalya, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560093, India",
+   "boundingbox": [
+    "12.9806918",
+    "12.9807918",
+    "77.6567031",
+    "77.6568031"
+   ]
+  }
+ ],
+ "Embassy Tech Village": [
+  {
+   "place_id": 251815067,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 232970396,
+   "lat": "12.9306853",
+   "lon": "77.6914167",
+   "category": "landuse",
+   "type": "commercial",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "commercial",
+   "name": "Embassy TechVillage",
+   "display_name": "Embassy TechVillage, Devarabeesanahalli, Shivanasamudra Ward, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+   "boundingbox": [
+    "12.9264027",
+    "12.9345005",
+    "77.6873959",
+    "77.6949253"
+   ]
+  }
+ ],
+ "Prestige Tech Park": [
+  {
+   "place_id": 258389403,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 233001388,
+   "lat": "12.9422716",
+   "lon": "77.6935966",
+   "category": "landuse",
+   "type": "commercial",
+   "place_rank": 24,
+   "importance": 0.08007094453345538,
+   "addresstype": "commercial",
+   "name": "Prestige Tech Park",
+   "display_name": "Prestige Tech Park, Kaadubeesanahalli, Panathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560103, India",
+   "boundingbox": [
+    "12.9391829",
+    "12.9453398",
+    "77.6881723",
+    "77.6975015"
+   ]
+  }
+ ]
+}

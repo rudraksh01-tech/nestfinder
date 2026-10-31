@@ -1,0 +1,7738 @@
+{
+ "note": "Demo data. Rents are generated from rough per-area assumptions. Distances are straight-line km, approximate.",
+ "seed": 2026,
+ "count": 120,
+ "listings": [
+  {
+   "id": "NF-001",
+   "isDemo": true,
+   "locality": "Koramangala",
+   "location": {
+    "lat": 12.938343,
+    "lon": 77.616431
+   },
+   "bhk": 2,
+   "sqft": 1020,
+   "rent": 42000,
+   "depositMonths": 6,
+   "deposit": 252000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 5,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-11-14",
+   "nearestMetro": {
+    "name": "Central Silk Board",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 13.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 8.4
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Koramangala, on floor 2 of 5. Nearest metro is Central Silk Board, about 2.5 km away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-002",
+   "isDemo": true,
+   "locality": "Koramangala",
+   "location": {
+    "lat": 12.94157,
+    "lon": 77.619208
+   },
+   "bhk": 2,
+   "sqft": 1160,
+   "rent": 45000,
+   "depositMonths": 5,
+   "deposit": 225000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 2,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-12-29",
+   "nearestMetro": {
+    "name": "Central Silk Board",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 11.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 13.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 8.1
+    }
+   ],
+   "description": "2BHK fully furnished flat in an independent house in Koramangala, on floor 1 of 2. Nearest metro is Central Silk Board, about 2.8 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Bachelors welcome. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-003",
+   "isDemo": true,
+   "locality": "Koramangala",
+   "location": {
+    "lat": 12.946003,
+    "lon": 77.631363
+   },
+   "bhk": 1,
+   "sqft": 620,
+   "rent": 33500,
+   "depositMonths": 5,
+   "deposit": 167500,
+   "maintenance": 4000,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 10,
+   "totalFloors": 10,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Swimming pool",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-12-29",
+   "nearestMetro": {
+    "name": "Trinity",
+    "lines": [
+     "Purple"
+    ],
+    "km": 3.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 11.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.8
+    }
+   ],
+   "description": "1BHK fully furnished flat in a gated society in Koramangala, on floor 10 of 10. Nearest metro is Trinity, about 3.4 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-004",
+   "isDemo": true,
+   "locality": "Koramangala",
+   "location": {
+    "lat": 12.935407,
+    "lon": 77.626034
+   },
+   "bhk": 3,
+   "sqft": 1740,
+   "rent": 64000,
+   "depositMonths": 10,
+   "deposit": 640000,
+   "maintenance": 4900,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 17,
+   "totalFloors": 21,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "high",
+   "availableFrom": "2027-01-09",
+   "nearestMetro": {
+    "name": "Central Silk Board",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 12.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 10.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.4
+    }
+   ],
+   "description": "3BHK unfurnished flat in a gated society in Koramangala, on floor 17 of 21. Nearest metro is Central Silk Board, about 2.2 km away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Tanker supply."
+  },
+  {
+   "id": "NF-005",
+   "isDemo": true,
+   "locality": "Koramangala",
+   "location": {
+    "lat": 12.942957,
+    "lon": 77.63322
+   },
+   "bhk": 2,
+   "sqft": 1230,
+   "rent": 48000,
+   "depositMonths": 3,
+   "deposit": 144000,
+   "maintenance": 2100,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 5,
+   "totalFloors": 9,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-16",
+   "nearestMetro": {
+    "name": "Central Silk Board",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 3.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 11.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.5
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Koramangala, on floor 5 of 9. Nearest metro is Central Silk Board, about 3.2 km away. Quiet street, good for working from home. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-006",
+   "isDemo": true,
+   "locality": "Koramangala",
+   "location": {
+    "lat": 12.932781,
+    "lon": 77.614365
+   },
+   "bhk": 2,
+   "sqft": 940,
+   "rent": 39000,
+   "depositMonths": 3,
+   "deposit": 117000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 3,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Tanker supply",
+   "noise": "low",
+   "availableFrom": "2026-11-05",
+   "nearestMetro": {
+    "name": "Central Silk Board",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 14.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.1
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 8.7
+    }
+   ],
+   "description": "2BHK unfurnished flat in an independent house in Koramangala, on floor 3 of 3. Nearest metro is Central Silk Board, about 1.9 km away. Quiet street, good for working from home. Pets are welcome. Owner prefers a family. Water: Tanker supply."
+  },
+  {
+   "id": "NF-007",
+   "isDemo": true,
+   "locality": "Indiranagar",
+   "location": {
+    "lat": 12.964227,
+    "lon": 77.635635
+   },
+   "bhk": 1,
+   "sqft": 630,
+   "rent": 25500,
+   "depositMonths": 5,
+   "deposit": 127500,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Borewell",
+   "noise": "high",
+   "availableFrom": "2026-12-01",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.7
+    }
+   ],
+   "description": "1BHK semi-furnished flat in an independent house in Indiranagar, on floor 2 of 3. Nearest metro is Indiranagar, about 1.6 km away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Open to families and working professionals. Water: Borewell."
+  },
+  {
+   "id": "NF-008",
+   "isDemo": true,
+   "locality": "Indiranagar",
+   "location": {
+    "lat": 12.963841,
+    "lon": 77.639332
+   },
+   "bhk": 1,
+   "sqft": 640,
+   "rent": 31500,
+   "depositMonths": 3,
+   "deposit": 94500,
+   "maintenance": 2500,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 3,
+   "totalFloors": 11,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area"
+   ],
+   "waterSource": "Borewell",
+   "noise": "high",
+   "availableFrom": "2027-01-07",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 2.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.4
+    }
+   ],
+   "description": "1BHK unfurnished flat in a gated society in Indiranagar, on floor 3 of 11. Nearest metro is Indiranagar, about 1.6 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-009",
+   "isDemo": true,
+   "locality": "Indiranagar",
+   "location": {
+    "lat": 12.973736,
+    "lon": 77.646772
+   },
+   "bhk": 3,
+   "sqft": 1360,
+   "rent": 75500,
+   "depositMonths": 3,
+   "deposit": 226500,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 4,
+   "totalFloors": 5,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-24",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 8.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 1.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.2
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Indiranagar, on floor 4 of 5. Indiranagar metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-010",
+   "isDemo": true,
+   "locality": "Indiranagar",
+   "location": {
+    "lat": 12.973111,
+    "lon": 77.641503
+   },
+   "bhk": 1,
+   "sqft": 530,
+   "rent": 35000,
+   "depositMonths": 8,
+   "deposit": 280000,
+   "maintenance": 4100,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 9,
+   "totalFloors": 13,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "high",
+   "availableFrom": "2026-12-26",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 8.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.6
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a gated society in Indiranagar, on floor 9 of 13. Indiranagar metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Tanker supply."
+  },
+  {
+   "id": "NF-011",
+   "isDemo": true,
+   "locality": "Indiranagar",
+   "location": {
+    "lat": 12.97796,
+    "lon": 77.650365
+   },
+   "bhk": 2,
+   "sqft": 1100,
+   "rent": 47500,
+   "depositMonths": 3,
+   "deposit": 142500,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 5,
+   "totalFloors": 5,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [
+    "Power backup",
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "high",
+   "availableFrom": "2027-01-10",
+   "nearestMetro": {
+    "name": "Swami Vivekananda Road",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 8.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 0.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.1
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Indiranagar, on floor 5 of 5. Swami Vivekananda Road metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Bachelors welcome. Water: Tanker supply."
+  },
+  {
+   "id": "NF-012",
+   "isDemo": true,
+   "locality": "Indiranagar",
+   "location": {
+    "lat": 12.969979,
+    "lon": 77.644218
+   },
+   "bhk": 2,
+   "sqft": 1180,
+   "rent": 54000,
+   "depositMonths": 6,
+   "deposit": 324000,
+   "maintenance": 3600,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 12,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-11-11",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 14
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 1.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.2
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a gated society in Indiranagar, on floor 8 of 12. Indiranagar metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-013",
+   "isDemo": true,
+   "locality": "HSR Layout",
+   "location": {
+    "lat": 12.911737,
+    "lon": 77.646861
+   },
+   "bhk": 3,
+   "sqft": 1730,
+   "rent": 72000,
+   "depositMonths": 10,
+   "deposit": 720000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 2,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-09",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 12.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 7.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 5.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.1
+    }
+   ],
+   "description": "3BHK fully furnished flat in an independent house in HSR Layout, on floor 1 of 2. Nearest metro is Hongasandra, about 2 km away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-014",
+   "isDemo": true,
+   "locality": "HSR Layout",
+   "location": {
+    "lat": 12.909073,
+    "lon": 77.636724
+   },
+   "bhk": 2,
+   "sqft": 1080,
+   "rent": 49500,
+   "depositMonths": 3,
+   "deposit": 148500,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "None",
+   "amenities": [
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-12",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 13.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.2
+    }
+   ],
+   "description": "2BHK fully furnished flat in an independent house in HSR Layout, on the ground floor of 2. Hongasandra metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-015",
+   "isDemo": true,
+   "locality": "HSR Layout",
+   "location": {
+    "lat": 12.904723,
+    "lon": 77.630247
+   },
+   "bhk": 1,
+   "sqft": 650,
+   "rent": 26000,
+   "depositMonths": 8,
+   "deposit": 208000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 0,
+   "totalFloors": 5,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Power backup",
+    "Lift"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2027-01-03",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 14.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 8
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a standalone building in HSR Layout, on the ground floor of 5. Hongasandra metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-016",
+   "isDemo": true,
+   "locality": "HSR Layout",
+   "location": {
+    "lat": 12.911688,
+    "lon": 77.637421
+   },
+   "bhk": 3,
+   "sqft": 1540,
+   "rent": 49500,
+   "depositMonths": 8,
+   "deposit": 396000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 4,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "24x7 security"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-12",
+   "nearestMetro": {
+    "name": "Bommanahalli",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.3
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 13.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 7.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7
+    }
+   ],
+   "description": "3BHK unfurnished flat in a standalone building in HSR Layout, on floor 4 of 4. Bommanahalli metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-017",
+   "isDemo": true,
+   "locality": "HSR Layout",
+   "location": {
+    "lat": 12.911338,
+    "lon": 77.628251
+   },
+   "bhk": 3,
+   "sqft": 1610,
+   "rent": 59500,
+   "depositMonths": 6,
+   "deposit": 357000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 5,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Power backup",
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-12",
+   "nearestMetro": {
+    "name": "Bommanahalli",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 14
+    },
+    {
+     "name": "Electronic City",
+     "km": 8.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.9
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in HSR Layout, on floor 2 of 5. Bommanahalli metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-018",
+   "isDemo": true,
+   "locality": "HSR Layout",
+   "location": {
+    "lat": 12.907812,
+    "lon": 77.639222
+   },
+   "bhk": 1,
+   "sqft": 650,
+   "rent": 28000,
+   "depositMonths": 2,
+   "deposit": 56000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 4,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Lift",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "medium",
+   "availableFrom": "2026-11-08",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 13.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a standalone building in HSR Layout, on floor 4 of 4. Hongasandra metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Tanker supply."
+  },
+  {
+   "id": "NF-019",
+   "isDemo": true,
+   "locality": "BTM Layout",
+   "location": {
+    "lat": 12.918748,
+    "lon": 77.615636
+   },
+   "bhk": 1,
+   "sqft": 650,
+   "rent": 15500,
+   "depositMonths": 10,
+   "deposit": 155000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-12-02",
+   "nearestMetro": {
+    "name": "Central Silk Board",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 14.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 9.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 8.8
+    }
+   ],
+   "description": "1BHK unfurnished flat in a standalone building in BTM Layout, on floor 1 of 3. Central Silk Board metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-020",
+   "isDemo": true,
+   "locality": "BTM Layout",
+   "location": {
+    "lat": 12.922642,
+    "lon": 77.607588
+   },
+   "bhk": 3,
+   "sqft": 1770,
+   "rent": 38000,
+   "depositMonths": 6,
+   "deposit": 228000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "24x7 security",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2027-01-03",
+   "nearestMetro": {
+    "name": "BTM Layout",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 10.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.6
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in BTM Layout, on floor 3 of 4. BTM Layout metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-021",
+   "isDemo": true,
+   "locality": "BTM Layout",
+   "location": {
+    "lat": 12.924304,
+    "lon": 77.604109
+   },
+   "bhk": 2,
+   "sqft": 970,
+   "rent": 27500,
+   "depositMonths": 3,
+   "deposit": 82500,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "24x7 security"
+   ],
+   "waterSource": "Borewell",
+   "noise": "high",
+   "availableFrom": "2026-11-21",
+   "nearestMetro": {
+    "name": "Jayadeva Hospital",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 13.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 11
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.9
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in BTM Layout, on floor 1 of 3. Jayadeva Hospital metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Bachelors welcome. Water: Borewell."
+  },
+  {
+   "id": "NF-022",
+   "isDemo": true,
+   "locality": "BTM Layout",
+   "location": {
+    "lat": 12.911853,
+    "lon": 77.607307
+   },
+   "bhk": 1,
+   "sqft": 520,
+   "rent": 19000,
+   "depositMonths": 6,
+   "deposit": 114000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Standalone building",
+   "floor": 5,
+   "totalFloors": 5,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-11-17",
+   "nearestMetro": {
+    "name": "BTM Layout",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 9.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.9
+    }
+   ],
+   "description": "1BHK fully furnished flat in a standalone building in BTM Layout, on floor 5 of 5. BTM Layout metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-023",
+   "isDemo": true,
+   "locality": "BTM Layout",
+   "location": {
+    "lat": 12.91925,
+    "lon": 77.608264
+   },
+   "bhk": 1,
+   "sqft": 630,
+   "rent": 16000,
+   "depositMonths": 6,
+   "deposit": 96000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-12-05",
+   "nearestMetro": {
+    "name": "BTM Layout",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 10.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.6
+    }
+   ],
+   "description": "1BHK unfurnished flat in an independent house in BTM Layout, on floor 1 of 3. BTM Layout metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-024",
+   "isDemo": true,
+   "locality": "BTM Layout",
+   "location": {
+    "lat": 12.903279,
+    "lon": 77.612127
+   },
+   "bhk": 2,
+   "sqft": 1190,
+   "rent": 27500,
+   "depositMonths": 6,
+   "deposit": 165000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 5,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Lift",
+    "24x7 security",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-11-22",
+   "nearestMetro": {
+    "name": "BTM Layout",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16
+    },
+    {
+     "name": "Electronic City",
+     "km": 8.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.8
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in BTM Layout, on floor 3 of 5. BTM Layout metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-025",
+   "isDemo": true,
+   "locality": "Jayanagar",
+   "location": {
+    "lat": 12.939046,
+    "lon": 77.587626
+   },
+   "bhk": 1,
+   "sqft": 590,
+   "rent": 21500,
+   "depositMonths": 2,
+   "deposit": 43000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2027-01-12",
+   "nearestMetro": {
+    "name": "South End Circle",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16.6
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 11.5
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a standalone building in Jayanagar, on floor 3 of 3. South End Circle metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-026",
+   "isDemo": true,
+   "locality": "Jayanagar",
+   "location": {
+    "lat": 12.926671,
+    "lon": 77.57488
+   },
+   "bhk": 2,
+   "sqft": 1230,
+   "rent": 34500,
+   "depositMonths": 5,
+   "deposit": 172500,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Standalone building",
+   "floor": 0,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-12-30",
+   "nearestMetro": {
+    "name": "Jayanagar",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13
+    }
+   ],
+   "description": "2BHK fully furnished flat in a standalone building in Jayanagar, on the ground floor of 3. Jayanagar metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-027",
+   "isDemo": true,
+   "locality": "Jayanagar",
+   "location": {
+    "lat": 12.934733,
+    "lon": 77.572406
+   },
+   "bhk": 1,
+   "sqft": 580,
+   "rent": 25000,
+   "depositMonths": 10,
+   "deposit": 250000,
+   "maintenance": 3300,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 4,
+   "totalFloors": 18,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "Clubhouse",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-15",
+   "nearestMetro": {
+    "name": "South End Circle",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 13.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.1
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.2
+    }
+   ],
+   "description": "1BHK unfurnished flat in a gated society in Jayanagar, on floor 4 of 18. South End Circle metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-028",
+   "isDemo": true,
+   "locality": "Jayanagar",
+   "location": {
+    "lat": 12.934169,
+    "lon": 77.577388
+   },
+   "bhk": 2,
+   "sqft": 920,
+   "rent": 28500,
+   "depositMonths": 3,
+   "deposit": 85500,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-22",
+   "nearestMetro": {
+    "name": "South End Circle",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 13.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 17.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.6
+    }
+   ],
+   "description": "2BHK unfurnished flat in an independent house in Jayanagar, on floor 2 of 2. South End Circle metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Water: Borewell."
+  },
+  {
+   "id": "NF-029",
+   "isDemo": true,
+   "locality": "JP Nagar",
+   "location": {
+    "lat": 12.912068,
+    "lon": 77.580911
+   },
+   "bhk": 3,
+   "sqft": 1760,
+   "rent": 42500,
+   "depositMonths": 3,
+   "deposit": 127500,
+   "maintenance": 3800,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 18,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-12-11",
+   "nearestMetro": {
+    "name": "Banashankari",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 11.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.7
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in JP Nagar, on floor 8 of 18. Banashankari metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-030",
+   "isDemo": true,
+   "locality": "JP Nagar",
+   "location": {
+    "lat": 12.91651,
+    "lon": 77.59645
+   },
+   "bhk": 3,
+   "sqft": 1400,
+   "rent": 37000,
+   "depositMonths": 5,
+   "deposit": 185000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "24x7 security"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "medium",
+   "availableFrom": "2026-12-25",
+   "nearestMetro": {
+    "name": "Jayadeva Hospital",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 10.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.9
+    }
+   ],
+   "description": "3BHK unfurnished flat in a standalone building in JP Nagar, on floor 1 of 4. Jayadeva Hospital metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Tanker supply."
+  },
+  {
+   "id": "NF-031",
+   "isDemo": true,
+   "locality": "JP Nagar",
+   "location": {
+    "lat": 12.902992,
+    "lon": 77.575918
+   },
+   "bhk": 3,
+   "sqft": 1430,
+   "rent": 35000,
+   "depositMonths": 3,
+   "deposit": 105000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 4,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Power backup",
+    "24x7 security",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-15",
+   "nearestMetro": {
+    "name": "Jaya Prakash Nagar",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.5
+    }
+   ],
+   "description": "3BHK unfurnished flat in a standalone building in JP Nagar, on floor 3 of 4. Jaya Prakash Nagar metro is a short walk away. Quiet street, good for working from home. No pets, as per the owner. Bachelors welcome. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-032",
+   "isDemo": true,
+   "locality": "JP Nagar",
+   "location": {
+    "lat": 12.915255,
+    "lon": 77.582881
+   },
+   "bhk": 3,
+   "sqft": 1370,
+   "rent": 45000,
+   "depositMonths": 8,
+   "deposit": 360000,
+   "maintenance": 4900,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 4,
+   "totalFloors": 22,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-17",
+   "nearestMetro": {
+    "name": "Ragigudda",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18
+    },
+    {
+     "name": "Electronic City",
+     "km": 11.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.4
+    }
+   ],
+   "description": "3BHK unfurnished flat in a gated society in JP Nagar, on floor 4 of 22. Ragigudda metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-033",
+   "isDemo": true,
+   "locality": "Whitefield",
+   "location": {
+    "lat": 12.990085,
+    "lon": 77.767098
+   },
+   "bhk": 3,
+   "sqft": 1580,
+   "rent": 61500,
+   "depositMonths": 2,
+   "deposit": 123000,
+   "maintenance": 3000,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 16,
+   "totalFloors": 22,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2027-01-08",
+   "nearestMetro": {
+    "name": "Whitefield (Kadugodi)",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 17.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 11.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.6
+    }
+   ],
+   "description": "3BHK fully furnished flat in a gated society in Whitefield, on floor 16 of 22. Whitefield (Kadugodi) metro is a short walk away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-034",
+   "isDemo": true,
+   "locality": "Whitefield",
+   "location": {
+    "lat": 12.993949,
+    "lon": 77.759385
+   },
+   "bhk": 2,
+   "sqft": 1150,
+   "rent": 31000,
+   "depositMonths": 5,
+   "deposit": 155000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-22",
+   "nearestMetro": {
+    "name": "Whitefield (Kadugodi)",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 11
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.2
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in Whitefield, on floor 2 of 3. Whitefield (Kadugodi) metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-035",
+   "isDemo": true,
+   "locality": "Whitefield",
+   "location": {
+    "lat": 13.000592,
+    "lon": 77.76856
+   },
+   "bhk": 2,
+   "sqft": 1040,
+   "rent": 37000,
+   "depositMonths": 3,
+   "deposit": 111000,
+   "maintenance": 2600,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 19,
+   "totalFloors": 20,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-24",
+   "nearestMetro": {
+    "name": "Whitefield (Kadugodi)",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 20.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.4
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Whitefield, on floor 19 of 20. Whitefield (Kadugodi) metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-036",
+   "isDemo": true,
+   "locality": "Whitefield",
+   "location": {
+    "lat": 13.001902,
+    "lon": 77.748492
+   },
+   "bhk": 1,
+   "sqft": 580,
+   "rent": 22500,
+   "depositMonths": 5,
+   "deposit": 112500,
+   "maintenance": 2100,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 12,
+   "totalFloors": 19,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2027-01-04",
+   "nearestMetro": {
+    "name": "Whitefield (Kadugodi)",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 2.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 8.9
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a gated society in Whitefield, on floor 12 of 19. Whitefield (Kadugodi) metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-037",
+   "isDemo": true,
+   "locality": "Whitefield",
+   "location": {
+    "lat": 12.994484,
+    "lon": 77.760365
+   },
+   "bhk": 1,
+   "sqft": 670,
+   "rent": 25000,
+   "depositMonths": 5,
+   "deposit": 125000,
+   "maintenance": 4900,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 11,
+   "totalFloors": 16,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Lift",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-01",
+   "nearestMetro": {
+    "name": "Whitefield (Kadugodi)",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 11.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.3
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a gated society in Whitefield, on floor 11 of 16. Whitefield (Kadugodi) metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-038",
+   "isDemo": true,
+   "locality": "Whitefield",
+   "location": {
+    "lat": 12.997006,
+    "lon": 77.768321
+   },
+   "bhk": 2,
+   "sqft": 1120,
+   "rent": 37000,
+   "depositMonths": 10,
+   "deposit": 370000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Children's play area"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-03",
+   "nearestMetro": {
+    "name": "Whitefield (Kadugodi)",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4
+    },
+    {
+     "name": "Electronic City",
+     "km": 20.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.1
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Whitefield, on floor 3 of 4. Whitefield (Kadugodi) metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Borewell."
+  },
+  {
+   "id": "NF-039",
+   "isDemo": true,
+   "locality": "Marathahalli",
+   "location": {
+    "lat": 12.948791,
+    "lon": 77.702299
+   },
+   "bhk": 2,
+   "sqft": 1090,
+   "rent": 39500,
+   "depositMonths": 3,
+   "deposit": 118500,
+   "maintenance": 3000,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 5,
+   "totalFloors": 15,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Lift",
+    "24x7 security",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2027-01-03",
+   "nearestMetro": {
+    "name": "Kundalahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 3.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 5.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 12.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 2.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 1.2
+    }
+   ],
+   "description": "2BHK fully furnished flat in a gated society in Marathahalli, on floor 5 of 15. Nearest metro is Kundalahalli, about 3.5 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-040",
+   "isDemo": true,
+   "locality": "Marathahalli",
+   "location": {
+    "lat": 12.965479,
+    "lon": 77.698993
+   },
+   "bhk": 2,
+   "sqft": 1140,
+   "rent": 33500,
+   "depositMonths": 2,
+   "deposit": 67000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Lift"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2027-01-12",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.6
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in Marathahalli, on the ground floor of 2. Nearest metro is Seetharampalya, about 2 km away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-041",
+   "isDemo": true,
+   "locality": "Marathahalli",
+   "location": {
+    "lat": 12.963626,
+    "lon": 77.695827
+   },
+   "bhk": 3,
+   "sqft": 1680,
+   "rent": 41000,
+   "depositMonths": 5,
+   "deposit": 205000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 2,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-27",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.4
+    }
+   ],
+   "description": "3BHK semi-furnished flat in an independent house in Marathahalli, on floor 2 of 2. Nearest metro is Seetharampalya, about 2.4 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-042",
+   "isDemo": true,
+   "locality": "Marathahalli",
+   "location": {
+    "lat": 12.964068,
+    "lon": 77.692753
+   },
+   "bhk": 2,
+   "sqft": 1150,
+   "rent": 30500,
+   "depositMonths": 2,
+   "deposit": 61000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Power backup",
+    "Lift",
+    "24x7 security"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2027-01-11",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 5
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.4
+    }
+   ],
+   "description": "2BHK fully furnished flat in a standalone building in Marathahalli, on floor 1 of 4. Nearest metro is Seetharampalya, about 2.6 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-043",
+   "isDemo": true,
+   "locality": "Marathahalli",
+   "location": {
+    "lat": 12.964919,
+    "lon": 77.694696
+   },
+   "bhk": 1,
+   "sqft": 540,
+   "rent": 22000,
+   "depositMonths": 10,
+   "deposit": 220000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Children's play area"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "low",
+   "availableFrom": "2026-12-04",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.5
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a standalone building in Marathahalli, on floor 2 of 4. Nearest metro is Seetharampalya, about 2.3 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Water: Tanker supply."
+  },
+  {
+   "id": "NF-044",
+   "isDemo": true,
+   "locality": "Marathahalli",
+   "location": {
+    "lat": 12.962631,
+    "lon": 77.703745
+   },
+   "bhk": 1,
+   "sqft": 550,
+   "rent": 17500,
+   "depositMonths": 3,
+   "deposit": 52500,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 3,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-11-30",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 13.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.5
+    }
+   ],
+   "description": "1BHK unfurnished flat in an independent house in Marathahalli, on the ground floor of 3. Nearest metro is Seetharampalya, about 2.1 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Bachelors welcome. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-045",
+   "isDemo": true,
+   "locality": "Bellandur",
+   "location": {
+    "lat": 12.931438,
+    "lon": 77.682131
+   },
+   "bhk": 3,
+   "sqft": 1670,
+   "rent": 63500,
+   "depositMonths": 10,
+   "deposit": 635000,
+   "maintenance": 3000,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 5,
+   "totalFloors": 8,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-29",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 6.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 8.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 9.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 1.7
+    }
+   ],
+   "description": "3BHK unfurnished flat in a gated society in Bellandur, on floor 5 of 8. Nearest metro is Seetharampalya, about 6.2 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-046",
+   "isDemo": true,
+   "locality": "Bellandur",
+   "location": {
+    "lat": 12.923188,
+    "lon": 77.677867
+   },
+   "bhk": 3,
+   "sqft": 1760,
+   "rent": 57500,
+   "depositMonths": 2,
+   "deposit": 115000,
+   "maintenance": 4700,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 12,
+   "totalFloors": 18,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Swimming pool",
+    "Lift",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-11-16",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 5.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 8.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 1.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.7
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in Bellandur, on floor 12 of 18. Nearest metro is Hongasandra, about 5.5 km away. Quiet street, good for working from home. Pets are welcome. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-047",
+   "isDemo": true,
+   "locality": "Bellandur",
+   "location": {
+    "lat": 12.922183,
+    "lon": 77.674924
+   },
+   "bhk": 2,
+   "sqft": 1060,
+   "rent": 41500,
+   "depositMonths": 6,
+   "deposit": 249000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 4,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-10",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 5.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 8.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 3
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Bellandur, on floor 1 of 4. Nearest metro is Hongasandra, about 5.2 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-048",
+   "isDemo": true,
+   "locality": "Bellandur",
+   "location": {
+    "lat": 12.924644,
+    "lon": 77.676932
+   },
+   "bhk": 1,
+   "sqft": 530,
+   "rent": 31000,
+   "depositMonths": 6,
+   "deposit": 186000,
+   "maintenance": 4200,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 1,
+   "totalFloors": 21,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-16",
+   "nearestMetro": {
+    "name": "Hongasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 5.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 8.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 1.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 2.7
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a gated society in Bellandur, on floor 1 of 21. Nearest metro is Hongasandra, about 5.5 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-049",
+   "isDemo": true,
+   "locality": "Bellandur",
+   "location": {
+    "lat": 12.931865,
+    "lon": 77.68715
+   },
+   "bhk": 2,
+   "sqft": 940,
+   "rent": 33500,
+   "depositMonths": 2,
+   "deposit": 67000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 5,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-10",
+   "nearestMetro": {
+    "name": "Seetharampalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 5.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 7.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 9.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 0.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 1.4
+    }
+   ],
+   "description": "2BHK unfurnished flat in a standalone building in Bellandur, on floor 3 of 5. Nearest metro is Seetharampalya, about 5.9 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-050",
+   "isDemo": true,
+   "locality": "Bellandur",
+   "location": {
+    "lat": 12.930073,
+    "lon": 77.693861
+   },
+   "bhk": 3,
+   "sqft": 1460,
+   "rent": 76500,
+   "depositMonths": 5,
+   "deposit": 382500,
+   "maintenance": 3900,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 18,
+   "totalFloors": 21,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-11-04",
+   "nearestMetro": {
+    "name": "Kundalahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 5.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.3
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 7.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 9.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 0.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 1.4
+    }
+   ],
+   "description": "3BHK fully furnished flat in a gated society in Bellandur, on floor 18 of 21. Nearest metro is Kundalahalli, about 5.8 km away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-051",
+   "isDemo": true,
+   "locality": "Sarjapur Road",
+   "location": {
+    "lat": 12.906728,
+    "lon": 77.675993
+   },
+   "bhk": 3,
+   "sqft": 1560,
+   "rent": 54500,
+   "depositMonths": 2,
+   "deposit": 109000,
+   "maintenance": 4700,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 1,
+   "totalFloors": 12,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-12-28",
+   "nearestMetro": {
+    "name": "Kudlu Gate",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 4.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 6.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 4.4
+    }
+   ],
+   "description": "3BHK unfurnished flat in a gated society in Sarjapur Road, on floor 1 of 12. Nearest metro is Kudlu Gate, about 4.4 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-052",
+   "isDemo": true,
+   "locality": "Sarjapur Road",
+   "location": {
+    "lat": 12.887864,
+    "lon": 77.684656
+   },
+   "bhk": 1,
+   "sqft": 670,
+   "rent": 24000,
+   "depositMonths": 3,
+   "deposit": 72000,
+   "maintenance": 3200,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 16,
+   "totalFloors": 18,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-19",
+   "nearestMetro": {
+    "name": "Beratena Agrahara",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 3.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 19.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 12.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 5.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 4.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.1
+    }
+   ],
+   "description": "1BHK unfurnished flat in a gated society in Sarjapur Road, on floor 16 of 18. Nearest metro is Beratena Agrahara, about 3.9 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-053",
+   "isDemo": true,
+   "locality": "Sarjapur Road",
+   "location": {
+    "lat": 12.908438,
+    "lon": 77.670671
+   },
+   "bhk": 2,
+   "sqft": 1100,
+   "rent": 43000,
+   "depositMonths": 10,
+   "deposit": 430000,
+   "maintenance": 4700,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 1,
+   "totalFloors": 19,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-25",
+   "nearestMetro": {
+    "name": "Kudlu Gate",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11
+    },
+    {
+     "name": "Electronic City",
+     "km": 7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 7.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 4.5
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a gated society in Sarjapur Road, on floor 1 of 19. Nearest metro is Kudlu Gate, about 4 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-054",
+   "isDemo": true,
+   "locality": "Sarjapur Road",
+   "location": {
+    "lat": 12.896686,
+    "lon": 77.678048
+   },
+   "bhk": 2,
+   "sqft": 1020,
+   "rent": 34500,
+   "depositMonths": 8,
+   "deposit": 276000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 2,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Borewell",
+   "noise": "high",
+   "availableFrom": "2026-11-10",
+   "nearestMetro": {
+    "name": "Hosa Road",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 18
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.6
+    },
+    {
+     "name": "Electronic City",
+     "km": 5.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 5.3
+    }
+   ],
+   "description": "2BHK fully furnished flat in an independent house in Sarjapur Road, on floor 2 of 2. Nearest metro is Hosa Road, about 4 km away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Open to families and working professionals. Water: Borewell."
+  },
+  {
+   "id": "NF-055",
+   "isDemo": true,
+   "locality": "Sarjapur Road",
+   "location": {
+    "lat": 12.900253,
+    "lon": 77.681002
+   },
+   "bhk": 3,
+   "sqft": 1460,
+   "rent": 60500,
+   "depositMonths": 5,
+   "deposit": 302500,
+   "maintenance": 3600,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 22,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-25",
+   "nearestMetro": {
+    "name": "Singasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 4.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 17.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 6.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 3.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 4.9
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in Sarjapur Road, on floor 8 of 22. Nearest metro is Singasandra, about 4.5 km away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-056",
+   "isDemo": true,
+   "locality": "Sarjapur Road",
+   "location": {
+    "lat": 12.907817,
+    "lon": 77.682695
+   },
+   "bhk": 1,
+   "sqft": 570,
+   "rent": 25000,
+   "depositMonths": 2,
+   "deposit": 50000,
+   "maintenance": 4800,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 5,
+   "totalFloors": 9,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-07",
+   "nearestMetro": {
+    "name": "Singasandra",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 5.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 17
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 2.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 4
+    }
+   ],
+   "description": "1BHK unfurnished flat in a gated society in Sarjapur Road, on floor 5 of 9. Nearest metro is Singasandra, about 5.1 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-057",
+   "isDemo": true,
+   "locality": "Electronic City",
+   "location": {
+    "lat": 12.848203,
+    "lon": 77.645673
+   },
+   "bhk": 3,
+   "sqft": 1520,
+   "rent": 33500,
+   "depositMonths": 6,
+   "deposit": 201000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 3,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-12-04",
+   "nearestMetro": {
+    "name": "Electronic City",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 22.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18
+    },
+    {
+     "name": "Electronic City",
+     "km": 2.1
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 14.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 11.7
+    }
+   ],
+   "description": "3BHK semi-furnished flat in an independent house in Electronic City, on the ground floor of 3. Nearest metro is Electronic City, about 2.1 km away. Quiet street, good for working from home. No pets, as per the owner. Bachelors welcome. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-058",
+   "isDemo": true,
+   "locality": "Electronic City",
+   "location": {
+    "lat": 12.859475,
+    "lon": 77.649005
+   },
+   "bhk": 1,
+   "sqft": 690,
+   "rent": 14500,
+   "depositMonths": 6,
+   "deposit": 87000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 0,
+   "totalFloors": 5,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Lift"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-29",
+   "nearestMetro": {
+    "name": "Beratena Agrahara",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 21.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 2.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.4
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a standalone building in Electronic City, on the ground floor of 5. Beratena Agrahara metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-059",
+   "isDemo": true,
+   "locality": "Electronic City",
+   "location": {
+    "lat": 12.838846,
+    "lon": 77.641439
+   },
+   "bhk": 3,
+   "sqft": 1380,
+   "rent": 37000,
+   "depositMonths": 3,
+   "deposit": 111000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "Children's play area"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-16",
+   "nearestMetro": {
+    "name": "Electronic City",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 3.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 23.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 2.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 15.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.8
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Electronic City, on floor 2 of 4. Nearest metro is Electronic City, about 3.1 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-060",
+   "isDemo": true,
+   "locality": "Electronic City",
+   "location": {
+    "lat": 12.846547,
+    "lon": 77.643249
+   },
+   "bhk": 2,
+   "sqft": 950,
+   "rent": 26500,
+   "depositMonths": 2,
+   "deposit": 53000,
+   "maintenance": 2800,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 2,
+   "totalFloors": 18,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-13",
+   "nearestMetro": {
+    "name": "Electronic City",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 22.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 2.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 14.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Electronic City, on floor 2 of 18. Nearest metro is Electronic City, about 2.5 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-061",
+   "isDemo": true,
+   "locality": "Electronic City",
+   "location": {
+    "lat": 12.855715,
+    "lon": 77.65869
+   },
+   "bhk": 2,
+   "sqft": 1050,
+   "rent": 22500,
+   "depositMonths": 6,
+   "deposit": 135000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 2,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-02",
+   "nearestMetro": {
+    "name": "Electronic City",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 0.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 21.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16.6
+    },
+    {
+     "name": "Electronic City",
+     "km": 1.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 9.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.3
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in Electronic City, on floor 2 of 2. Electronic City metro is a short walk away. Quiet street, good for working from home. Pets are welcome. Open to families and working professionals. Water: Borewell."
+  },
+  {
+   "id": "NF-062",
+   "isDemo": true,
+   "locality": "Electronic City",
+   "location": {
+    "lat": 12.844086,
+    "lon": 77.649373
+   },
+   "bhk": 2,
+   "sqft": 940,
+   "rent": 24500,
+   "depositMonths": 3,
+   "deposit": 73500,
+   "maintenance": 3700,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 2,
+   "totalFloors": 15,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "low",
+   "availableFrom": "2027-01-06",
+   "nearestMetro": {
+    "name": "Electronic City",
+    "lines": [
+     "Yellow"
+    ],
+    "km": 2.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 22.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 1.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 15
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 11.9
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Electronic City, on floor 2 of 15. Nearest metro is Electronic City, about 2.1 km away. Quiet street, good for working from home. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Tanker supply."
+  },
+  {
+   "id": "NF-063",
+   "isDemo": true,
+   "locality": "Hebbal",
+   "location": {
+    "lat": 13.045748,
+    "lon": 77.582671
+   },
+   "bhk": 3,
+   "sqft": 1460,
+   "rent": 51500,
+   "depositMonths": 2,
+   "deposit": 103000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-11-06",
+   "nearestMetro": {
+    "name": "Yeshwantpur",
+    "lines": [
+     "Green"
+    ],
+    "km": 4.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 4.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 17.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 24
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 11.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 17.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16.6
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Hebbal, on floor 3 of 4. Nearest metro is Yeshwantpur, about 4.3 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-064",
+   "isDemo": true,
+   "locality": "Hebbal",
+   "location": {
+    "lat": 13.030107,
+    "lon": 77.592581
+   },
+   "bhk": 2,
+   "sqft": 1220,
+   "rent": 42000,
+   "depositMonths": 3,
+   "deposit": 126000,
+   "maintenance": 3400,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 6,
+   "totalFloors": 11,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "Clubhouse",
+    "Children's play area"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-12",
+   "nearestMetro": {
+    "name": "Sandal Soap Factory",
+    "lines": [
+     "Green"
+    ],
+    "km": 4.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 3.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 22
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 14.7
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Hebbal, on floor 6 of 11. Nearest metro is Sandal Soap Factory, about 4.5 km away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-065",
+   "isDemo": true,
+   "locality": "Hebbal",
+   "location": {
+    "lat": 13.029314,
+    "lon": 77.594557
+   },
+   "bhk": 2,
+   "sqft": 1230,
+   "rent": 40000,
+   "depositMonths": 2,
+   "deposit": 80000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-17",
+   "nearestMetro": {
+    "name": "Sandal Soap Factory",
+    "lines": [
+     "Green"
+    ],
+    "km": 4.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 3.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 21.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 14.5
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Hebbal, on floor 3 of 3. Nearest metro is Sandal Soap Factory, about 4.7 km away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-066",
+   "isDemo": true,
+   "locality": "Hebbal",
+   "location": {
+    "lat": 13.044702,
+    "lon": 77.599618
+   },
+   "bhk": 1,
+   "sqft": 630,
+   "rent": 23000,
+   "depositMonths": 2,
+   "deposit": 46000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 5,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Lift",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-11",
+   "nearestMetro": {
+    "name": "Yeshwantpur",
+    "lines": [
+     "Green"
+    ],
+    "km": 5.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 2.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 23.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.3
+    }
+   ],
+   "description": "1BHK unfurnished flat in a standalone building in Hebbal, on floor 3 of 5. Nearest metro is Yeshwantpur, about 5.9 km away. Moderate traffic noise during peak hours. Pets are welcome. Bachelors welcome. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-067",
+   "isDemo": true,
+   "locality": "Hebbal",
+   "location": {
+    "lat": 13.032489,
+    "lon": 77.583652
+   },
+   "bhk": 1,
+   "sqft": 630,
+   "rent": 21000,
+   "depositMonths": 2,
+   "deposit": 42000,
+   "maintenance": 4600,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 5,
+   "totalFloors": 11,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-28",
+   "nearestMetro": {
+    "name": "Sandal Soap Factory",
+    "lines": [
+     "Green"
+    ],
+    "km": 3.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 4.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 22.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.6
+    }
+   ],
+   "description": "1BHK unfurnished flat in a gated society in Hebbal, on floor 5 of 11. Nearest metro is Sandal Soap Factory, about 3.8 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-068",
+   "isDemo": true,
+   "locality": "Hebbal",
+   "location": {
+    "lat": 13.038784,
+    "lon": 77.595814
+   },
+   "bhk": 3,
+   "sqft": 1400,
+   "rent": 59000,
+   "depositMonths": 3,
+   "deposit": 177000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 0,
+   "totalFloors": 5,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Power backup",
+    "Lift"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-12",
+   "nearestMetro": {
+    "name": "Sandal Soap Factory",
+    "lines": [
+     "Green"
+    ],
+    "km": 5.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 2.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 15.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 22.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.1
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Hebbal, on the ground floor of 5. Nearest metro is Sandal Soap Factory, about 5.3 km away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-069",
+   "isDemo": true,
+   "locality": "Yelahanka",
+   "location": {
+    "lat": 13.101501,
+    "lon": 77.592128
+   },
+   "bhk": 2,
+   "sqft": 1160,
+   "rent": 23500,
+   "depositMonths": 3,
+   "deposit": 70500,
+   "maintenance": 4100,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 10,
+   "totalFloors": 14,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-12-05",
+   "nearestMetro": {
+    "name": "Yeshwantpur",
+    "lines": [
+     "Green"
+    ],
+    "km": 9.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 6.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 29.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 15.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 21.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 20.8
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Yelahanka, on floor 10 of 14. Nearest metro is Yeshwantpur, about 9.8 km away. Quiet street, good for working from home. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-070",
+   "isDemo": true,
+   "locality": "Yelahanka",
+   "location": {
+    "lat": 13.110563,
+    "lon": 77.599802
+   },
+   "bhk": 1,
+   "sqft": 660,
+   "rent": 15000,
+   "depositMonths": 2,
+   "deposit": 30000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 4,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "low",
+   "availableFrom": "2026-11-08",
+   "nearestMetro": {
+    "name": "Yeshwantpur",
+    "lines": [
+     "Green"
+    ],
+    "km": 11.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 7.3
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 30.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 16
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 22.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 21.3
+    }
+   ],
+   "description": "1BHK unfurnished flat in a standalone building in Yelahanka, on floor 4 of 4. Nearest metro is Yeshwantpur, about 11.1 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Water: Tanker supply."
+  },
+  {
+   "id": "NF-071",
+   "isDemo": true,
+   "locality": "Yelahanka",
+   "location": {
+    "lat": 13.098792,
+    "lon": 77.606109
+   },
+   "bhk": 3,
+   "sqft": 1790,
+   "rent": 32000,
+   "depositMonths": 3,
+   "deposit": 96000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-29",
+   "nearestMetro": {
+    "name": "Yeshwantpur",
+    "lines": [
+     "Green"
+    ],
+    "km": 10.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 5.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 28.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 14.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 20.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 19.8
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Yelahanka, on floor 3 of 3. Nearest metro is Yeshwantpur, about 10.4 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-072",
+   "isDemo": true,
+   "locality": "Yelahanka",
+   "location": {
+    "lat": 13.096038,
+    "lon": 77.591512
+   },
+   "bhk": 2,
+   "sqft": 980,
+   "rent": 30500,
+   "depositMonths": 6,
+   "deposit": 183000,
+   "maintenance": 4900,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 3,
+   "totalFloors": 15,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-24",
+   "nearestMetro": {
+    "name": "Yeshwantpur",
+    "lines": [
+     "Green"
+    ],
+    "km": 9.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 6.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.6
+    },
+    {
+     "name": "Electronic City",
+     "km": 29
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 14.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 21.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 20.4
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a gated society in Yelahanka, on floor 3 of 15. Nearest metro is Yeshwantpur, about 9.3 km away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-073",
+   "isDemo": true,
+   "locality": "Malleshwaram",
+   "location": {
+    "lat": 13.008324,
+    "lon": 77.563684
+   },
+   "bhk": 1,
+   "sqft": 560,
+   "rent": 24500,
+   "depositMonths": 2,
+   "deposit": 49000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Power backup",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2027-01-01",
+   "nearestMetro": {
+    "name": "Sandal Soap Factory",
+    "lines": [
+     "Green"
+    ],
+    "km": 1.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 7.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 21.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.9
+    }
+   ],
+   "description": "1BHK semi-furnished flat in a standalone building in Malleshwaram, on floor 3 of 4. Sandal Soap Factory metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-074",
+   "isDemo": true,
+   "locality": "Malleshwaram",
+   "location": {
+    "lat": 13.005599,
+    "lon": 77.563944
+   },
+   "bhk": 2,
+   "sqft": 1180,
+   "rent": 36000,
+   "depositMonths": 3,
+   "deposit": 108000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Power backup",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-17",
+   "nearestMetro": {
+    "name": "Srirampura",
+    "lines": [
+     "Green"
+    ],
+    "km": 1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 7.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 20.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.7
+    }
+   ],
+   "description": "2BHK unfurnished flat in a standalone building in Malleshwaram, on floor 2 of 4. Srirampura metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-075",
+   "isDemo": true,
+   "locality": "Malleshwaram",
+   "location": {
+    "lat": 13.00627,
+    "lon": 77.562867
+   },
+   "bhk": 1,
+   "sqft": 620,
+   "rent": 27500,
+   "depositMonths": 3,
+   "deposit": 82500,
+   "maintenance": 2600,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 11,
+   "totalFloors": 19,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-12-14",
+   "nearestMetro": {
+    "name": "Mahakavi Kuvempu Road",
+    "lines": [
+     "Green"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 7.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 21
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.9
+    }
+   ],
+   "description": "1BHK fully furnished flat in a gated society in Malleshwaram, on floor 11 of 19. Mahakavi Kuvempu Road metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-076",
+   "isDemo": true,
+   "locality": "Malleshwaram",
+   "location": {
+    "lat": 13.00994,
+    "lon": 77.577178
+   },
+   "bhk": 2,
+   "sqft": 1190,
+   "rent": 37500,
+   "depositMonths": 6,
+   "deposit": 225000,
+   "maintenance": 3600,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 4,
+   "totalFloors": 13,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-13",
+   "nearestMetro": {
+    "name": "Srirampura",
+    "lines": [
+     "Green"
+    ],
+    "km": 2.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 6.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 17
+    },
+    {
+     "name": "Electronic City",
+     "km": 20.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 14.7
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Malleshwaram, on floor 4 of 13. Nearest metro is Srirampura, about 2.1 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-077",
+   "isDemo": true,
+   "locality": "Rajajinagar",
+   "location": {
+    "lat": 13.008611,
+    "lon": 77.545035
+   },
+   "bhk": 2,
+   "sqft": 1040,
+   "rent": 31500,
+   "depositMonths": 5,
+   "deposit": 157500,
+   "maintenance": 2100,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 5,
+   "totalFloors": 16,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-09",
+   "nearestMetro": {
+    "name": "Mahalakshmi",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.3
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 20.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 22.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 18.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 17.7
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Rajajinagar, on floor 5 of 16. Mahalakshmi metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-078",
+   "isDemo": true,
+   "locality": "Rajajinagar",
+   "location": {
+    "lat": 13.001013,
+    "lon": 77.549692
+   },
+   "bhk": 2,
+   "sqft": 1060,
+   "rent": 29000,
+   "depositMonths": 10,
+   "deposit": 290000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "None",
+   "amenities": [
+    "Power backup"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-28",
+   "nearestMetro": {
+    "name": "Rajajinagar",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 21.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 17.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16.9
+    }
+   ],
+   "description": "2BHK fully furnished flat in a standalone building in Rajajinagar, on floor 2 of 4. Rajajinagar metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-079",
+   "isDemo": true,
+   "locality": "Rajajinagar",
+   "location": {
+    "lat": 13.000186,
+    "lon": 77.545666
+   },
+   "bhk": 3,
+   "sqft": 1530,
+   "rent": 42000,
+   "depositMonths": 5,
+   "deposit": 210000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-18",
+   "nearestMetro": {
+    "name": "Rajajinagar",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 20.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 21.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 17.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 17.3
+    }
+   ],
+   "description": "3BHK semi-furnished flat in an independent house in Rajajinagar, on floor 2 of 2. Rajajinagar metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-080",
+   "isDemo": true,
+   "locality": "Rajajinagar",
+   "location": {
+    "lat": 13.009172,
+    "lon": 77.551364
+   },
+   "bhk": 1,
+   "sqft": 690,
+   "rent": 19000,
+   "depositMonths": 3,
+   "deposit": 57000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-11-15",
+   "nearestMetro": {
+    "name": "Mahalakshmi",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 8.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 22
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 17.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 17.1
+    }
+   ],
+   "description": "1BHK semi-furnished flat in an independent house in Rajajinagar, on floor 1 of 3. Mahalakshmi metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-081",
+   "isDemo": true,
+   "locality": "Banashankari",
+   "location": {
+    "lat": 12.924314,
+    "lon": 77.556535
+   },
+   "bhk": 1,
+   "sqft": 570,
+   "rent": 17000,
+   "depositMonths": 3,
+   "deposit": 51000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Lift"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-09",
+   "nearestMetro": {
+    "name": "Banashankari",
+    "lines": [
+     "Green"
+    ],
+    "km": 2.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 20.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 14.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15
+    }
+   ],
+   "description": "1BHK semi-furnished flat in an independent house in Banashankari, on floor 2 of 3. Nearest metro is Banashankari, about 2.1 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-082",
+   "isDemo": true,
+   "locality": "Banashankari",
+   "location": {
+    "lat": 12.934147,
+    "lon": 77.545724
+   },
+   "bhk": 1,
+   "sqft": 690,
+   "rent": 17000,
+   "depositMonths": 3,
+   "deposit": 51000,
+   "maintenance": 4300,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 8,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "None",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-12-23",
+   "nearestMetro": {
+    "name": "Mysore Road",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 15.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 21.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 16.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16.1
+    }
+   ],
+   "description": "1BHK unfurnished flat in a gated society in Banashankari, on floor 8 of 8. Nearest metro is Mysore Road, about 2.2 km away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-083",
+   "isDemo": true,
+   "locality": "Banashankari",
+   "location": {
+    "lat": 12.920116,
+    "lon": 77.547691
+   },
+   "bhk": 2,
+   "sqft": 1140,
+   "rent": 32000,
+   "depositMonths": 6,
+   "deposit": 192000,
+   "maintenance": 4100,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 8,
+   "tenantPreference": "Family",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Lift",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-12-03",
+   "nearestMetro": {
+    "name": "Banashankari",
+    "lines": [
+     "Green"
+    ],
+    "km": 2.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 16.3
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 21.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 15.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16
+    }
+   ],
+   "description": "2BHK fully furnished flat in a gated society in Banashankari, on floor 8 of 8. Nearest metro is Banashankari, about 2.9 km away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-084",
+   "isDemo": true,
+   "locality": "Banashankari",
+   "location": {
+    "lat": 12.930669,
+    "lon": 77.5638
+   },
+   "bhk": 3,
+   "sqft": 1400,
+   "rent": 35500,
+   "depositMonths": 3,
+   "deposit": 106500,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 5,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Lift",
+    "24x7 security"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "low",
+   "availableFrom": "2026-12-11",
+   "nearestMetro": {
+    "name": "Jayanagar",
+    "lines": [
+     "Green"
+    ],
+    "km": 1.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 11.6
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 13.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 14.1
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Banashankari, on floor 3 of 5. Nearest metro is Jayanagar, about 1.8 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Water: Tanker supply."
+  },
+  {
+   "id": "NF-085",
+   "isDemo": true,
+   "locality": "Basavanagudi",
+   "location": {
+    "lat": 12.94688,
+    "lon": 77.582502
+   },
+   "bhk": 3,
+   "sqft": 1560,
+   "rent": 49000,
+   "depositMonths": 5,
+   "deposit": 245000,
+   "maintenance": 4600,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 9,
+   "totalFloors": 13,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "low",
+   "availableFrom": "2026-11-22",
+   "nearestMetro": {
+    "name": "Lalbagh",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 16.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.9
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.1
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in Basavanagudi, on floor 9 of 13. Lalbagh metro is a short walk away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-086",
+   "isDemo": true,
+   "locality": "Basavanagudi",
+   "location": {
+    "lat": 12.931495,
+    "lon": 77.570435
+   },
+   "bhk": 2,
+   "sqft": 1030,
+   "rent": 33500,
+   "depositMonths": 2,
+   "deposit": 67000,
+   "maintenance": 4900,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 0,
+   "totalFloors": 18,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "low",
+   "availableFrom": "2027-01-03",
+   "nearestMetro": {
+    "name": "Jayanagar",
+    "lines": [
+     "Green"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 14.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.6
+    },
+    {
+     "name": "Electronic City",
+     "km": 14
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 13.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.4
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Basavanagudi, on the ground floor of 18. Jayanagar metro is a short walk away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-087",
+   "isDemo": true,
+   "locality": "Basavanagudi",
+   "location": {
+    "lat": 12.944799,
+    "lon": 77.578643
+   },
+   "bhk": 2,
+   "sqft": 1030,
+   "rent": 29000,
+   "depositMonths": 6,
+   "deposit": 174000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 4,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Power backup",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Tanker supply",
+   "noise": "medium",
+   "availableFrom": "2026-12-12",
+   "nearestMetro": {
+    "name": "Lalbagh",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 17.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.5
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Basavanagudi, on floor 2 of 4. Lalbagh metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Water: Tanker supply."
+  },
+  {
+   "id": "NF-088",
+   "isDemo": true,
+   "locality": "Basavanagudi",
+   "location": {
+    "lat": 12.936652,
+    "lon": 77.574183
+   },
+   "bhk": 2,
+   "sqft": 1170,
+   "rent": 27000,
+   "depositMonths": 3,
+   "deposit": 81000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Power backup"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-11-10",
+   "nearestMetro": {
+    "name": "South End Circle",
+    "lines": [
+     "Green"
+    ],
+    "km": 0.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 13.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18
+    },
+    {
+     "name": "Electronic City",
+     "km": 14.1
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 10.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13
+    }
+   ],
+   "description": "2BHK unfurnished flat in an independent house in Basavanagudi, on the ground floor of 2. South End Circle metro is a short walk away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-089",
+   "isDemo": true,
+   "locality": "Hennur",
+   "location": {
+    "lat": 13.041356,
+    "lon": 77.643673
+   },
+   "bhk": 2,
+   "sqft": 1220,
+   "rent": 25500,
+   "depositMonths": 6,
+   "deposit": 153000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Lift"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-12-15",
+   "nearestMetro": {
+    "name": "Benniganahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 5.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 2.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 21.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 7.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 13.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.3
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in Hennur, on the ground floor of 2. Nearest metro is Benniganahalli, about 5.7 km away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-090",
+   "isDemo": true,
+   "locality": "Hennur",
+   "location": {
+    "lat": 13.037172,
+    "lon": 77.638194
+   },
+   "bhk": 2,
+   "sqft": 960,
+   "rent": 27500,
+   "depositMonths": 6,
+   "deposit": 165000,
+   "maintenance": 2200,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 1,
+   "totalFloors": 12,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-23",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 5.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 2.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 21.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 13.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.1
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a gated society in Hennur, on floor 1 of 12. Nearest metro is Baiyappanahalli, about 5.4 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-091",
+   "isDemo": true,
+   "locality": "Hennur",
+   "location": {
+    "lat": 13.029185,
+    "lon": 77.633843
+   },
+   "bhk": 1,
+   "sqft": 670,
+   "rent": 20500,
+   "depositMonths": 5,
+   "deposit": 102500,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Standalone building",
+   "floor": 0,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Power backup",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-12-20",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 4.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 2.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 20.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 6.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 11.6
+    }
+   ],
+   "description": "1BHK fully furnished flat in a standalone building in Hennur, on the ground floor of 3. Nearest metro is Baiyappanahalli, about 4.7 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-092",
+   "isDemo": true,
+   "locality": "Hennur",
+   "location": {
+    "lat": 13.045067,
+    "lon": 77.651986
+   },
+   "bhk": 2,
+   "sqft": 910,
+   "rent": 29500,
+   "depositMonths": 3,
+   "deposit": 88500,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [],
+   "waterSource": "Tanker supply",
+   "noise": "low",
+   "availableFrom": "2027-01-02",
+   "nearestMetro": {
+    "name": "Benniganahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 5.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 3.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 22.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 7.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 13.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.3
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in Hennur, on floor 2 of 3. Nearest metro is Benniganahalli, about 5.7 km away. Quiet street, good for working from home. Pets are welcome. Open to families and working professionals. Water: Tanker supply."
+  },
+  {
+   "id": "NF-093",
+   "isDemo": true,
+   "locality": "Kalyan Nagar",
+   "location": {
+    "lat": 13.031219,
+    "lon": 77.648908
+   },
+   "bhk": 2,
+   "sqft": 1040,
+   "rent": 31000,
+   "depositMonths": 5,
+   "deposit": 155000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 2,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-02",
+   "nearestMetro": {
+    "name": "Benniganahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 4.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 3.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 20.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 11
+    }
+   ],
+   "description": "2BHK fully furnished flat in an independent house in Kalyan Nagar, on floor 2 of 2. Nearest metro is Benniganahalli, about 4.4 km away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Water: Borewell."
+  },
+  {
+   "id": "NF-094",
+   "isDemo": true,
+   "locality": "Kalyan Nagar",
+   "location": {
+    "lat": 13.017219,
+    "lon": 77.651009
+   },
+   "bhk": 2,
+   "sqft": 920,
+   "rent": 29000,
+   "depositMonths": 5,
+   "deposit": 145000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 5,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Lift"
+   ],
+   "waterSource": "Borewell",
+   "noise": "high",
+   "availableFrom": "2026-11-05",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 4.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 9.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 10.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 9.5
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in Kalyan Nagar, on floor 1 of 5. Nearest metro is Baiyappanahalli, about 2.9 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-095",
+   "isDemo": true,
+   "locality": "Kalyan Nagar",
+   "location": {
+    "lat": 13.018228,
+    "lon": 77.638808
+   },
+   "bhk": 2,
+   "sqft": 1220,
+   "rent": 36000,
+   "depositMonths": 6,
+   "deposit": 216000,
+   "maintenance": 4800,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 12,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-10",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 3.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 3.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.3
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.3
+    }
+   ],
+   "description": "2BHK fully furnished flat in a gated society in Kalyan Nagar, on floor 8 of 12. Nearest metro is Baiyappanahalli, about 3.4 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-096",
+   "isDemo": true,
+   "locality": "Kalyan Nagar",
+   "location": {
+    "lat": 13.024048,
+    "lon": 77.647803
+   },
+   "bhk": 2,
+   "sqft": 1070,
+   "rent": 26000,
+   "depositMonths": 5,
+   "deposit": 130000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 2,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Lift"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-20",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 3.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 10.4
+    }
+   ],
+   "description": "2BHK semi-furnished flat in an independent house in Kalyan Nagar, on floor 1 of 2. Nearest metro is Baiyappanahalli, about 3.7 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-097",
+   "isDemo": true,
+   "locality": "KR Puram",
+   "location": {
+    "lat": 12.999665,
+    "lon": 77.700682
+   },
+   "bhk": 2,
+   "sqft": 1050,
+   "rent": 21500,
+   "depositMonths": 2,
+   "deposit": 43000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 0,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-12-03",
+   "nearestMetro": {
+    "name": "Garudacharpalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 10.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 17.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.4
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in KR Puram, on the ground floor of 3. Garudacharpalya metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-098",
+   "isDemo": true,
+   "locality": "KR Puram",
+   "location": {
+    "lat": 13.009913,
+    "lon": 77.693605
+   },
+   "bhk": 3,
+   "sqft": 1390,
+   "rent": 41500,
+   "depositMonths": 10,
+   "deposit": 415000,
+   "maintenance": 4100,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 8,
+   "totalFloors": 8,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-12-13",
+   "nearestMetro": {
+    "name": "Singayyanapalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 8.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 5
+    },
+    {
+     "name": "Electronic City",
+     "km": 18.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8.8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.5
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in KR Puram, on floor 8 of 8. Singayyanapalya metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-099",
+   "isDemo": true,
+   "locality": "KR Puram",
+   "location": {
+    "lat": 13.0023,
+    "lon": 77.698708
+   },
+   "bhk": 2,
+   "sqft": 970,
+   "rent": 22500,
+   "depositMonths": 2,
+   "deposit": 45000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2027-01-02",
+   "nearestMetro": {
+    "name": "Singayyanapalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.9
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.8
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 4.1
+    },
+    {
+     "name": "Electronic City",
+     "km": 17.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.7
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a standalone building in KR Puram, on floor 1 of 3. Singayyanapalya metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-100",
+   "isDemo": true,
+   "locality": "KR Puram",
+   "location": {
+    "lat": 13.006691,
+    "lon": 77.704782
+   },
+   "bhk": 2,
+   "sqft": 1210,
+   "rent": 30500,
+   "depositMonths": 2,
+   "deposit": 61000,
+   "maintenance": 3500,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 22,
+   "totalFloors": 22,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-11-05",
+   "nearestMetro": {
+    "name": "Garudacharpalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 10.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 18.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.3
+    }
+   ],
+   "description": "2BHK fully furnished flat in a gated society in KR Puram, on floor 22 of 22. Garudacharpalya metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. Pets are welcome. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-101",
+   "isDemo": true,
+   "locality": "Mahadevapura",
+   "location": {
+    "lat": 12.997454,
+    "lon": 77.703674
+   },
+   "bhk": 1,
+   "sqft": 650,
+   "rent": 18500,
+   "depositMonths": 3,
+   "deposit": 55500,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 2,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "None",
+   "amenities": [],
+   "waterSource": "Tanker supply",
+   "noise": "medium",
+   "availableFrom": "2026-11-19",
+   "nearestMetro": {
+    "name": "Garudacharpalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 10.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 17.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 5.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.2
+    }
+   ],
+   "description": "1BHK unfurnished flat in an independent house in Mahadevapura, on the ground floor of 2. Garudacharpalya metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Tanker supply."
+  },
+  {
+   "id": "NF-102",
+   "isDemo": true,
+   "locality": "Mahadevapura",
+   "location": {
+    "lat": 13.007198,
+    "lon": 77.691935
+   },
+   "bhk": 1,
+   "sqft": 620,
+   "rent": 18000,
+   "depositMonths": 3,
+   "deposit": 54000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Bike only",
+   "amenities": [
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-12",
+   "nearestMetro": {
+    "name": "Singayyanapalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 8.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 5
+    },
+    {
+     "name": "Electronic City",
+     "km": 18.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 8.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.2
+    }
+   ],
+   "description": "1BHK unfurnished flat in an independent house in Mahadevapura, on floor 1 of 3. Singayyanapalya metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-103",
+   "isDemo": true,
+   "locality": "Mahadevapura",
+   "location": {
+    "lat": 12.990728,
+    "lon": 77.684696
+   },
+   "bhk": 3,
+   "sqft": 1460,
+   "rent": 49000,
+   "depositMonths": 5,
+   "deposit": 245000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-10",
+   "nearestMetro": {
+    "name": "Singayyanapalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 5.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 16.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 3.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 5.5
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a standalone building in Mahadevapura, on floor 2 of 3. Singayyanapalya metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-104",
+   "isDemo": true,
+   "locality": "Mahadevapura",
+   "location": {
+    "lat": 12.989269,
+    "lon": 77.69787
+   },
+   "bhk": 2,
+   "sqft": 1150,
+   "rent": 27500,
+   "depositMonths": 5,
+   "deposit": 137500,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 0,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "high",
+   "availableFrom": "2026-11-24",
+   "nearestMetro": {
+    "name": "Garudacharpalya",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 10.6
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 3.8
+    },
+    {
+     "name": "Electronic City",
+     "km": 16.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 5.2
+    }
+   ],
+   "description": "2BHK unfurnished flat in an independent house in Mahadevapura, on the ground floor of 3. Garudacharpalya metro is a short walk away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Owner prefers a family. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-105",
+   "isDemo": true,
+   "locality": "Hulimavu",
+   "location": {
+    "lat": 12.870565,
+    "lon": 77.59559
+   },
+   "bhk": 1,
+   "sqft": 520,
+   "rent": 22000,
+   "depositMonths": 10,
+   "deposit": 220000,
+   "maintenance": 2800,
+   "furnishing": "Fully furnished",
+   "buildingType": "Gated society",
+   "floor": 12,
+   "totalFloors": 15,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "high",
+   "availableFrom": "2026-12-30",
+   "nearestMetro": {
+    "name": "Yelachenahalli",
+    "lines": [
+     "Green"
+    ],
+    "km": 4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 20
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.3
+    }
+   ],
+   "description": "1BHK fully furnished flat in a gated society in Hulimavu, on floor 12 of 15. Nearest metro is Yelachenahalli, about 4 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-106",
+   "isDemo": true,
+   "locality": "Hulimavu",
+   "location": {
+    "lat": 12.869048,
+    "lon": 77.599218
+   },
+   "bhk": 2,
+   "sqft": 1010,
+   "rent": 23000,
+   "depositMonths": 10,
+   "deposit": 230000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 5,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Lift"
+   ],
+   "waterSource": "Borewell",
+   "noise": "low",
+   "availableFrom": "2026-12-16",
+   "nearestMetro": {
+    "name": "Yelachenahalli",
+    "lines": [
+     "Green"
+    ],
+    "km": 4.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 20.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.1
+    }
+   ],
+   "description": "2BHK unfurnished flat in a standalone building in Hulimavu, on floor 2 of 5. Nearest metro is Yelachenahalli, about 4.4 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Water: Borewell."
+  },
+  {
+   "id": "NF-107",
+   "isDemo": true,
+   "locality": "Hulimavu",
+   "location": {
+    "lat": 12.8769,
+    "lon": 77.599205
+   },
+   "bhk": 2,
+   "sqft": 960,
+   "rent": 25000,
+   "depositMonths": 3,
+   "deposit": 75000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Independent house",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Power backup"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-12-25",
+   "nearestMetro": {
+    "name": "Yelachenahalli",
+    "lines": [
+     "Green"
+    ],
+    "km": 3.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 19.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 18.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 11.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 12.6
+    }
+   ],
+   "description": "2BHK unfurnished flat in an independent house in Hulimavu, on floor 2 of 3. Nearest metro is Yelachenahalli, about 3.8 km away. Quiet street, good for working from home. Pets are welcome. Bachelors welcome. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-108",
+   "isDemo": true,
+   "locality": "Hulimavu",
+   "location": {
+    "lat": 12.870688,
+    "lon": 77.598084
+   },
+   "bhk": 3,
+   "sqft": 1430,
+   "rent": 35000,
+   "depositMonths": 6,
+   "deposit": 210000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 3,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "low",
+   "availableFrom": "2026-11-22",
+   "nearestMetro": {
+    "name": "Yelachenahalli",
+    "lines": [
+     "Green"
+    ],
+    "km": 4.1
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 19.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 19.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 7.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 12.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.1
+    }
+   ],
+   "description": "3BHK semi-furnished flat in an independent house in Hulimavu, on floor 3 of 3. Nearest metro is Yelachenahalli, about 4.1 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-109",
+   "isDemo": true,
+   "locality": "Thanisandra",
+   "location": {
+    "lat": 13.058983,
+    "lon": 77.621773
+   },
+   "bhk": 3,
+   "sqft": 1420,
+   "rent": 40000,
+   "depositMonths": 3,
+   "deposit": 120000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2026-12-22",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 8.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 1.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 14.5
+    },
+    {
+     "name": "Electronic City",
+     "km": 24.2
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.8
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.1
+    }
+   ],
+   "description": "3BHK unfurnished flat in a standalone building in Thanisandra, on floor 1 of 3. Nearest metro is Baiyappanahalli, about 8.3 km away. Quiet street, good for working from home. No pets, as per the owner. Owner prefers a family. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-110",
+   "isDemo": true,
+   "locality": "Thanisandra",
+   "location": {
+    "lat": 13.047433,
+    "lon": 77.631493
+   },
+   "bhk": 1,
+   "sqft": 670,
+   "rent": 17000,
+   "depositMonths": 3,
+   "deposit": 51000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 4,
+   "totalFloors": 4,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Power backup",
+    "Lift"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-08",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 6.7
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 1.1
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 12.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 22.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.2
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 14.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 13.5
+    }
+   ],
+   "description": "1BHK unfurnished flat in a standalone building in Thanisandra, on floor 4 of 4. Nearest metro is Baiyappanahalli, about 6.7 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-111",
+   "isDemo": true,
+   "locality": "Thanisandra",
+   "location": {
+    "lat": 13.051198,
+    "lon": 77.624782
+   },
+   "bhk": 1,
+   "sqft": 650,
+   "rent": 17500,
+   "depositMonths": 8,
+   "deposit": 140000,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 3,
+   "totalFloors": 4,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "low",
+   "availableFrom": "2027-01-14",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 7.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 0.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 13.7
+    },
+    {
+     "name": "Electronic City",
+     "km": 23.3
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 8.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 15.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 14.2
+    }
+   ],
+   "description": "1BHK unfurnished flat in a standalone building in Thanisandra, on floor 3 of 4. Nearest metro is Baiyappanahalli, about 7.4 km away. Quiet street, good for working from home. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-112",
+   "isDemo": true,
+   "locality": "Thanisandra",
+   "location": {
+    "lat": 13.062563,
+    "lon": 77.626907
+   },
+   "bhk": 2,
+   "sqft": 1190,
+   "rent": 30500,
+   "depositMonths": 3,
+   "deposit": 91500,
+   "maintenance": 4200,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 3,
+   "totalFloors": 13,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "high",
+   "availableFrom": "2026-11-02",
+   "nearestMetro": {
+    "name": "Baiyappanahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 8.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 1.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 14.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 24.5
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 9.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.2
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 15.2
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a gated society in Thanisandra, on floor 3 of 13. Nearest metro is Baiyappanahalli, about 8.4 km away. Busy area with cafes and shops close by; expect some street noise. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-113",
+   "isDemo": true,
+   "locality": "Domlur",
+   "location": {
+    "lat": 12.965676,
+    "lon": 77.631183
+   },
+   "bhk": 3,
+   "sqft": 1490,
+   "rent": 65000,
+   "depositMonths": 3,
+   "deposit": 195000,
+   "maintenance": 0,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Independent house",
+   "floor": 1,
+   "totalFloors": 3,
+   "tenantPreference": "Any",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-04",
+   "nearestMetro": {
+    "name": "Halasuru",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.3
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.3
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.2
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 3.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 7.2
+    }
+   ],
+   "description": "3BHK semi-furnished flat in an independent house in Domlur, on floor 1 of 3. Halasuru metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Open to families and working professionals. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-114",
+   "isDemo": true,
+   "locality": "Domlur",
+   "location": {
+    "lat": 12.954102,
+    "lon": 77.630901
+   },
+   "bhk": 2,
+   "sqft": 1080,
+   "rent": 51500,
+   "depositMonths": 6,
+   "deposit": 309000,
+   "maintenance": 2700,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 0,
+   "totalFloors": 13,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery (BWSSB)",
+   "noise": "medium",
+   "availableFrom": "2026-11-10",
+   "nearestMetro": {
+    "name": "Halasuru",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 10.5
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11.6
+    },
+    {
+     "name": "Electronic City",
+     "km": 12.6
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 4.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 7.1
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.9
+    }
+   ],
+   "description": "2BHK semi-furnished flat in a gated society in Domlur, on the ground floor of 13. Nearest metro is Halasuru, about 2.5 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Gym on the premises. Water: Cauvery (BWSSB)."
+  },
+  {
+   "id": "NF-115",
+   "isDemo": true,
+   "locality": "Domlur",
+   "location": {
+    "lat": 12.953156,
+    "lon": 77.636689
+   },
+   "bhk": 3,
+   "sqft": 1590,
+   "rent": 58000,
+   "depositMonths": 6,
+   "deposit": 348000,
+   "maintenance": 3500,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 9,
+   "totalFloors": 9,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-09",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 2.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 10.7
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 11
+    },
+    {
+     "name": "Electronic City",
+     "km": 12.4
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 3.7
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.4
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.3
+    }
+   ],
+   "description": "3BHK unfurnished flat in a gated society in Domlur, on floor 9 of 9. Nearest metro is Indiranagar, about 2.8 km away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-116",
+   "isDemo": true,
+   "locality": "Domlur",
+   "location": {
+    "lat": 12.968156,
+    "lon": 77.642424
+   },
+   "bhk": 2,
+   "sqft": 940,
+   "rent": 49500,
+   "depositMonths": 10,
+   "deposit": 495000,
+   "maintenance": 3300,
+   "furnishing": "Unfurnished",
+   "buildingType": "Gated society",
+   "floor": 10,
+   "totalFloors": 20,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "Children's play area",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-11-19",
+   "nearestMetro": {
+    "name": "Indiranagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 1.2
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 9.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 10
+    },
+    {
+     "name": "Electronic City",
+     "km": 13.9
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 2.1
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 6.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 6.2
+    }
+   ],
+   "description": "2BHK unfurnished flat in a gated society in Domlur, on floor 10 of 20. Indiranagar metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Bachelors welcome. Gym on the premises. Water: Borewell."
+  },
+  {
+   "id": "NF-117",
+   "isDemo": true,
+   "locality": "Vijayanagar",
+   "location": {
+    "lat": 12.962439,
+    "lon": 77.540985
+   },
+   "bhk": 3,
+   "sqft": 1500,
+   "rent": 44500,
+   "depositMonths": 3,
+   "deposit": 133500,
+   "maintenance": 2900,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 6,
+   "totalFloors": 19,
+   "tenantPreference": "Any",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Swimming pool",
+    "Lift",
+    "24x7 security",
+    "Clubhouse",
+    "CCTV"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-04",
+   "nearestMetro": {
+    "name": "Attiguppe",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.8
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.9
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 20.9
+    },
+    {
+     "name": "Electronic City",
+     "km": 18.7
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.9
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16.7
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in Vijayanagar, on floor 6 of 19. Attiguppe metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Open to families and working professionals. Gym on the premises. Water: Cauvery + borewell."
+  },
+  {
+   "id": "NF-118",
+   "isDemo": true,
+   "locality": "Vijayanagar",
+   "location": {
+    "lat": 12.970339,
+    "lon": 77.544656
+   },
+   "bhk": 3,
+   "sqft": 1740,
+   "rent": 47000,
+   "depositMonths": 5,
+   "deposit": 235000,
+   "maintenance": 0,
+   "furnishing": "Fully furnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 5,
+   "tenantPreference": "Family",
+   "petsAllowed": false,
+   "parking": "Car",
+   "amenities": [
+    "Lift",
+    "CCTV"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-26",
+   "nearestMetro": {
+    "name": "Sri Balagangadharanatha Swamiji Station, Hosahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.5
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 20.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 19
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.5
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16.4
+    }
+   ],
+   "description": "3BHK fully furnished flat in a standalone building in Vijayanagar, on floor 2 of 5. Sri Balagangadharanatha Swamiji Station, Hosahalli metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Owner prefers a family. Water: Borewell."
+  },
+  {
+   "id": "NF-119",
+   "isDemo": true,
+   "locality": "Vijayanagar",
+   "location": {
+    "lat": 12.974004,
+    "lon": 77.535461
+   },
+   "bhk": 2,
+   "sqft": 1020,
+   "rent": 24500,
+   "depositMonths": 5,
+   "deposit": 122500,
+   "maintenance": 0,
+   "furnishing": "Unfurnished",
+   "buildingType": "Standalone building",
+   "floor": 2,
+   "totalFloors": 3,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": false,
+   "parking": "Bike only",
+   "amenities": [
+    "Power backup",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Borewell",
+   "noise": "medium",
+   "availableFrom": "2026-12-29",
+   "nearestMetro": {
+    "name": "Vijayanagar",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.4
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 12.4
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 21.4
+    },
+    {
+     "name": "Electronic City",
+     "km": 20
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 13.4
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 17.6
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 17.5
+    }
+   ],
+   "description": "2BHK unfurnished flat in a standalone building in Vijayanagar, on floor 2 of 3. Vijayanagar metro is a short walk away. Moderate traffic noise during peak hours. No pets, as per the owner. Bachelors welcome. Water: Borewell."
+  },
+  {
+   "id": "NF-120",
+   "isDemo": true,
+   "locality": "Vijayanagar",
+   "location": {
+    "lat": 12.979864,
+    "lon": 77.545411
+   },
+   "bhk": 3,
+   "sqft": 1420,
+   "rent": 45500,
+   "depositMonths": 6,
+   "deposit": 273000,
+   "maintenance": 2800,
+   "furnishing": "Semi-furnished",
+   "buildingType": "Gated society",
+   "floor": 6,
+   "totalFloors": 10,
+   "tenantPreference": "Bachelors",
+   "petsAllowed": true,
+   "parking": "Car",
+   "amenities": [
+    "Gym",
+    "Power backup",
+    "Lift",
+    "24x7 security",
+    "Children's play area"
+   ],
+   "waterSource": "Cauvery + borewell",
+   "noise": "medium",
+   "availableFrom": "2027-01-02",
+   "nearestMetro": {
+    "name": "Sri Balagangadharanatha Swamiji Station, Hosahalli",
+    "lines": [
+     "Purple"
+    ],
+    "km": 0.6
+   },
+   "techParks": [
+    {
+     "name": "Manyata Tech Park",
+     "km": 11.2
+    },
+    {
+     "name": "ITPL Whitefield",
+     "km": 20.3
+    },
+    {
+     "name": "Electronic City",
+     "km": 19.8
+    },
+    {
+     "name": "Bagmane Tech Park",
+     "km": 12.3
+    },
+    {
+     "name": "Embassy Tech Village",
+     "km": 16.7
+    },
+    {
+     "name": "Prestige Tech Park",
+     "km": 16.6
+    }
+   ],
+   "description": "3BHK semi-furnished flat in a gated society in Vijayanagar, on floor 6 of 10. Sri Balagangadharanatha Swamiji Station, Hosahalli metro is a short walk away. Moderate traffic noise during peak hours. Pets are welcome. Bachelors welcome. Gym on the premises. Water: Cauvery + borewell."
+  }
+ ]
+}
