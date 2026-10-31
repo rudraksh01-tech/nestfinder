@@ -1,5 +1,6 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, ArrowUp, ArrowUpRight, Building2, Home as HomeIcon, Lightbulb, PiggyBank, Wallet } from 'lucide-react'
 import Globe from '../components/Globe.jsx'
 import PhoneStory from '../components/home/PhoneStory.jsx'
@@ -77,20 +78,95 @@ function Figures() {
   )
 }
 
+// Real Fair Rent Check results for these offers in the demo data (median, middle half, full range).
+const RENT_EXAMPLES = [
+  { flat: '2BHK · HSR Layout', asked: 48000, median: 42000, low: 33250, high: 46500, min: 27500, max: 49500, diff: 14, level: 'slightly_high' },
+  { flat: '1BHK · Indiranagar', asked: 30000, median: 22000, low: 18500, high: 28000, min: 15500, max: 35000, diff: 36, level: 'high' },
+  { flat: '2BHK · Whitefield', asked: 30000, median: 30750, low: 28250, high: 36125, min: 21500, max: 39500, diff: -2, level: 'fair' },
+  { flat: '1BHK · Electronic City', asked: 14000, median: 24500, low: 22500, high: 25750, min: 14500, max: 28000, diff: -43, level: 'low' },
+]
+const LEVEL_STYLE = {
+  low: { badge: 'bg-good/10 text-good', dot: 'bg-good', text: (d) => `${Math.abs(d)}% below median` },
+  fair: { badge: 'bg-good/10 text-good', dot: 'bg-good', text: () => 'Fair price' },
+  slightly_high: { badge: 'bg-warn/10 text-warn', dot: 'bg-warn', text: (d) => `${d}% above median` },
+  high: { badge: 'bg-bad/10 text-bad', dot: 'bg-bad', text: (d) => `${d}% above median` },
+}
+const k = (n) => `₹${Number((n / 1000).toFixed(1))}k`
+
+// Same bands as the server's verdict (server/src/lib/fairRent.js).
+const levelFor = (diff) => (diff <= -10 ? 'low' : diff <= 10 ? 'fair' : diff <= 25 ? 'slightly_high' : 'high')
+
+// Cycles through a few real checks. Moving the cursor (or a finger) along the bar sets your own
+// asked rent and the verdict updates live; leaving the bar resumes the cycle.
 function RentPreview() {
+  const [index, setIndex] = useState(0)
+  const [tryRent, setTryRent] = useState(null) // the rent under the cursor, or null when not interacting
+  const reduceMotion = useReducedMotion()
+  const interacting = tryRent !== null
+
+  useEffect(() => {
+    if (interacting || reduceMotion) return
+    const id = setInterval(() => setIndex((i) => (i + 1) % RENT_EXAMPLES.length), 3200)
+    return () => clearInterval(id)
+  }, [interacting, reduceMotion])
+
+  const ex = RENT_EXAMPLES[index]
+  // A little room either side of the real range, so you can try prices beyond it.
+  const lo = Math.floor((Math.min(ex.min, ex.asked) * 0.9) / 1000) * 1000
+  const hi = Math.ceil((Math.max(ex.max, ex.asked) * 1.1) / 1000) * 1000
+  const asked = tryRent ?? ex.asked
+  const diff = Math.round(((asked - ex.median) / ex.median) * 100)
+  const style = LEVEL_STYLE[levelFor(diff)]
+  const pos = (v) => `${((v - lo) / (hi - lo)) * 100}%`
+  const glide = 'transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]'
+
+  const follow = (e) => {
+    const r = e.currentTarget.getBoundingClientRect()
+    const ratio = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width))
+    setTryRent(Math.round((lo + ratio * (hi - lo)) / 500) * 500)
+  }
+
   return (
     <div className="mt-6 glass-inset rounded-2xl p-4">
-      <div className="flex items-baseline justify-between text-sm">
-        <span className="text-ink-2">2BHK · HSR Layout</span>
-        <span className="rounded-full bg-warn/10 px-2 py-0.5 font-mono text-[0.7rem] text-warn">14% above median</span>
+      <div className="flex items-center justify-between gap-3 text-sm">
+        <motion.span key={ex.flat} initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="text-ink-2">{ex.flat}</motion.span>
+        <span className={`rounded-full px-2 py-0.5 font-mono text-[0.7rem] transition-colors duration-300 ${style.badge}`}>{style.text(diff)}</span>
       </div>
-      <div className="relative mt-5 h-2 rounded-full bg-ink/[.07]">
-        <div className="absolute inset-y-0 left-[26%] right-[14%] rounded-full bg-signal/35" />
-        <div className="absolute -inset-y-1.5 left-[52%] w-0.5 bg-ink" />
-        <div className="absolute -top-1.5 left-[88%] size-5 -translate-x-1/2 rounded-full border-2 border-white bg-warn shadow" />
+
+      {/* Tall invisible hit area around the thin bar; taps here try a price instead of opening the page. */}
+      <div
+        className="relative -mx-1 mt-2 cursor-ew-resize touch-pan-y px-1 py-3"
+        onPointerMove={follow}
+        onPointerDown={follow}
+        onPointerLeave={() => setTryRent(null)}
+        onClick={(e) => e.preventDefault()}
+        role="slider"
+        aria-label={`Try an asked rent for ${ex.flat}`}
+        aria-valuemin={lo}
+        aria-valuemax={hi}
+        aria-valuenow={asked}
+        aria-valuetext={`₹${asked.toLocaleString('en-IN')}, ${style.text(diff)}`}
+      >
+        <div className="relative h-2 rounded-full bg-ink/[.07]">
+          <div className={`absolute inset-y-0 rounded-full bg-signal/35 ${glide}`} style={{ left: pos(ex.low), width: `calc(${pos(ex.high)} - ${pos(ex.low)})` }} />
+          <div className={`absolute -inset-y-1.5 w-0.5 bg-ink ${glide}`} style={{ left: pos(ex.median) }} />
+          <div
+            className={`absolute -top-1.5 size-5 -translate-x-1/2 rounded-full border-2 border-white shadow ${style.dot} ${interacting ? 'scale-110 transition-colors' : glide}`}
+            style={{ left: pos(asked) }}
+          />
+        </div>
       </div>
-      <div className="mt-3 flex justify-between font-mono text-[0.68rem] text-muted">
-        <span>₹27.5k</span><span>median ₹42k</span><span>asked ₹48k</span>
+
+      <div className="mt-1 flex justify-between font-mono text-[0.68rem] text-muted">
+        <span>{k(lo)}</span>
+        <span>median {k(ex.median)} · <span className="text-ink">{interacting ? 'you' : 'asked'} {k(asked)}</span></span>
+        <span>{k(hi)}</span>
+      </div>
+      <div className="mt-3 flex items-center gap-1.5">
+        {RENT_EXAMPLES.map((e, i) => (
+          <span key={e.flat} aria-hidden="true" className={`h-1 rounded-full transition-all duration-500 ${i === index ? 'w-5 bg-signal' : 'w-1.5 bg-ink/15'}`} />
+        ))}
+        <span className="ml-auto font-mono text-[0.62rem] text-faint">{interacting ? 'move to try a price' : 'move over the bar'}</span>
       </div>
     </div>
   )
