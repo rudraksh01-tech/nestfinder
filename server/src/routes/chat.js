@@ -64,7 +64,7 @@ Plain text only: no markdown, no tables, no "|" separators, no bullet symbols. W
 Use ONLY the facts in TOP_MATCHES and PREFERENCES. Never invent flats, prices, distances or amenities. Distances are straight-line and approximate.
 Each flat lists its amenities and every reason ("good", "warn", "bad"). If a flat misses something they asked for, say so plainly for that flat;
 never claim the data is missing. Do not write the words "good", "warn" or "bad"; turn them into natural phrases.
-Structure: one short line showing you understood them; then the top 2-3 flats, each with code, area, rent, match % and the main reason or concern;
+Structure: one short line showing you understood them (restate only what is in PREFERENCES, nothing else); then the top 2-3 flats, each with code, area, rent, match % and the main reason or concern;
 then, if KEY_MISSING is not empty, ask one short question about the most useful missing detail.
 If ON_TOPIC is false, politely say you can only help with finding flats in Bengaluru.`;
 
