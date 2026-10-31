@@ -23,6 +23,7 @@ export default function Navbar() {
           </span>
           NestFinder
         </Link>
+        <NavLink to="/match" className={linkClass}>Match</NavLink>
         <NavLink to="/flats" className={linkClass}>Flats</NavLink>
         {broker ? (
           <>

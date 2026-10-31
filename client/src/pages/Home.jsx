@@ -20,12 +20,17 @@ export default function Home() {
         Describe your commute, habits and budget in plain words. NestFinder matches you to flats,
         checks if the rent is fair and helps you decide.
       </p>
-      <Link
-        to="/flats"
-        className="mt-8 inline-flex items-center gap-2 rounded-xl bg-violet px-5 py-3 font-semibold text-white transition hover:bg-violet/85"
-      >
-        Browse flats <ArrowRight size={18} />
-      </Link>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Link
+          to="/match"
+          className="inline-flex items-center gap-2 rounded-xl bg-violet px-5 py-3 font-semibold text-white transition hover:bg-violet/85"
+        >
+          Find my match <ArrowRight size={18} />
+        </Link>
+        <Link to="/flats" className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3 font-semibold text-slate-200 transition hover:border-white/40">
+          Browse all flats
+        </Link>
+      </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-3">
         {FEATURES.map(({ icon: Icon, title, text }) => (
