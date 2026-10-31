@@ -197,31 +197,33 @@ function AnswerRow({ icon: Icon, label, value, delta, fill, tone, index }) {
   )
 }
 
+// Compact: question on the left, the answer card on the right (stacked on phones).
 function AskAnything() {
   return (
     <section className="mx-auto max-w-6xl px-5 sm:px-8">
-      <div className="relative overflow-hidden rounded-[2rem] bg-ink px-3 py-16 text-center text-porcelain sm:px-5 sm:py-20">
+      <div className="relative overflow-hidden rounded-[2rem] bg-ink px-4 py-10 text-porcelain sm:px-10 sm:py-12">
         <div className="absolute -right-24 -top-24 size-96 rounded-full bg-signal/35 blur-[110px]" />
         <div className="absolute -bottom-32 -left-20 size-80 rounded-full bg-signal/20 blur-[110px]" />
 
-        <div className="relative mx-auto max-w-[27rem]">
-          <svg viewBox="0 0 24 24" className="mx-auto size-7 text-[#8ea6ff]" aria-hidden="true">
-            <path fill="currentColor" d="M12 1.5c.5 5.6 4.9 10 10.5 10.5-5.6.5-10 4.9-10.5 10.5C11.5 16.9 7.1 12.5 1.5 12 7.1 11.5 11.5 7.1 12 1.5Z" />
-          </svg>
-          <h2 className="mt-4 font-display text-[3.2rem] italic leading-none sm:text-6xl">Ask anything</h2>
-          <p className="mx-auto mt-3 max-w-[22rem] text-[0.92rem] leading-relaxed text-porcelain/60">
-            Clear answers about rent, deposits and commutes, worked out from real flats and the Bengaluru metro map.
-          </p>
+        <div className="relative grid items-center gap-8 lg:grid-cols-[1fr_25rem] lg:gap-14">
+          <div className="text-center lg:text-left">
+            <svg viewBox="0 0 24 24" className="mx-auto size-6 text-[#8ea6ff] lg:mx-0" aria-hidden="true">
+              <path fill="currentColor" d="M12 1.5c.5 5.6 4.9 10 10.5 10.5-5.6.5-10 4.9-10.5 10.5C11.5 16.9 7.1 12.5 1.5 12 7.1 11.5 11.5 7.1 12 1.5Z" />
+            </svg>
+            <h2 className="mt-3 font-display text-[2.8rem] italic leading-none sm:text-[3.4rem]">Ask anything</h2>
+            <p className="mx-auto mt-3 max-w-[24rem] text-[0.92rem] leading-relaxed text-porcelain/60 lg:mx-0">
+              Clear answers about rent, deposits and commutes, worked out from real flats and the Bengaluru metro map.
+            </p>
+            <Link
+              to="/rent-check"
+              className="mx-auto mt-6 flex max-w-[25rem] items-center gap-3 rounded-full bg-white py-2 pl-4 pr-2 text-left text-[0.86rem] text-ink shadow-[0_20px_50px_-20px_rgb(0_0_0/0.6)] transition hover:shadow-[0_20px_50px_-12px_rgb(30_79_255/0.55)] sm:pl-5 sm:text-[0.92rem] lg:mx-0"
+            >
+              <span className="flex-1">Is ₹48,000 fair for a 2BHK in HSR?</span>
+              <span className="grid size-9 shrink-0 place-items-center rounded-full bg-ink text-white"><ArrowUp size={17} /></span>
+            </Link>
+          </div>
 
-          <Link
-            to="/rent-check"
-            className="mt-10 flex items-center gap-3 rounded-full bg-white py-2 pl-4 pr-2 text-left text-[0.86rem] sm:pl-5 sm:text-[0.92rem] text-ink shadow-[0_20px_50px_-20px_rgb(0_0_0/0.6)] transition hover:shadow-[0_20px_50px_-12px_rgb(30_79_255/0.55)]"
-          >
-            <span className="flex-1">Is ₹48,000 fair for a 2BHK in HSR?</span>
-            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-ink text-white"><ArrowUp size={17} /></span>
-          </Link>
-
-          <div className="mt-4 rounded-3xl bg-white p-4 text-left sm:p-5 text-ink shadow-[0_30px_60px_-30px_rgb(0_0_0/0.7)]">
+          <div className="rounded-3xl bg-white p-4 text-left text-ink shadow-[0_30px_60px_-30px_rgb(0_0_0/0.7)] sm:p-5">
             <p className="font-semibold">This rent is 14% above similar flats</p>
             <p className="mt-1 text-[0.85rem] leading-snug text-ink-2">
               Seven 2BHKs in and around HSR Layout have a median rent of ₹42,000, and the deposit is more than three times the usual.
@@ -237,6 +239,44 @@ function AskAnything() {
               Based on the sample listings in this demo. Distances are straight-line.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const FAQS = [
+  ['Are these real listings?', 'No. The 120 flats and the brokers are sample data made for this demo. The map, the 82 Namma Metro stations, the tech parks and every distance are real (from OpenStreetMap).'],
+  ['How is the match score worked out?', 'From fixed rules, not a guess. Budget, commute, metro, pets, tenant type and a few comforts each carry a weight, and anything you did not mention is left out. A flat that breaks a dealbreaker, like no pets when you have one, cannot score above 40%. The AI only turns your words into preferences and explains the result.'],
+  ['Can I type in Hindi or Hinglish?', 'Yes. Write the way you would text a friend, in English, Hindi or Hinglish, and the assistant replies in the same language.'],
+  ['How do you know if a rent is fair?', 'Your quote is compared with flats of the same size in the same area. If there are too few, nearby areas within 4 km, then 8 km, are added, and you are told how wide it looked. You get the median, the usual range and a fair counter-offer.'],
+  ['What happens to my phone number?', 'An enquiry goes only to the broker of that flat. On the shared demo broker account, visitor numbers are masked, and numbers are removed before anything is sent to the AI monitoring tools.'],
+  ['Does it cost anything?', 'No. There is no sign-up for flat seekers and no brokerage. It is a portfolio project.'],
+]
+
+// Native <details> keeps it accessible and works without JavaScript.
+function Faq() {
+  return (
+    <section className="mx-auto max-w-6xl px-5 pt-28 sm:px-8" aria-labelledby="faq-title">
+      <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+        <div>
+          <p className="eyebrow">FAQ</p>
+          <h2 id="faq-title" className="mt-3 font-display text-4xl leading-[1.02] sm:text-5xl">Questions people ask first.</h2>
+          <p className="mt-4 max-w-xs text-[0.95rem] leading-relaxed text-ink-2">Something else on your mind? Ask the assistant; it knows the flats better than this page does.</p>
+        </div>
+        <div className="border-t border-ink/10">
+          {FAQS.map(([q, a]) => (
+            <details key={q} className="group border-b border-ink/10">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[1.05rem] font-medium marker:hidden [&::-webkit-details-marker]:hidden">
+                {q}
+                <span className="relative size-4 shrink-0 text-muted transition group-open:rotate-45" aria-hidden="true">
+                  <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-current" />
+                  <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-current" />
+                </span>
+              </summary>
+              <p className="max-w-2xl pb-6 pr-10 text-[0.95rem] leading-relaxed text-ink-2">{a}</p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
@@ -263,6 +303,7 @@ export default function Home() {
       <PhoneStory />
       <Features />
       <AskAnything />
+      <Faq />
       <Closing />
     </main>
   )
