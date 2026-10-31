@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "cases": 20,
+    "ran": 13,
+    "notRun": 7,
+    "exactSequence": "13/13",
+    "firstToolRight": "13/13",
+    "modelsUsed": [
+      "openai/gpt-oss-120b"
+    ],
+    "medianMs": 2432
+  },
+  "results": [
+    {
+      "id": "search-en-1",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2716,
+      "reply": "Here are the top matches for you:\n\n- NF-102 in Mahadevapura, 1 BHK, rent ₹18,000 (84% match). Fits: ₹7,000 under budget, Singayyanapalya metro 1.2 km away, pets"
+    },
+    {
+      "id": "search-en-2",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2432,
+      "reply": "Here are the top matches for a quiet 3 BHK with car parking under ₹50,000:\n\nNF-098 – KR Puram, 3 BHK, rent ₹41,500, match 87 %. Fits: ₹4,400 under budget, 5 km "
+    },
+    {
+      "id": "search-hinglish-1",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2250,
+      "reply": "NF-102 (Mahadevapura) – 1BHK, rent ₹18,000, match 96%. Fits: ₹2,000 under budget, 4.8 km to Bagmane Tech Park, 1.2 km to Singayyanapalya metro, owner open to an"
+    },
+    {
+      "id": "search-hinglish-2",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2571,
+      "reply": "NF-058 (Electronic City) – 1BHK, ₹14,500, 100% match. Fits: ₹500 under budget, 2.3 km to Electronic City, 1.1 km to Beratena Agrahara metro, gym in building. No"
+    },
+    {
+      "id": "search-hindi",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 5714,
+      "reply": "NF-097 KR Puram में 2BHK, किराया ₹21,500, मैच 98 % – ₹8,500 बजट से कम, 3.8 km ITPL Whitefield, 0.8 km Garudacharpalya metro, कार पार्किंग, पालतू अनुमति।  \nNF-10"
+    },
+    {
+      "id": "search-followup",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 6397,
+      "reply": "NF-066 in Hebbal: 1 BHK, rent ₹23,000, match 92%. Fits: ₹7,000 under budget, 2.4 km to Manyata Tech Park, pets allowed. Problem: 5.9 km to Yeshwantpur metro.\n\nN"
+    },
+    {
+      "id": "rent-en",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2138,
+      "reply": "The rent of ₹48,000 for a 2 BHK in HSR Layout is slightly high. The median is ₹42,000 and typical rents range from ₹33,250 to ₹46,500. You could aim for around "
+    },
+    {
+      "id": "rent-hinglish",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2321,
+      "reply": "Indiranagar me 1 BHK ka 30 k rent kaafi high hai – median 22 k, usual range 18.5‑28 k. Isse 36 % zyada hai, isliye “High” verdict. Aap 22 k ke aas‑paas negotiat"
+    },
+    {
+      "id": "rent-code",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2241,
+      "reply": "NF-002 is a 2BHK in Koramangala with a rent of ₹45,000. The median rent for similar 2BHKs there is also ₹45,000, so the rent is fair. The deposit you’re asked f"
+    },
+    {
+      "id": "rent-deposit-amount",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2562,
+      "reply": "The rent of ₹22,000 for a 1 BHK in Kasavanahalli is considered **Fair**. It’s about 4 % below the median rent of similar 1 BHKs (₹23,000) in the area. The depos"
+    },
+    {
+      "id": "compare-en",
+      "expect": [
+        "compare_flats"
+      ],
+      "called": [
+        "compare_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3597,
+      "reply": "NF-102: 1 BHK, 620 sqft, Unfurnished, rent ₹18,000, pet‑friendly, bike‑only parking, medium noise, CCTV, 1.2 km from Singayyanapalya metro.  \n\nNF-097: 2 BHK, 1,"
+    },
+    {
+      "id": "compare-hinglish",
+      "expect": [
+        "compare_flats"
+      ],
+      "called": [
+        "compare_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2016,
+      "reply": "NF-066 (Hebbal) – 1 BHK, ₹23,000 rent, bike‑only parking, medium noise, gym, lift, kids‑play, CCTV, metro 5.9 km. Fit: compact rent, good amenities. Problem: on"
+    },
+    {
+      "id": "flat-en",
+      "expect": [
+        "get_flat"
+      ],
+      "called": [
+        "get_flat"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2396,
+      "reply": "NF-019 is a 1‑BHK unfurnished flat in BTM Layout. Rent is ₹15,500 per month with a 10‑month deposit, 650 sq ft, bike‑only parking and a gym in the building. It’"
+    },
+    {
+      "id": "flat-hinglish",
+      "expect": [
+        "get_flat"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    },
+    {
+      "id": "visit-en",
+      "expect": [
+        "book_visit"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    },
+    {
+      "id": "visit-hinglish",
+      "expect": [
+        "book_visit"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    },
+    {
+      "id": "multi-rent-search",
+      "expect": [
+        "check_rent",
+        "search_flats"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    },
+    {
+      "id": "multi-search-compare",
+      "expect": [
+        "search_flats",
+        "compare_flats"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    },
+    {
+      "id": "none-offtopic",
+      "expect": [],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    },
+    {
+      "id": "none-injection",
+      "expect": [],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "error": "The AI assistant is busy right now, please try again in a minute"
+    }
+  ],
+  "note": "The 7 cases with an error were stopped by the Groq free daily token limit (200K tokens/day for gpt-oss-120b), not by the agent. Re-run them with: npm run eval:agent -- --only=flat-hinglish,visit-en,visit-hinglish,multi-rent-search,multi-search-compare,none-offtopic,none-injection",
+  "updatedAt": "2026-10-31T15:50:07.691Z"
+}

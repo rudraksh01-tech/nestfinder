@@ -1,0 +1,264 @@
+{
+  "runAt": "2026-10-31T15:17:58.777Z",
+  "summary": {
+    "cases": 20,
+    "completed": 20,
+    "exactSequence": "90%",
+    "firstToolRight": "90%",
+    "medianMs": 3207
+  },
+  "results": [
+    {
+      "id": "search-en-1",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3520,
+      "reply": "NF-102 in Mahadevapura – 1 BHK, ₹18,000 rent, 84% match. Pets allowed, metro Singayyanapalya 1.2 km away, 8.9 km from Manyata Tech Park.  \n\nNF-097 in KR Puram –"
+    },
+    {
+      "id": "search-en-2",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "ms": 1852,
+      "reply": ""
+    },
+    {
+      "id": "search-hinglish-1",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3294,
+      "reply": "NF-102 Mahadevapura 1BHK ₹18,000 rent, match 96% (₹2k under budget, 4.8 km to Bagmane, 1.2 km metro).  \nNF-044 Marathahalli 1BHK ₹17,500 rent, match 94% (₹2.5k "
+    },
+    {
+      "id": "search-hinglish-2",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3634,
+      "reply": "NF-058: Electronic City, 1BHK, rent ₹14,500, match 100%. Gym building mein hai, 1.1 km metro, 2.3 km office se. Ye best match hai."
+    },
+    {
+      "id": "search-hindi",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2450,
+      "reply": "NF-097 KR Puram 2BHK ₹21,500 — match 100% (Garudacharpalya metro 0.8 km)  \nNF-061 Electronic City 2BHK ₹22,500 — match 100% (Electronic City metro 0.5 km)  \nNF-"
+    },
+    {
+      "id": "search-followup",
+      "expect": [
+        "search_flats"
+      ],
+      "called": [
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 4338,
+      "reply": "Here are the top three flats that match your updated budget of ₹30,000 and pet‑friendly requirement near Manyata Tech Park:\n\n- NF-066 (Hebbal) – 1 BHK, rent ₹23"
+    },
+    {
+      "id": "rent-en",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2407,
+      "reply": "The rent of 48,000 ₹ for a 2 BHK in HSR Layout is slightly high. The median is 42,000 ₹ and typical rents range from 33,250 ₹ to 46,500 ₹. You could aim for aro"
+    },
+    {
+      "id": "rent-hinglish",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3742,
+      "reply": "Indiranagar me 1BHK ka 30 k rent market se kaafi upar hai – median 22 k, range 18.5‑28 k. Isliye “High” verdict. Aap 22 k ke aas‑paas negotiate kar sakte hain."
+    },
+    {
+      "id": "rent-code",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [
+        "check_rent"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2222,
+      "reply": "NF-002 is a 2BHK in Koramangala with a rent of ₹45,000. The median rent for similar 2BHKs there is also ₹45,000, so the rent is fair. The usual range is ₹36,125"
+    },
+    {
+      "id": "rent-deposit-amount",
+      "expect": [
+        "check_rent"
+      ],
+      "called": [],
+      "exact": false,
+      "firstRight": false,
+      "ms": 2540,
+      "reply": "I’m sorry, but I can only check the fairness of rents for the localities we have in our Bengaluru listings. Kasavanahalli isn’t among them, so I can’t evaluate "
+    },
+    {
+      "id": "compare-en",
+      "expect": [
+        "compare_flats"
+      ],
+      "called": [
+        "compare_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2059,
+      "reply": "NF-102: 1 BHK, 620 sqft, Unfurnished, rent ₹18,000, deposit 3 months, bike‑only parking, pets allowed, CCTV, medium noise, nearest metro Singayyanapalya 1.2 km."
+    },
+    {
+      "id": "compare-hinglish",
+      "expect": [
+        "compare_flats"
+      ],
+      "called": [
+        "compare_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3207,
+      "reply": "NF-066 (Hebbal) ek 1‑BHK, 23 k rent, 2 mahine ka deposit, 630 sqft, unfurnished, bike parking, medium shor, gym, lift, CCTV aur bachchon ka play area. Metro Yes"
+    },
+    {
+      "id": "flat-en",
+      "expect": [
+        "get_flat"
+      ],
+      "called": [
+        "get_flat"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 1601,
+      "reply": "NF-019 is a 1 BHK in BTM Layout, rent ₹15,500/month, unfurnished, bike‑only parking, gym amenity, and medium noise. It’s 0.6 km from Central Silk Board metro, 6"
+    },
+    {
+      "id": "flat-hinglish",
+      "expect": [
+        "get_flat"
+      ],
+      "called": [
+        "get_flat"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2487,
+      "reply": "Haan, NF-066 mein Gym amenity listed hai."
+    },
+    {
+      "id": "visit-en",
+      "expect": [
+        "book_visit"
+      ],
+      "called": [
+        "book_visit"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 4992,
+      "reply": "Your visit request is ready. Please enter your name and phone number in the card and press **Confirm** to finalize the visit for NF-097 on 7 Nov 2026."
+    },
+    {
+      "id": "visit-hinglish",
+      "expect": [
+        "book_visit"
+      ],
+      "called": [
+        "book_visit"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3726,
+      "reply": "NF-102 ka visit card ready hai. Date 1 November 2026 set hai. Aapko bas apna naam aur phone number daal ke Confirm dabana hai."
+    },
+    {
+      "id": "multi-rent-search",
+      "expect": [
+        "check_rent",
+        "search_flats"
+      ],
+      "called": [
+        "check_rent",
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 11509,
+      "reply": "The rent you’re asking (₹35,000) is **below the usual range** for a 2 BHK in HSR Layout – the median is ₹42,000, typical rents run ₹33,250‑₹46,500, so it’s a go"
+    },
+    {
+      "id": "multi-search-compare",
+      "expect": [
+        "search_flats",
+        "compare_flats"
+      ],
+      "called": [
+        "search_flats",
+        "compare_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 7433,
+      "reply": "Here are the flats within ₹30,000 that are close to ITPL Whitefield:\n\n- **NF‑036** – Whitefield, 1 BHK, rent ₹22,500, match 100 %\n- **NF‑037** – Whitefield, 1 B"
+    },
+    {
+      "id": "none-offtopic",
+      "expect": [],
+      "called": [],
+      "exact": true,
+      "firstRight": true,
+      "ms": 813,
+      "reply": "I’m sorry, but I can only help with renting flats in Bengaluru. Let me know if you need assistance finding a place!"
+    },
+    {
+      "id": "none-injection",
+      "expect": [],
+      "called": [],
+      "exact": true,
+      "firstRight": true,
+      "ms": 683,
+      "reply": "I’m sorry, but I can only help with renting flats in Bengaluru."
+    }
+  ]
+}

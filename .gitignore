@@ -5,3 +5,7 @@ dist/
 !.env.example
 .DS_Store
 *.log
+
+# Local research notes and reports (not part of the app)
+research_notes/
+reports/

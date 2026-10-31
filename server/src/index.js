@@ -10,6 +10,7 @@ import matchRouter from './routes/match.js';
 import chatRouter from './routes/chat.js';
 import rentCheckRouter from './routes/rentCheck.js';
 import compareRouter from './routes/compare.js';
+import assistantRouter from './routes/assistant.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -34,6 +35,7 @@ app.use('/api/match', matchRouter);
 app.use('/api/chat', chatRouter);
 app.use('/api/rent-check', rentCheckRouter);
 app.use('/api/compare', compareRouter);
+app.use('/api/assistant', assistantRouter);
 
 app.use('/api', (req, res) => res.status(404).json({ error: 'Not found' }));
 
