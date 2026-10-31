@@ -51,6 +51,7 @@ export default function EnquiryForm({ listingCode }) {
   return (
     <form onSubmit={submit} className="glass space-y-3 rounded-2xl p-5">
       <h2 className="font-bold text-white">Contact the broker</h2>
+      <p className="-mt-1 text-xs text-slate-500">Demo site: these are sample brokers, so feel free to use a dummy number.</p>
       <div>
         <label htmlFor="enq-name" className={labelClass}>Name</label>
         <input id="enq-name" required maxLength={80} className={fieldClass} value={form.name} onChange={set('name')} autoComplete="name" />

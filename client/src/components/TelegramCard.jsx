@@ -31,10 +31,11 @@ export default function TelegramCard() {
   const test = () => run(() => sendJson('/api/broker/telegram/test'), 'Test alert sent.')
   const disconnect = () => run(async () => setBroker((await sendJson('/api/broker/telegram', { method: 'DELETE' })).broker))
 
+  // Hidden entirely until the server has a bot token.
+  if (!info?.enabled) return null
+
   let body
-  if (info && !info.enabled) {
-    body = <p className="text-sm text-slate-400">Telegram alerts are not set up on this server yet.</p>
-  } else if (broker.isDemo) {
+  if (broker.isDemo) {
     body = (
       <p className="text-sm text-slate-400">
         Alerts are off for the shared demo account, so visitors' numbers are never sent to someone else's phone.

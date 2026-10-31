@@ -1,10 +1,9 @@
 import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
-import { Broker } from '../models/Broker.js';
 import { Lead } from '../models/Lead.js';
 import { Listing } from '../models/Listing.js';
 import { httpError } from '../lib/errors.js';
-import { escapeHtml, sendMessage, telegramEnabled } from '../lib/telegram.js';
+import { notifyNewLead } from '../lib/notify.js';
 
 const router = Router();
 
@@ -55,25 +54,8 @@ router.post('/', leadLimiter, async (req, res) => {
   });
   res.status(201).json({ ok: true, id: lead._id });
 
-  // Alert the broker after responding, so a slow or failing Telegram call never blocks the enquiry.
-  notifyBroker(listing, lead).catch((err) => console.error('Telegram alert failed:', err.message));
+  // Alert the broker after responding, so a slow or failing push/Telegram call never blocks the enquiry.
+  notifyNewLead(listing, lead).catch((err) => console.error('Lead alert failed:', err.message));
 });
-
-async function notifyBroker(listing, lead) {
-  if (!telegramEnabled()) return;
-  const broker = await Broker.findById(listing.broker, 'telegramChatId');
-  if (!broker?.telegramChatId) return;
-  const lines = [
-    `🏠 <b>New ${lead.visitDate ? 'visit booking' : 'lead'}</b> for ${listing.code}`,
-    `${listing.bhk}BHK ${escapeHtml(listing.locality)} · ₹${listing.rent.toLocaleString('en-IN')}`,
-    '',
-    `👤 ${escapeHtml(lead.name)}`,
-    `📞 +91 ${lead.phone}`,
-    lead.visitDate ? `📅 Visit: ${lead.visitDate.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })}` : null,
-    lead.message ? `💬 ${escapeHtml(lead.message)}` : null,
-  ];
-  if (process.env.CLIENT_ORIGIN) lines.push('', `<a href="${process.env.CLIENT_ORIGIN}/broker">Open dashboard</a>`);
-  await sendMessage(broker.telegramChatId, lines.filter((l) => l !== null).join('\n'));
-}
 
 export default router;

@@ -8,6 +8,7 @@ import { connectDb } from '../src/db.js';
 import { Broker } from '../src/models/Broker.js';
 import { Lead } from '../src/models/Lead.js';
 import { Listing } from '../src/models/Listing.js';
+import { PushSubscription } from '../src/models/PushSubscription.js';
 
 // The first broker is the public demo login shown on the login page.
 export const DEMO_LOGIN = { email: 'demo@nestfinder.test', password: 'demo1234' };
@@ -44,6 +45,9 @@ for (const b of BROKERS) {
   await broker.save();
   brokers.push(broker);
 }
+
+// Devices subscribed to the shared demo accounts are dropped on every reset.
+await PushSubscription.deleteMany({ broker: { $in: brokers.map((b) => b._id) } });
 
 // Split listings between brokers by locality, so each broker "owns" a few areas.
 const localityNames = [...new Set(listings.map((l) => l.locality))];

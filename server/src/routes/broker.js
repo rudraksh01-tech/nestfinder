@@ -4,8 +4,11 @@ import mongoose from 'mongoose';
 import { Broker } from '../models/Broker.js';
 import { Lead, LEAD_STATUSES } from '../models/Lead.js';
 import { Listing } from '../models/Listing.js';
+import { PushSubscription } from '../models/PushSubscription.js';
 import { httpError } from '../lib/errors.js';
 import { localities, nearestMetro, techParkDistances } from '../lib/geo.js';
+import { phoneForBroker } from '../lib/notify.js';
+import { pushEnabled, pushToBroker } from '../lib/push.js';
 import { escapeHtml, findChatForStartCode, getBotUsername, sendMessage, telegramEnabled } from '../lib/telegram.js';
 import { requireBroker } from '../middleware/auth.js';
 
@@ -13,6 +16,12 @@ const router = Router();
 router.use(requireBroker);
 
 // Every query below includes `broker: req.brokerId`, so a broker can only see or change their own data.
+
+async function loadBroker(req) {
+  const broker = await Broker.findById(req.brokerId);
+  if (!broker) throw httpError(401, 'Please log in');
+  return broker;
+}
 
 router.get('/stats', async (req, res) => {
   const broker = new mongoose.Types.ObjectId(String(req.brokerId));
@@ -34,12 +43,11 @@ router.get('/leads', async (req, res) => {
     if (!LEAD_STATUSES.includes(req.query.status)) throw httpError(400, 'Unknown status');
     filter.status = req.query.status;
   }
-  const leads = await Lead.find(filter)
-    .sort({ createdAt: -1 })
-    .limit(200)
-    .populate('listing', 'code locality bhk rent')
-    .lean();
-  res.json({ leads });
+  const [broker, leads] = await Promise.all([
+    loadBroker(req),
+    Lead.find(filter).sort({ createdAt: -1 }).limit(200).populate('listing', 'code locality bhk rent').lean(),
+  ]);
+  res.json({ leads: leads.map((l) => ({ ...l, phone: phoneForBroker(broker, l) })) });
 });
 
 router.patch('/leads/:id', async (req, res) => {
@@ -50,9 +58,9 @@ router.patch('/leads/:id', async (req, res) => {
     { _id: req.params.id, broker: req.brokerId },
     { status },
     { returnDocument: 'after', runValidators: true },
-  ).populate('listing', 'code locality bhk rent');
+  ).populate('listing', 'code locality bhk rent').lean();
   if (!lead) throw httpError(404, 'Lead not found');
-  res.json({ lead });
+  res.json({ lead: { ...lead, phone: phoneForBroker(await loadBroker(req), lead) } });
 });
 
 // ---- Listings ----
@@ -123,13 +131,44 @@ router.delete('/listings/:code', async (req, res) => {
   res.json({ ok: true });
 });
 
-// ---- Telegram alerts ----
+// ---- Browser push ----
 
-async function loadBroker(req) {
-  const broker = await Broker.findById(req.brokerId);
-  if (!broker) throw httpError(401, 'Please log in');
-  return broker;
-}
+router.get('/push', async (req, res) => {
+  res.json({ enabled: pushEnabled(), publicKey: process.env.VAPID_PUBLIC_KEY ?? null });
+});
+
+// Saves this browser's subscription. Upsert by endpoint, so re-subscribing never duplicates a device.
+router.post('/push/subscribe', async (req, res) => {
+  if (!pushEnabled()) throw httpError(503, 'Push notifications are not set up on this server');
+  const { endpoint, keys } = req.body?.subscription ?? {};
+  if (typeof endpoint !== 'string' || !endpoint.startsWith('https://') || !keys?.p256dh || !keys?.auth) {
+    throw httpError(400, 'Invalid push subscription');
+  }
+  await PushSubscription.findOneAndUpdate(
+    { endpoint },
+    { broker: req.brokerId, endpoint, keys: { p256dh: keys.p256dh, auth: keys.auth } },
+    { upsert: true, setDefaultsOnInsert: true },
+  );
+  res.status(201).json({ ok: true });
+});
+
+router.post('/push/unsubscribe', async (req, res) => {
+  await PushSubscription.deleteOne({ endpoint: String(req.body?.endpoint ?? ''), broker: req.brokerId });
+  res.json({ ok: true });
+});
+
+router.post('/push/test', async (req, res) => {
+  const sent = await pushToBroker(req.brokerId, {
+    title: 'NestFinder test alert',
+    body: 'Notifications are working. New leads will show up like this.',
+    url: '/broker',
+    tag: 'test',
+  }, { endpoint: String(req.body?.endpoint ?? '') });
+  if (!sent) throw httpError(404, 'This device is not subscribed');
+  res.json({ ok: true });
+});
+
+// ---- Telegram ----
 
 router.get('/telegram', async (req, res) => {
   res.json({ enabled: telegramEnabled(), botUsername: telegramEnabled() ? await getBotUsername() : null });
