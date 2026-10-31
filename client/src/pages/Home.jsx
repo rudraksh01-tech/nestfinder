@@ -79,11 +79,12 @@ function Figures() {
 }
 
 // Real Fair Rent Check results for these offers in the demo data (median, middle half, full range).
+// `count` is how many similar flats the check compared; `bhk` is used in the captions.
 const RENT_EXAMPLES = [
-  { flat: '2BHK · HSR Layout', asked: 48000, median: 42000, low: 33250, high: 46500, min: 27500, max: 49500, diff: 14, level: 'slightly_high' },
-  { flat: '1BHK · Indiranagar', asked: 30000, median: 22000, low: 18500, high: 28000, min: 15500, max: 35000, diff: 36, level: 'high' },
-  { flat: '2BHK · Whitefield', asked: 30000, median: 30750, low: 28250, high: 36125, min: 21500, max: 39500, diff: -2, level: 'fair' },
-  { flat: '1BHK · Electronic City', asked: 14000, median: 24500, low: 22500, high: 25750, min: 14500, max: 28000, diff: -43, level: 'low' },
+  { flat: '2BHK · HSR Layout', bhk: '2BHKs', count: 7, asked: 48000, median: 42000, low: 33250, high: 46500, min: 27500, max: 49500 },
+  { flat: '1BHK · Indiranagar', bhk: '1BHKs', count: 17, asked: 30000, median: 22000, low: 18500, high: 28000, min: 15500, max: 35000 },
+  { flat: '2BHK · Whitefield', bhk: '2BHKs', count: 10, asked: 30000, median: 30750, low: 28250, high: 36125, min: 21500, max: 39500 },
+  { flat: '1BHK · Electronic City', bhk: '1BHKs', count: 6, asked: 14000, median: 24500, low: 22500, high: 25750, min: 14500, max: 28000 },
 ]
 const LEVEL_STYLE = {
   low: { badge: 'bg-good/10 text-good', dot: 'bg-good', text: (d) => `${Math.abs(d)}% below median` },
@@ -96,29 +97,66 @@ const k = (n) => `₹${Number((n / 1000).toFixed(1))}k`
 // Same bands as the server's verdict (server/src/lib/fairRent.js).
 const levelFor = (diff) => (diff <= -10 ? 'low' : diff <= 10 ? 'fair' : diff <= 25 ? 'slightly_high' : 'high')
 
-// Cycles through a few real checks. Moving the cursor (or a finger) along the bar sets your own
-// asked rent and the verdict updates live; leaving the bar resumes the cycle.
+const inr = (n) => `₹${Math.round(n).toLocaleString('en-IN')}`
+// How long each step of the story stays on screen.
+const STEP_MS = [1500, 1800, 2000, 3200]
+
+// What the story says at each step for one example.
+function caption(ex, step, target) {
+  const diff = Math.round(((ex.asked - ex.median) / ex.median) * 100)
+  const level = levelFor(diff)
+  if (step === 0) return `The broker asks ${inr(ex.asked)} a month.`
+  if (step === 1) return `${ex.count} similar ${ex.bhk} nearby rent for ${k(ex.low)} to ${k(ex.high)}.`
+  if (step === 2) return `Their median is ${inr(ex.median)}, so this is ${level === 'fair' ? 'about right' : `${Math.abs(diff)}% ${diff > 0 ? 'above' : 'below'} it`}.`
+  if (level === 'fair') return 'A fair price. Negotiate the deposit, not the rent.'
+  if (level === 'low') return "Well below similar flats. Ask what's missing before you pay."
+  return `Counter at ${inr(target)}: you save ${inr(ex.asked - target)} a month, ${inr((ex.asked - target) * 12)} a year.`
+}
+
+function tryCaption(value, median) {
+  const gap = value - median
+  if (Math.abs(gap / median) <= 0.1) return `At ${inr(value)}: within 10% of the median, a fair price.`
+  return `At ${inr(value)}: ${inr(Math.abs(gap))} a month ${gap > 0 ? 'above' : 'below'} the median, ${inr(Math.abs(gap) * 12)} a year.`
+}
+
+// Tells the story of one rent check, step by step: the quote, the range of similar flats, the median,
+// then what to do about it (with the yearly saving). It loops through four real checks.
+// Moving the cursor (or a finger) along the bar tries your own price instead.
 function RentPreview() {
   const [index, setIndex] = useState(0)
-  const [tryRent, setTryRent] = useState(null) // the rent under the cursor, or null when not interacting
   const reduceMotion = useReducedMotion()
+  const [step, setStep] = useState(reduceMotion ? 3 : 0)
+  const [tryRent, setTryRent] = useState(null) // the rent under the cursor, or null when not interacting
   const interacting = tryRent !== null
 
   useEffect(() => {
     if (interacting || reduceMotion) return
-    const id = setInterval(() => setIndex((i) => (i + 1) % RENT_EXAMPLES.length), 3200)
-    return () => clearInterval(id)
-  }, [interacting, reduceMotion])
+    const id = setTimeout(() => {
+      if (step < STEP_MS.length - 1) setStep(step + 1)
+      else {
+        setStep(0)
+        setIndex((i) => (i + 1) % RENT_EXAMPLES.length)
+      }
+    }, STEP_MS[step])
+    return () => clearTimeout(id)
+  }, [step, interacting, reduceMotion])
 
   const ex = RENT_EXAMPLES[index]
   // A little room either side of the real range, so you can try prices beyond it.
   const lo = Math.floor((Math.min(ex.min, ex.asked) * 0.9) / 1000) * 1000
   const hi = Math.ceil((Math.max(ex.max, ex.asked) * 1.1) / 1000) * 1000
-  const asked = tryRent ?? ex.asked
-  const diff = Math.round(((asked - ex.median) / ex.median) * 100)
+  // The counter-offer, as the real check works it out: the median, never above what was asked.
+  const target = Math.min(ex.asked, Math.round(ex.median / 500) * 500)
+  const askedLevel = levelFor(Math.round(((ex.asked - ex.median) / ex.median) * 100))
+  const countering = !interacting && step === 3 && (askedLevel === 'high' || askedLevel === 'slightly_high')
+  const shown = interacting ? tryRent : countering ? target : ex.asked
+  const diff = Math.round(((shown - ex.median) / ex.median) * 100)
   const style = LEVEL_STYLE[levelFor(diff)]
+  const showBand = interacting || step >= 1
+  const showVerdict = interacting || step >= 2
   const pos = (v) => `${((v - lo) / (hi - lo)) * 100}%`
   const glide = 'transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]'
+  const text = interacting ? tryCaption(tryRent, ex.median) : caption(ex, step, target)
 
   const follow = (e) => {
     const r = e.currentTarget.getBoundingClientRect()
@@ -130,7 +168,9 @@ function RentPreview() {
     <div className="mt-6 glass-inset rounded-2xl p-4">
       <div className="flex items-center justify-between gap-3 text-sm">
         <motion.span key={ex.flat} initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="text-ink-2">{ex.flat}</motion.span>
-        <span className={`rounded-full px-2 py-0.5 font-mono text-[0.7rem] transition-colors duration-300 ${style.badge}`}>{style.text(diff)}</span>
+        <span className={`rounded-full px-2 py-0.5 font-mono text-[0.7rem] transition-colors duration-300 ${showVerdict ? style.badge : 'bg-ink/[.05] text-muted'}`}>
+          {!showVerdict ? 'checking…' : countering ? 'your counter is fair' : style.text(diff)}
+        </span>
       </div>
 
       {/* Tall invisible hit area around the thin bar; taps here try a price instead of opening the page. */}
@@ -144,29 +184,44 @@ function RentPreview() {
         aria-label={`Try an asked rent for ${ex.flat}`}
         aria-valuemin={lo}
         aria-valuemax={hi}
-        aria-valuenow={asked}
-        aria-valuetext={`₹${asked.toLocaleString('en-IN')}, ${style.text(diff)}`}
+        aria-valuenow={shown}
+        aria-valuetext={`₹${shown.toLocaleString('en-IN')}, ${style.text(diff)}`}
       >
         <div className="relative h-2 rounded-full bg-ink/[.07]">
-          <div className={`absolute inset-y-0 rounded-full bg-signal/35 ${glide}`} style={{ left: pos(ex.low), width: `calc(${pos(ex.high)} - ${pos(ex.low)})` }} />
-          <div className={`absolute -inset-y-1.5 w-0.5 bg-ink ${glide}`} style={{ left: pos(ex.median) }} />
+          {/* Range of similar flats (middle half) grows in from the median. */}
           <div
-            className={`absolute -top-1.5 size-5 -translate-x-1/2 rounded-full border-2 border-white shadow ${style.dot} ${interacting ? 'scale-110 transition-colors' : glide}`}
-            style={{ left: pos(asked) }}
+            className={`absolute inset-y-0 origin-center rounded-full bg-signal/35 ${glide} ${showBand ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`}
+            style={{ left: pos(ex.low), width: `calc(${pos(ex.high)} - ${pos(ex.low)})` }}
+          />
+          <div className={`absolute -inset-y-1.5 w-0.5 bg-ink ${glide} ${showVerdict ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'}`} style={{ left: pos(ex.median) }} />
+          {/* Where the broker started, left behind as an outline once we counter. */}
+          {countering && <div className="absolute -top-1.5 size-5 -translate-x-1/2 rounded-full border-2 border-dashed border-ink/30" style={{ left: pos(ex.asked) }} />}
+          <div
+            className={`absolute -top-1.5 size-5 -translate-x-1/2 rounded-full border-2 border-white shadow ${showVerdict ? style.dot : 'bg-ink-2'} ${interacting ? 'scale-110 transition-colors' : glide}`}
+            style={{ left: pos(shown) }}
           />
         </div>
       </div>
 
       <div className="mt-1 flex justify-between font-mono text-[0.68rem] text-muted">
         <span>{k(lo)}</span>
-        <span>median {k(ex.median)} · <span className="text-ink">{interacting ? 'you' : 'asked'} {k(asked)}</span></span>
         <span>{k(hi)}</span>
       </div>
-      <div className="mt-3 flex items-center gap-1.5">
-        {RENT_EXAMPLES.map((e, i) => (
-          <span key={e.flat} aria-hidden="true" className={`h-1 rounded-full transition-all duration-500 ${i === index ? 'w-5 bg-signal' : 'w-1.5 bg-ink/15'}`} />
+      <motion.p
+        key={`${index}-${step}-${interacting}`}
+        initial={{ opacity: 0, y: 4 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+        className="mt-2 min-h-[2.6em] text-[0.88rem] leading-snug text-ink"
+        aria-live="polite"
+      >
+        {text}
+      </motion.p>
+      <div className="mt-2 flex items-center gap-1.5">
+        {STEP_MS.map((_, i) => (
+          <span key={i} aria-hidden="true" className={`h-1 rounded-full transition-all duration-500 ${!interacting && i <= step ? 'w-5 bg-signal' : 'w-3 bg-ink/15'}`} />
         ))}
-        <span className="ml-auto font-mono text-[0.62rem] text-faint">{interacting ? 'move to try a price' : 'move over the bar'}</span>
+        <span className="ml-auto font-mono text-[0.62rem] text-faint">{interacting ? 'your price' : 'or move over the bar'}</span>
       </div>
     </div>
   )
