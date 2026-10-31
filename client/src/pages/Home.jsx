@@ -20,16 +20,16 @@ function Hero() {
     <section className="relative -mt-[4.25rem] overflow-hidden rounded-b-[2.5rem] bg-ink pt-[4.25rem]">
       <div className="relative mx-auto flex max-w-6xl justify-center">
         <div className="relative -mt-4 w-[min(200vw,1180px)] shrink-0 sm:-mt-10">
-          <div className="absolute inset-[12%] rounded-full bg-white/15 blur-3xl" />
+          <div className="absolute inset-[12%] rounded-full bg-[#8ea2ff]/20 blur-3xl" />
           <Globe />
           {/* Whiter area behind the words (upper half, where the text sits), so the dots never fight the text. */}
-          <div className="pointer-events-none absolute inset-[11%] rounded-full bg-[radial-gradient(circle_at_50%_30%,rgb(255_255_255/0.92)_28%,rgb(255_255_255/0.6)_48%,rgb(255_255_255/0)_70%)]" />
+          <div className="pointer-events-none absolute inset-[11%] rounded-full bg-[radial-gradient(circle_at_50%_30%,rgb(244_243_238/0.9)_28%,rgb(244_243_238/0.55)_48%,rgb(244_243_238/0)_70%)]" />
         </div>
 
         {/* Text layer: clicks pass through to the globe (so it can still be dragged) except on the buttons. */}
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-start px-6 pt-[40%] sm:pt-[22%] lg:pt-[19%] text-center text-ink">
           <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-ink/55 sm:text-[0.85rem]">AI flat finder · Bengaluru</p>
-          <h1 className="mt-5 max-w-[16ch] font-display sm:max-w-none text-[2.6rem] leading-[0.95] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(255_255_255/0.8)] sm:text-[4.2rem] lg:text-[5.2rem]">
+          <h1 className="mt-5 max-w-[16ch] font-display sm:max-w-none text-[2.6rem] leading-[0.95] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(244_243_238/0.8)] sm:text-[4.2rem] lg:text-[5.2rem]">
             Tell the AI how you live. <br className="hidden sm:block" />
             <em className="text-signal">It finds the flat.</em>
           </h1>
