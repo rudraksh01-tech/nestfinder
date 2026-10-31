@@ -36,11 +36,11 @@ function Hero() {
           <p className="mt-5 max-w-[30rem] text-[0.95rem] leading-relaxed text-ink-2 sm:text-[1.05rem]">
             Say where you work and what you need. It shows the flats that fit, why they fit, and whether the rent is fair.
           </p>
-          <div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-3">
-            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
-              Ask the AI <ArrowRight size={18} />
+          <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-12 sm:gap-4">
+            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-7 py-3.5 text-[1.05rem] font-medium text-white sm:px-9 sm:py-4 sm:text-lg shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
+              Ask the AI <ArrowRight size={20} />
             </Link>
-            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/70 px-6 py-3 font-medium text-ink backdrop-blur transition hover:bg-white">
+            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/70 px-7 py-3.5 text-[1.05rem] font-medium text-ink sm:px-9 sm:py-4 sm:text-lg backdrop-blur transition hover:bg-white">
               Check a rent
             </Link>
           </div>
