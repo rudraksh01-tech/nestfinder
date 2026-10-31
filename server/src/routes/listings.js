@@ -68,6 +68,16 @@ router.get('/', async (req, res) => {
   res.json({ total, page, limit, pages: Math.ceil(total / limit), items });
 });
 
+// GET /api/listings/meta: options for the filter dropdowns.
+router.get('/meta', async (req, res) => {
+  const [localities, techParks, [range]] = await Promise.all([
+    Listing.distinct('locality'),
+    Listing.distinct('techParks.name'),
+    Listing.aggregate([{ $group: { _id: null, minRent: { $min: '$rent' }, maxRent: { $max: '$rent' } } }]),
+  ]);
+  res.json({ localities: localities.sort((a, b) => a.localeCompare(b)), techParks, minRent: range?.minRent ?? 0, maxRent: range?.maxRent ?? 0 });
+});
+
 // GET /api/listings/NF-001  (or a Mongo _id)
 router.get('/:id', async (req, res) => {
   const { id } = req.params;

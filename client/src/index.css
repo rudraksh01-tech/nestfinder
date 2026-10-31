@@ -23,8 +23,11 @@ body {
   font-family: var(--font-sans);
 }
 
-.glass {
-  background: rgb(255 255 255 / .05);
-  border: 1px solid rgb(255 255 255 / .1);
-  backdrop-filter: blur(16px);
+/* In the components layer so utilities like hover:border-* can override it. */
+@layer components {
+  .glass {
+    background: rgb(255 255 255 / .05);
+    border: 1px solid rgb(255 255 255 / .1);
+    backdrop-filter: blur(16px);
+  }
 }
