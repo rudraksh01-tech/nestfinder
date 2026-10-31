@@ -32,25 +32,25 @@ export default function Globe({ className = '' }) {
       height: size * dpr,
       phi: phiFor(BENGALURU[1]),
       theta: 0.22,
-      // A deep navy globe with porcelain dots reads as a solid object on the light page.
-      dark: 1,
-      diffuse: 1.6,
+      // A white globe with soft grey land dots, set on the black hero.
+      dark: 0,
+      diffuse: 1.2,
       mapSamples: 20000,
-      mapBrightness: 7,
-      mapBaseBrightness: 0.05,
-      baseColor: [0.16, 0.2, 0.32],
-      markerColor: [0.38, 0.55, 1],
-      glowColor: [0.86, 0.89, 1],
+      mapBrightness: 5,
+      mapBaseBrightness: 0,
+      baseColor: [1, 1, 1],
+      markerColor: [0.12, 0.31, 1],
+      glowColor: [0.55, 0.62, 0.8],
       markers: [
         { location: BENGALURU, size: 0.075 },
-        ...CITIES.map((c) => ({ location: c, size: 0.022, color: [0.8, 0.84, 0.95] })),
+        ...CITIES.map((c) => ({ location: c, size: 0.022, color: [0.05, 0.07, 0.13] })),
       ],
       arcs: CITIES.map((c) => ({ from: c, to: BENGALURU })),
-      arcColor: [0.45, 0.6, 1],
+      arcColor: [0.12, 0.31, 1],
       arcWidth: 0.55,
       arcHeight: 0.22,
       markerElevation: 0.01,
-      opacity: 0.92,
+      opacity: 1,
     })
 
     let phi = phiFor(BENGALURU[1])

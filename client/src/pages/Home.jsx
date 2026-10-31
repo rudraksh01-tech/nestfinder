@@ -7,39 +7,40 @@ import PhoneStory from '../components/home/PhoneStory.jsx'
 
 // Little floating notes either side of the globe: real distances from the demo data.
 const NOTES = [
-  { label: 'Manyata Tech Park', value: '2.4 km from a Hebbal 1BHK', className: 'left-0 top-[20%]' },
-  { label: 'Purple line', value: 'Indiranagar · 0.5 km', className: 'left-[3%] bottom-[22%]' },
+  { label: 'Manyata Tech Park', value: '2.4 km from a Hebbal 1BHK', className: 'left-0 top-[52%]' },
+  { label: 'Purple line', value: 'Indiranagar · 0.5 km', className: 'left-[3%] bottom-[16%]' },
   { label: 'Deposit check', value: '10 months? Ask for 3', className: 'right-0 top-[44%]' },
 ]
 
 // A big globe with the pitch written on top of it. The sphere is sized so the text always sits
-// inside the navy disc (on phones the globe is wider than the screen), which keeps light text readable.
+// inside the white disc (on phones the globe is wider than the screen), which keeps dark text readable.
+// The section sits on black and slides up under the floating navbar so there is no light strip above it.
 function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative -mt-[4.25rem] overflow-hidden rounded-b-[2.5rem] bg-ink pt-[4.25rem]">
       <div className="relative mx-auto flex max-w-6xl justify-center">
         <div className="relative -mt-4 w-[min(200vw,1180px)] shrink-0 sm:-mt-10">
-          <div className="absolute inset-[12%] rounded-full bg-signal/25 blur-3xl" />
+          <div className="absolute inset-[12%] rounded-full bg-white/15 blur-3xl" />
           <Globe />
-          {/* Darker centre behind the words, so the dots never fight the text. */}
-          <div className="pointer-events-none absolute inset-[11%] rounded-full bg-[radial-gradient(circle,rgb(13_19_33/0.88)_32%,rgb(13_19_33/0.55)_52%,rgb(13_19_33/0)_72%)]" />
+          {/* Whiter area behind the words (upper half, where the text sits), so the dots never fight the text. */}
+          <div className="pointer-events-none absolute inset-[11%] rounded-full bg-[radial-gradient(circle_at_50%_30%,rgb(255_255_255/0.92)_28%,rgb(255_255_255/0.6)_48%,rgb(255_255_255/0)_70%)]" />
         </div>
 
         {/* Text layer: clicks pass through to the globe (so it can still be dragged) except on the buttons. */}
-        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-porcelain">
-          <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-porcelain/65 sm:text-[0.85rem]">AI flat finder · Bengaluru</p>
-          <h1 className="mt-5 max-w-[16ch] font-display sm:max-w-none text-[3.3rem] leading-[0.95] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(13_19_33/0.6)] sm:text-[5.4rem] lg:text-[6.6rem]">
+        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-start px-6 pt-[40%] sm:pt-[22%] lg:pt-[19%] text-center text-ink">
+          <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-ink/55 sm:text-[0.85rem]">AI flat finder · Bengaluru</p>
+          <h1 className="mt-5 max-w-[16ch] font-display sm:max-w-none text-[2.6rem] leading-[0.95] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(255_255_255/0.8)] sm:text-[4.2rem] lg:text-[5.2rem]">
             Tell the AI how you live. <br className="hidden sm:block" />
-            <em className="text-[#9db3ff]">It finds the flat.</em>
+            <em className="text-signal">It finds the flat.</em>
           </h1>
-          <p className="mt-7 max-w-[36rem] text-[1.08rem] leading-relaxed text-porcelain/85 sm:text-[1.3rem]">
-            Type your office, budget and needs in plain words. The AI matches you to flats and checks if the rent is fair.
+          <p className="mt-5 max-w-[30rem] text-[0.95rem] leading-relaxed text-ink-2 sm:text-[1.05rem]">
+            Your office, budget and habits go in. Every flat comes back with a match score and the reason behind it.
           </p>
-          <div className="pointer-events-auto mt-9 flex flex-wrap items-center justify-center gap-4">
-            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-8 py-4 text-lg font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
-              Ask the AI <ArrowRight size={20} />
+          <div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-3">
+            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
+              Ask the AI <ArrowRight size={18} />
             </Link>
-            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-8 py-4 text-lg font-medium text-porcelain backdrop-blur transition hover:bg-white/20">
+            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/70 px-6 py-3 font-medium text-ink backdrop-blur transition hover:bg-white">
               Check a rent
             </Link>
           </div>
@@ -52,7 +53,7 @@ function Hero() {
           </div>
         ))}
       </div>
-      <p className="relative -mt-6 pb-10 text-center font-mono text-[0.7rem] text-faint sm:-mt-12">Drag the globe · Arcs: where Bengaluru's newcomers come from</p>
+      <p className="relative -mt-6 pb-10 text-center font-mono text-[0.7rem] text-porcelain/45 sm:-mt-12">Drag the globe · Arcs: where Bengaluru's newcomers come from</p>
     </section>
   )
 }
