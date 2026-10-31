@@ -14,6 +14,10 @@ import { parsePrefs } from '../routes/match.js';
 // Values are resolved and validated here instead (see areas.js).
 const CODE = { type: 'string', description: 'Flat code like NF-002', pattern: '^NF-\\d{1,5}$' };
 const LISTING_FIELDS = '-location -createdAt -updatedAt -__v';
+// Optional fields also accept null: the smaller fallback model sends null for "not given", and
+// Groq would otherwise reject the whole call, costing a repair round. toPrefs and check_rent skip nulls.
+const optional = (schema) => ({ ...schema, type: [schema.type, 'null'] });
+const optionalAll = (properties) => Object.fromEntries(Object.entries(properties).map(([k, v]) => [k, optional(v)]));
 
 export const TOOL_DEFINITIONS = [
   {
@@ -24,7 +28,7 @@ export const TOOL_DEFINITIONS = [
         "Rank flats for the person's preferences and return the top 3 with match scores. Call it whenever they describe what they want or change a preference. Pass the complete set of preferences known so far: start from CURRENT_PREFERENCES and apply what they just said.",
       parameters: {
         type: 'object',
-        properties: {
+        properties: optionalAll({
           techPark: { type: 'string', description: `Where they work. Our tech parks: ${PARKS.join(', ')}. An office area like "Whitefield" or "Hebbal" is fine; it is mapped to the nearest park.` },
           budget: { type: 'integer', description: 'Max monthly rent in rupees' },
           bhk: { type: 'integer', description: '1, 2 or 3' },
@@ -35,7 +39,7 @@ export const TOOL_DEFINITIONS = [
           quiet: { type: 'boolean' },
           car: { type: 'boolean', description: 'Needs car parking' },
           metro: { type: 'boolean', description: 'Wants a metro station nearby' },
-        },
+        }),
       },
     },
   },
@@ -47,13 +51,13 @@ export const TOOL_DEFINITIONS = [
         'Check whether a rent (and deposit) is fair by comparing it with similar flats nearby. Usually pass locality, bhk and rent (plus depositMonths if they gave a deposit; convert an amount like "2 lakh" into months of rent). Only when they mention one of our flats by code (like NF-002), pass that code instead.',
       parameters: {
         type: 'object',
-        properties: {
+        properties: optionalAll({
           code: CODE,
           locality: { type: 'string', description: `The area. Our areas: ${AREAS.join(', ')}. A nearby neighbourhood like "Kasavanahalli" is fine; it is mapped to the area it belongs to.` },
           bhk: { type: 'integer', description: '1, 2 or 3' },
           rent: { type: 'integer', description: 'Monthly rent in rupees' },
           depositMonths: { type: 'number' },
-        },
+        }),
       },
     },
   },

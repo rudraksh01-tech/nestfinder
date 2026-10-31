@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight, Bot, CalendarCheck, CheckCircle2, SendHorizontal, Sparkles } from 'lucide-react'
-import { sendJson } from '../lib/api.js'
+import { errorMessage, sendJson, UNREACHABLE } from '../lib/api.js'
 import { rupees } from '../lib/format.js'
 import { fieldClass, primaryButton } from '../lib/ui.js'
 
@@ -21,11 +21,20 @@ const VERDICT_STYLE = {
 }
 
 // Reads the assistant's newline-delimited JSON events as they arrive.
+// One retry after a short wait when the server could not be reached at all (it may be restarting).
+async function postAssistant(body) {
+  const request = () => fetch('/api/assistant', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+  const res = await request()
+  if (!UNREACHABLE.has(res.status)) return res
+  await new Promise((r) => setTimeout(r, 2000))
+  return request()
+}
+
 async function streamAssistant(body, onEvent) {
-  const res = await fetch('/api/assistant', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+  const res = await postAssistant(body)
   if (!res.ok) {
     const err = await res.json().catch(() => ({}))
-    throw Object.assign(new Error(err.error || `Request failed (${res.status})`), { status: res.status })
+    throw Object.assign(new Error(errorMessage(res.status, err)), { status: res.status })
   }
   const reader = res.body.getReader()
   const decoder = new TextDecoder()
