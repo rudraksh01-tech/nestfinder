@@ -25,20 +25,19 @@ function Hero() {
 
         {/* Text layer: clicks pass through to the globe (so it can still be dragged) except on the buttons. */}
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-porcelain">
-          <p className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-porcelain/60">Bengaluru · 12.97° N, 77.59° E</p>
-          <h1 className="mt-4 max-w-[19ch] font-display text-[2.7rem] leading-[0.98] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(13_19_33/0.6)] sm:text-[4rem] lg:text-[4.6rem]">
-            New in Bengaluru? Find a flat that fits <em className="text-[#9db3ff]">how you live.</em>
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-porcelain/60">AI flat finder · Bengaluru</p>
+          <h1 className="mt-4 max-w-[17ch] font-display text-[2.8rem] leading-[0.98] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(13_19_33/0.6)] sm:text-[4.2rem] lg:text-[4.8rem]">
+            Tell the AI how you live. <em className="text-[#9db3ff]">It finds the flat.</em>
           </h1>
-          <p className="mt-5 max-w-[34rem] text-[0.98rem] leading-relaxed text-porcelain/80 sm:text-[1.05rem]">
-            Tell it where you work, what you can pay and who's moving in. NestFinder scores every flat against your day,
-            flags a padded deposit, and helps you pick one.
+          <p className="mt-5 max-w-[30rem] text-[0.98rem] leading-relaxed text-porcelain/80 sm:text-[1.05rem]">
+            Type your office, budget and needs in plain words. The AI matches you to flats and checks if the rent is fair.
           </p>
           <div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-3">
             <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
-              Find my match <ArrowRight size={18} />
+              Ask the AI <ArrowRight size={18} />
             </Link>
             <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 font-medium text-porcelain backdrop-blur transition hover:bg-white/20">
-              Check a broker's quote
+              Check a rent
             </Link>
           </div>
         </div>
