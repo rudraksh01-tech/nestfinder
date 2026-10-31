@@ -16,6 +16,7 @@ export function AuthProvider({ children }) {
   const value = {
     broker,
     checking: broker === undefined,
+    setBroker, // e.g. after connecting Telegram
     login: async (email, password) => setBroker((await sendJson('/api/auth/login', { body: { email, password } })).broker),
     register: async (form) => setBroker((await sendJson('/api/auth/register', { body: form })).broker),
     logout: async () => {

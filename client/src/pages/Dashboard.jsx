@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { CalendarCheck, Home, Inbox, Pencil, Phone, Plus, Trash2, Users } from 'lucide-react'
+import TelegramCard from '../components/TelegramCard.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 import { sendJson } from '../lib/api.js'
 import { formatDate, rupees } from '../lib/format.js'
@@ -164,6 +165,8 @@ export default function Dashboard() {
         <Stat icon={Inbox} label="New leads" value={stats?.leads.new} />
         <Stat icon={CalendarCheck} label="Upcoming visits" value={stats?.upcomingVisits} />
       </div>
+
+      <TelegramCard />
 
       <div className="mt-8 flex flex-wrap items-center gap-2 border-b border-white/10 pb-3">
         <button type="button" className={tabClass(tab === 'leads')} onClick={() => setParams({})}>Leads</button>

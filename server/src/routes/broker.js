@@ -1,9 +1,12 @@
 import { Router } from 'express';
+import { randomBytes } from 'node:crypto';
 import mongoose from 'mongoose';
+import { Broker } from '../models/Broker.js';
 import { Lead, LEAD_STATUSES } from '../models/Lead.js';
 import { Listing } from '../models/Listing.js';
 import { httpError } from '../lib/errors.js';
 import { localities, nearestMetro, techParkDistances } from '../lib/geo.js';
+import { escapeHtml, findChatForStartCode, getBotUsername, sendMessage, telegramEnabled } from '../lib/telegram.js';
 import { requireBroker } from '../middleware/auth.js';
 
 const router = Router();
@@ -118,6 +121,60 @@ router.delete('/listings/:code', async (req, res) => {
   if (!listing) throw httpError(404, 'Listing not found');
   await Lead.deleteMany({ listing: listing._id });
   res.json({ ok: true });
+});
+
+// ---- Telegram alerts ----
+
+async function loadBroker(req) {
+  const broker = await Broker.findById(req.brokerId);
+  if (!broker) throw httpError(401, 'Please log in');
+  return broker;
+}
+
+router.get('/telegram', async (req, res) => {
+  res.json({ enabled: telegramEnabled(), botUsername: telegramEnabled() ? await getBotUsername() : null });
+});
+
+// Step 1: create a one-time code and a t.me link that sends "/start <code>" to the bot.
+router.post('/telegram/connect', async (req, res) => {
+  const broker = await loadBroker(req);
+  // The demo login is shared by everyone, so it must not forward visitors' phone numbers to one person's Telegram.
+  if (broker.isDemo) throw httpError(403, 'Telegram alerts are off for the shared demo account. Create your own broker account to try them.');
+  broker.telegramConnectCode = randomBytes(12).toString('hex');
+  broker.telegramConnectExpires = new Date(Date.now() + 15 * 60 * 1000);
+  await broker.save();
+  const bot = await getBotUsername();
+  res.json({ link: `https://t.me/${bot}?start=${broker.telegramConnectCode}`, botUsername: bot });
+});
+
+// Step 2: after the broker presses Start in Telegram, find their chat and save it.
+router.post('/telegram/verify', async (req, res) => {
+  const broker = await loadBroker(req);
+  if (!broker.telegramConnectCode || broker.telegramConnectExpires < new Date()) {
+    throw httpError(400, 'The connect link expired. Click Connect again.');
+  }
+  const found = await findChatForStartCode(broker.telegramConnectCode);
+  if (!found) throw httpError(404, 'No Start message yet. Open the link, press Start in Telegram, then verify.');
+  broker.telegramChatId = found.chatId;
+  broker.telegramConnectCode = undefined;
+  broker.telegramConnectExpires = undefined;
+  await broker.save();
+  await sendMessage(found.chatId, `✅ Connected to NestFinder as <b>${escapeHtml(broker.name)}</b>. New leads will show up here.`);
+  res.json({ broker });
+});
+
+router.post('/telegram/test', async (req, res) => {
+  const broker = await loadBroker(req);
+  if (!broker.telegramChatId) throw httpError(400, 'Telegram is not connected');
+  await sendMessage(broker.telegramChatId, '🔔 Test alert from NestFinder. Alerts are working.');
+  res.json({ ok: true });
+});
+
+router.delete('/telegram', async (req, res) => {
+  const broker = await loadBroker(req);
+  broker.telegramChatId = undefined;
+  await broker.save();
+  res.json({ broker });
 });
 
 export default router;

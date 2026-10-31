@@ -9,6 +9,8 @@ const brokerSchema = new mongoose.Schema(
     phone: { type: String, trim: true },
     agency: { type: String, trim: true, maxlength: 80 },
     telegramChatId: String, // set when the broker connects the Telegram bot
+    telegramConnectCode: String, // one-time code sent as "/start <code>" while connecting
+    telegramConnectExpires: Date,
     isDemo: { type: Boolean, default: false },
   },
   { timestamps: true },
@@ -25,6 +27,8 @@ brokerSchema.methods.checkPassword = function (password) {
 brokerSchema.set('toJSON', {
   transform: (doc, ret) => {
     delete ret.passwordHash;
+    delete ret.telegramConnectCode;
+    delete ret.telegramConnectExpires;
     delete ret.__v;
     return ret;
   },
