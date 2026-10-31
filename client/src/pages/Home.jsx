@@ -3,48 +3,54 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import Globe from '../components/Globe.jsx'
 import PhoneStory from '../components/home/PhoneStory.jsx'
 
-// Little floating notes around the globe: real distances from the demo data.
+// Little floating notes either side of the globe: real distances from the demo data.
 const NOTES = [
-  { label: 'Manyata Tech Park', value: '2.4 km from a Hebbal 1BHK', className: 'left-[-4%] top-[16%]' },
-  { label: 'Deposit check', value: '10 months? Ask for 3', className: 'right-[-2%] top-[46%]' },
-  { label: 'Purple line', value: 'Indiranagar · 0.5 km', className: 'left-[4%] bottom-[12%]' },
+  { label: 'Manyata Tech Park', value: '2.4 km from a Hebbal 1BHK', className: 'left-0 top-[20%]' },
+  { label: 'Purple line', value: 'Indiranagar · 0.5 km', className: 'left-[3%] bottom-[22%]' },
+  { label: 'Deposit check', value: '10 months? Ask for 3', className: 'right-0 top-[44%]' },
 ]
 
+// A big globe with the pitch written on top of it. The sphere is sized so the text always sits
+// inside the navy disc (on phones the globe is wider than the screen), which keeps light text readable.
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-center gap-4 px-5 pb-10 pt-12 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:gap-0 lg:pb-16 lg:pt-14">
-        <div className="relative z-10 text-center lg:text-left">
-          <p className="eyebrow">Bengaluru · 12.97° N, 77.59° E</p>
-          <h1 className="mx-auto mt-5 max-w-[38rem] font-display text-[3.1rem] leading-[0.98] tracking-[-0.015em] sm:text-[4.4rem] lg:mx-0 lg:text-[4.75rem]">
-            New in Bengaluru? Find a flat that fits <em className="text-signal">how you live.</em>
+      <div className="relative mx-auto flex max-w-6xl justify-center">
+        <div className="relative -mt-4 w-[min(190vw,1060px)] shrink-0 sm:-mt-10">
+          <div className="absolute inset-[12%] rounded-full bg-signal/25 blur-3xl" />
+          <Globe />
+          {/* Darker centre behind the words, so the dots never fight the text. */}
+          <div className="pointer-events-none absolute inset-[13%] rounded-full bg-[radial-gradient(circle,rgb(13_19_33/0.88)_32%,rgb(13_19_33/0.55)_52%,rgb(13_19_33/0)_72%)]" />
+        </div>
+
+        {/* Text layer: clicks pass through to the globe (so it can still be dragged) except on the buttons. */}
+        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-porcelain">
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-porcelain/60">Bengaluru · 12.97° N, 77.59° E</p>
+          <h1 className="mt-4 max-w-[19ch] font-display text-[2.7rem] leading-[0.98] tracking-[-0.015em] [text-shadow:0_2px_24px_rgb(13_19_33/0.6)] sm:text-[4rem] lg:text-[4.6rem]">
+            New in Bengaluru? Find a flat that fits <em className="text-[#9db3ff]">how you live.</em>
           </h1>
-          <p className="mx-auto mt-6 max-w-md text-[1.05rem] leading-relaxed text-ink-2 lg:mx-0">
+          <p className="mt-5 max-w-[34rem] text-[0.98rem] leading-relaxed text-porcelain/80 sm:text-[1.05rem]">
             Tell it where you work, what you can pay and who's moving in. NestFinder scores every flat against your day,
             flags a padded deposit, and helps you pick one.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.8)] transition hover:bg-signal-deep">
+          <div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-3">
+            <Link to="/match" className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-white shadow-[0_10px_30px_-10px_rgb(30_79_255/0.9)] transition hover:bg-signal-deep">
               Find my match <ArrowRight size={18} />
             </Link>
-            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/50 px-6 py-3 font-medium text-ink backdrop-blur transition hover:border-ink/30 hover:bg-white">
+            <Link to="/rent-check" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 font-medium text-porcelain backdrop-blur transition hover:bg-white/20">
               Check a broker's quote
             </Link>
           </div>
-          <p className="mt-6 font-mono text-[0.7rem] text-faint lg:mt-10">Drag the globe · Arcs: where Bengaluru's newcomers come from</p>
         </div>
 
-        <div className="relative mx-auto w-[min(92vw,600px)] lg:mr-[-8%] lg:w-[min(50vw,660px)]">
-          <div className="absolute inset-[10%] rounded-full bg-signal/20 blur-3xl" />
-          <Globe />
-          {NOTES.map((n) => (
-            <div key={n.label} className={`glass absolute hidden rounded-2xl !bg-white/80 px-3.5 py-2.5 text-left md:block ${n.className}`}>
-              <p className="eyebrow !text-[0.62rem]">{n.label}</p>
-              <p className="mt-0.5 text-sm font-medium">{n.value}</p>
-            </div>
-          ))}
-        </div>
+        {NOTES.map((n) => (
+          <div key={n.label} className={`glass absolute hidden rounded-2xl !bg-white/80 px-3.5 py-2.5 text-left xl:block ${n.className}`}>
+            <p className="eyebrow !text-[0.62rem]">{n.label}</p>
+            <p className="mt-0.5 text-sm font-medium">{n.value}</p>
+          </div>
+        ))}
       </div>
+      <p className="relative -mt-6 pb-10 text-center font-mono text-[0.7rem] text-faint sm:-mt-12">Drag the globe · Arcs: where Bengaluru's newcomers come from</p>
     </section>
   )
 }
