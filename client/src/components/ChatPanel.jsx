@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight, Bot, CalendarCheck, CheckCircle2, LoaderCircle, SendHorizontal } from 'lucide-react'
-import { errorMessage, sendJson, UNREACHABLE } from '../lib/api.js'
+import { errorMessage, request, sendJson, UNREACHABLE } from '../lib/api.js'
 import { rupees } from '../lib/format.js'
 import { fieldClass, primaryButton } from '../lib/ui.js'
 
@@ -20,18 +20,10 @@ const VERDICT_STYLE = {
   high: 'bg-bad/10 text-bad',
 }
 
-// Reads the assistant's newline-delimited JSON events as they arrive.
-// One retry after a short wait when the server could not be reached at all (it may be restarting).
-async function postAssistant(body) {
-  const request = () => fetch('/api/assistant', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
-  const res = await request()
-  if (!UNREACHABLE.has(res.status)) return res
-  await new Promise((r) => setTimeout(r, 2000))
-  return request()
-}
-
-async function streamAssistant(body, onEvent) {
-  const res = await postAssistant(body)
+// Reads the assistant's newline-delimited JSON events as they arrive. If the server is asleep
+// (free hosting), request() waits for it to wake and sends the message again.
+async function streamAssistant(body, onEvent, onWaking) {
+  const res = await request('/api/assistant', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }, { onWaking })
   if (!res.ok) {
     const err = await res.json().catch(() => ({}))
     throw Object.assign(new Error(errorMessage(res.status, err)), { status: res.status })
@@ -190,11 +182,12 @@ export default function ChatPanel({ prefs, onPrefs }) {
         } else if (event.type === 'error') {
           throw new Error(event.message)
         }
-      })
+      }, () => setStatus((s) => ({ ...s, step: 'Waking up the server (free hosting), this can take up to a minute' })))
       setStatus({ busy: false, error: null, step: null })
     } catch (err) {
-      // If the assistant endpoint itself is unavailable, fall back to the simpler search chat.
-      if (err.status && err.status !== 400 && err.status !== 429) {
+      // If the assistant endpoint itself fails, fall back to the simpler search chat
+      // (not when the whole server is unreachable: that has already been waited for).
+      if (err.status && err.status !== 400 && err.status !== 429 && !UNREACHABLE.has(err.status)) {
         try {
           const res = await sendJson('/api/chat', { body })
           updateLast(() => ({ role: 'assistant', content: res.reply, cards: [{ name: 'search_flats', data: { matches: res.matches } }] }))
