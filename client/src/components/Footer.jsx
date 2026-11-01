@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-2 border-t border-ink/10 pt-5 text-[0.8rem] text-muted sm:flex-row sm:justify-between">
-          <span>A portfolio project. Sample listings, real map data © OpenStreetMap contributors.</span>
+          <span>Designed and built by <span className="font-medium text-ink">Rudra Pratap Singh</span>. Sample listings, real map data © OpenStreetMap contributors.</span>
           <span>Made in Bengaluru, between two rent hikes.</span>
         </div>
       </div>

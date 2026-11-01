@@ -9,3 +9,6 @@ dist/
 # Local research notes and reports (not part of the app)
 research_notes/
 reports/
+
+# Personal interview notes, kept local only
+docs/interview-guide.md
