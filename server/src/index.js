@@ -28,6 +28,11 @@ app.get('/api/health', (req, res) => {
   res.json({ ok: true, service: 'nestfinder-server' });
 });
 
+// TEMP: proxy header check for the deploy, remove after.
+app.get('/api/_ipcheck', (req, res) => {
+  res.json({ ip: req.ip, ips: req.ips, xff: req.get('x-forwarded-for'), realIp: req.get('x-real-ip'), vercelFor: req.get('x-vercel-forwarded-for'), cf: req.get('cf-connecting-ip'), trueClient: req.get('true-client-ip') });
+});
+
 app.use('/api/listings', listingsRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/leads', leadsRouter);
