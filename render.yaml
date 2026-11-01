@@ -17,9 +17,11 @@ services:
         value: production
       - key: NODE_VERSION
         value: "24"
-      # Vercel's /api rewrite + Render's load balancer
+      # Proxy hops in front of the app, measured live: Vercel, Cloudflare, Render's LB, Render's router
       - key: TRUST_PROXY
-        value: "2"
+        value: "4"
+      - key: CLIENT_ORIGIN
+        value: https://nestfinder-woad.vercel.app
       - key: VAPID_SUBJECT
         value: mailto:alerts@nestfinder.test
       - key: LANGFUSE_BASE_URL

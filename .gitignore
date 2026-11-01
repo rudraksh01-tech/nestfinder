@@ -12,3 +12,6 @@ reports/
 
 # Personal interview notes, kept local only
 docs/interview-guide.md
+
+# Vercel CLI link folder
+.vercel

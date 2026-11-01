@@ -15,9 +15,11 @@ import assistantRouter from './routes/assistant.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// In production, requests come through proxies (Vercel's /api rewrite, then Render's load balancer).
-// Trusting that many hops lets rate limiting see the visitor's IP instead of a proxy's.
-// TRUST_PROXY is the number of hops (2 for Vercel + Render; 1 if the API is called on Render directly).
+// In production, requests come through proxies: Vercel's /api rewrite, then Cloudflare and a load
+// balancer inside Render. Trusting that many hops lets rate limiting see the visitor's IP instead of
+// a proxy's. TRUST_PROXY is the hop count, measured on the live deploy: 4 through Vercel (3 when the
+// Render URL is called directly). Someone calling the Render URL directly can fake their IP this way;
+// fine for a demo, worth fixing (e.g. a shared header) for real traffic.
 if (process.env.NODE_ENV === 'production') app.set('trust proxy', Number(process.env.TRUST_PROXY ?? 1));
 
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173', credentials: true }));
@@ -26,11 +28,6 @@ app.use(cookieParser());
 
 app.get('/api/health', (req, res) => {
   res.json({ ok: true, service: 'nestfinder-server' });
-});
-
-// TEMP: proxy header check for the deploy, remove after.
-app.get('/api/_ipcheck', (req, res) => {
-  res.json({ ip: req.ip, ips: req.ips, xff: req.get('x-forwarded-for'), realIp: req.get('x-real-ip'), vercelFor: req.get('x-vercel-forwarded-for'), cf: req.get('cf-connecting-ip'), trueClient: req.get('true-client-ip') });
 });
 
 app.use('/api/listings', listingsRouter);
