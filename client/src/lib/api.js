@@ -9,11 +9,18 @@ export const errorMessage = (status, body) =>
 // The free API host sleeps after 15 idle minutes and takes up to a minute to wake; the proxy in front
 // of it gives up sooner with a 502. wakeServer polls /api/health until it answers (callers share one
 // poll), so a request that hit a sleeping server can wait for it and try again instead of failing.
+// In production the API is on Render behind Vercel's /api rewrite. A request through Vercel fails
+// fast with a 502 while Render sleeps and does not wake it, so the wake-up knock goes straight to
+// Render (no-cors: the answer is not needed, only the request).
+const DIRECT_API = import.meta.env.PROD ? 'https://nestfinder-api-r1go.onrender.com' : null
+const knock = () => DIRECT_API && fetch(`${DIRECT_API}/api/health`, { mode: 'no-cors', cache: 'no-store' }).catch(() => {})
+
 let waking = null
 export function wakeServer({ timeoutMs = 75000 } = {}) {
   waking ??= (async () => {
     const until = Date.now() + timeoutMs
-    while (Date.now() < until) {
+    for (let i = 0; Date.now() < until; i++) {
+      if (i % 5 === 0) knock()
       try {
         if ((await fetch('/api/health', { cache: 'no-store' })).ok) return true
       } catch {
