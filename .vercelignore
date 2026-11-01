@@ -1,0 +1,12 @@
+# Only the client is built on Vercel; keep the API, secrets and notes out of the upload.
+server
+reports
+research_notes
+docs
+.env
+.env.*
+**/.env
+**/.env.*
+node_modules
+**/node_modules
+client/dist
