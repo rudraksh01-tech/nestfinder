@@ -1,5 +1,7 @@
 # NestFinder
 
+**Live demo: [nestfinder-woad.vercel.app](https://nestfinder-woad.vercel.app)** · broker demo login: `demo@nestfinder.test` / `demo1234`
+
 **An AI flat finder for Bengaluru.** Tell it how you live, in English, Hindi or Hinglish. It finds the flats that fit, explains why each one fits, checks whether the rent and deposit are fair, and helps you choose from your shortlist.
 
 ![NestFinder home page: a dark globe with the headline "Tell the AI how you live. It finds the flat."](docs/screenshots/hero-light.webp)
@@ -187,7 +189,9 @@ flowchart LR
   R -- "new lead" --> PUSH --> SW
 ```
 
-In development, Vite serves the frontend on port 5173 and forwards every `/api` request to the backend on port 5000. In production the plan is the same idea: Vercel serves the frontend and rewrites `/api` to the backend on Render, so the login cookie stays on one site.
+In development, Vite serves the frontend on port 5173 and forwards every `/api` request to the backend on port 5000. In production it's the same idea: Vercel serves the frontend and rewrites `/api` to the backend on Render (`client/vercel.json`), so the browser sees one site and the login cookie stays first-party. The Render service is described in `render.yaml`; secrets are set in the Render dashboard, not in the repo.
+
+The free Render instance sleeps after 15 idle minutes and takes up to a minute to wake, so the app pings `/api/health` as soon as it loads, and the chat retries once if the server can't be reached. Requests pass through four proxies (Vercel, Cloudflare and two inside Render), measured on the live deploy, so Express trusts four hops to see the visitor's real IP for rate limiting.
 
 ### One assistant message, step by step
 
@@ -511,18 +515,17 @@ Being honest about these is part of the project.
 - The eval checks tool choice, not reply wording.
 - Rate limits are kept in memory, so a server restart resets them.
 - Telegram alerts are built but switched off: the author's Telegram account can't create bots.
-- Not deployed yet.
+- On the free hosting, the first request after a quiet spell can take up to a minute while the server wakes.
 
 ---
 
 ## 14. What's next
 
-1. Deploy: frontend on Vercel, backend on Render, `/api` rewritten from Vercel to Render.
-2. A reply-groundedness eval with Langfuse datasets (does every number in a reply appear in the tool results?).
-3. Prompt Guard 2 in front of the chat and broker-written text.
-4. Check a rent from a screenshot of the broker's message (a vision model).
-5. Hinglish voice input (Whisper).
-6. A read-only MCP server so other AI assistants can search flats.
+1. A reply-groundedness eval with Langfuse datasets (does every number in a reply appear in the tool results?).
+2. Prompt Guard 2 in front of the chat and broker-written text.
+3. Check a rent from a screenshot of the broker's message (a vision model).
+4. Hinglish voice input (Whisper).
+5. A read-only MCP server so other AI assistants can search flats.
 
 ---
 
