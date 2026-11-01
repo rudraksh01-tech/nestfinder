@@ -1,0 +1,26 @@
+# Render Blueprint for the NestFinder API (free web service).
+# Secrets (database, keys) are not in this file: add them in the Render dashboard
+# under Environment -> "Add from .env".
+services:
+  - type: web
+    name: nestfinder-api
+    runtime: node
+    plan: free
+    region: singapore
+    rootDir: server
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "24"
+      # Vercel's /api rewrite + Render's load balancer
+      - key: TRUST_PROXY
+        value: "2"
+      - key: VAPID_SUBJECT
+        value: mailto:alerts@nestfinder.test
+      - key: LANGFUSE_BASE_URL
+        value: https://cloud.langfuse.com

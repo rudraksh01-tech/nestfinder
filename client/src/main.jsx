@@ -7,6 +7,10 @@ import { AuthProvider } from './context/AuthContext.jsx'
 import { ShortlistProvider } from './context/ShortlistContext.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 
+// The free API host sleeps when idle and takes up to a minute to wake. Knock as soon as the page
+// loads, so it is usually awake by the time someone sends a message.
+fetch('/api/health').catch(() => {})
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

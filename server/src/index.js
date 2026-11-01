@@ -15,9 +15,10 @@ import assistantRouter from './routes/assistant.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Render (and Vercel's rewrite) sit in front of the app; trust one proxy hop so
-// rate limiting sees the real client IP instead of the proxy's.
-if (process.env.NODE_ENV === 'production') app.set('trust proxy', 1);
+// In production, requests come through proxies (Vercel's /api rewrite, then Render's load balancer).
+// Trusting that many hops lets rate limiting see the visitor's IP instead of a proxy's.
+// TRUST_PROXY is the number of hops (2 for Vercel + Render; 1 if the API is called on Render directly).
+if (process.env.NODE_ENV === 'production') app.set('trust proxy', Number(process.env.TRUST_PROXY ?? 1));
 
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173', credentials: true }));
 app.use(express.json());
