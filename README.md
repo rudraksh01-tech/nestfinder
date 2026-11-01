@@ -430,7 +430,7 @@ Everything here uses free accounts. Nothing asks for a credit card.
 
 ### What you need
 
-- **Node.js 24** ([download](https://nodejs.org)). The server uses `node --env-file`, so Node 20.6 or newer is required; 24 is what it was built on.
+- **Node.js 24 or newer** ([download](https://nodejs.org)). `server/package.json` asks for it, and the server reads its settings with `node --env-file`.
 - A free **MongoDB Atlas** cluster ([mongodb.com/atlas](https://www.mongodb.com/atlas)), or MongoDB on your machine.
 - A free **Groq** API key ([console.groq.com](https://console.groq.com)) for the AI features. Without it, everything except the AI works.
 - Optional: free **Langfuse** keys ([cloud.langfuse.com](https://cloud.langfuse.com)) for tracing.
@@ -439,8 +439,8 @@ Everything here uses free accounts. Nothing asks for a credit card.
 
 ```bash
 # 1. Get the code
-git clone <this repo>
-cd NestFinder
+git clone https://github.com/rudraksh01-tech/nestfinder.git
+cd nestfinder
 
 # 2. Install
 cd server && npm install
