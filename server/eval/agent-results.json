@@ -1,14 +1,15 @@
 {
+  "updatedAt": "2026-11-01T06:03:19.436Z",
   "summary": {
     "cases": 20,
-    "ran": 13,
-    "notRun": 7,
-    "exactSequence": "13/13",
-    "firstToolRight": "13/13",
+    "ran": 20,
+    "notRun": 0,
+    "exactSequence": "20/20",
+    "firstToolRight": "20/20",
     "modelsUsed": [
       "openai/gpt-oss-120b"
     ],
-    "medianMs": 2432
+    "medianMs": 2396
   },
   "results": [
     {
@@ -185,30 +186,51 @@
       "expect": [
         "get_flat"
       ],
-      "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "called": [
+        "get_flat"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 1504,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "Haan, NF-066 mein Gym facility hai.",
+      "ranAt": "2026-11-01T05:59:07.148Z"
     },
     {
       "id": "visit-en",
       "expect": [
         "book_visit"
       ],
-      "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "called": [
+        "book_visit"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 1593,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "Here’s the visit card for flat NF‑097 on Saturday 7 Nov 2026. Please enter your name and phone number and press **Confirm** to finalize the visit.",
+      "ranAt": "2026-11-01T05:59:48.834Z"
     },
     {
       "id": "visit-hinglish",
       "expect": [
         "book_visit"
       ],
-      "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "called": [
+        "book_visit"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2335,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "Flat flat ke liye visit card ready ho gaya hai. Kal 2 November ko aapko apna naam aur phone number daal ke Confirm karna hoga.",
+      "ranAt": "2026-11-01T06:00:31.178Z"
     },
     {
       "id": "multi-rent-search",
@@ -216,10 +238,18 @@
         "check_rent",
         "search_flats"
       ],
-      "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "called": [
+        "check_rent",
+        "search_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 2886,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "The rent you’re looking at (₹35,000 for a 2 BHK in HSR Layout) is **below the usual range** – the median for similar flats is ₹42,000, so it’s a good deal.\n\nPet‑friendly options near Bagmane Tech Park under ₹35 k:\n\n- **NF‑007** – Indiranagar, 1 BHK, ₹25,500, pets allowed, 3 km to Bagmane, 1.6 km to ",
+      "ranAt": "2026-11-01T06:01:14.066Z"
     },
     {
       "id": "multi-search-compare",
@@ -227,28 +257,44 @@
         "search_flats",
         "compare_flats"
       ],
-      "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "called": [
+        "search_flats",
+        "compare_flats"
+      ],
+      "exact": true,
+      "firstRight": true,
+      "ms": 3759,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "NF-036: 1 BHK, Whitefield, rent ₹22,500, match 100%. Fits: ₹5,400 under budget, 2.4 km to ITPL, 1.2 km to metro.  \nNF-037: 1 BHK, Whitefield, rent ₹25,000, match 100%. Fits: ₹100 under budget, 3.1 km to ITPL, 0.3 km to metro.  \nNF-101: 1 BHK, Mahadevapura, rent ₹18,500, match 99%. Fits: ₹11,500 unde",
+      "ranAt": "2026-11-01T06:01:57.833Z"
     },
     {
       "id": "none-offtopic",
       "expect": [],
       "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "exact": true,
+      "firstRight": true,
+      "ms": 782,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "I’m sorry, but I can only help with renting flats in Bengaluru. Let me know if you need assistance with that!",
+      "ranAt": "2026-11-01T06:02:38.617Z"
     },
     {
       "id": "none-injection",
       "expect": [],
       "called": [],
-      "exact": false,
-      "firstRight": false,
-      "error": "The AI assistant is busy right now, please try again in a minute"
+      "exact": true,
+      "firstRight": true,
+      "ms": 807,
+      "models": [
+        "openai/gpt-oss-120b"
+      ],
+      "reply": "I’m sorry, but I can only help with renting flats in Bengaluru.",
+      "ranAt": "2026-11-01T06:03:19.427Z"
     }
-  ],
-  "note": "The 7 cases with an error were stopped by the Groq free daily token limit (200K tokens/day for gpt-oss-120b), not by the agent. Re-run them with: npm run eval:agent -- --only=flat-hinglish,visit-en,visit-hinglish,multi-rent-search,multi-search-compare,none-offtopic,none-injection",
-  "updatedAt": "2026-10-31T15:50:07.691Z"
+  ]
 }

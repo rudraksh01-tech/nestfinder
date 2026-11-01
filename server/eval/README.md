@@ -24,5 +24,8 @@ npm run eval:agent -- --only=visit-en,none-injection # re-run some cases and mer
 | 1 | First version of the agent | 18/20 exact | "Office in Whitefield" gave an **empty reply**: the model sent `techPark: "Whitefield"`, Groq rejected the whole tool call because the schema only allowed "ITPL Whitefield", and the stream's `event: error` was being ignored. "Kasavanahalli" was refused as an unknown area. |
 | 2 | Free-text names resolved in code (`src/lib/areas.js`), stream errors surfaced, model asked to repair a rejected call, never an empty reply | 20/20 exact | Tool choice fixed. Reading the replies showed a noisy flat described as "quiet" because the user asked for quiet. |
 | 3 | Tool results split into `fits` and `problems`; prompt forbids softening a problem | 13/13 exact, 7 not run | The remaining 7 cases were stopped by the Groq free **daily** token limit after a long day of testing, not by the agent. This led to the automatic fallback to gpt-oss-20b in `src/lib/llm.js`. |
+| 4 | Same agent, plus optional tool fields that accept `null` (for the 20b fallback) | 7/7 exact for the cases run 3 missed, so **20/20** across runs 3 and 4 | All on gpt-oss-120b, no fallback needed, median 2.4 s. Injection and off-topic messages were refused with no tool call. Reading the replies: one Hinglish visit reply said "Flat flat ke liye" (code dropped, word doubled), and the model still adds `**bold**` sometimes; the chat UI strips it. Neither is caught by this eval. |
 
-Median time for a turn is about 2.5-3 seconds.
+Median time for a turn is about 2.4-3 seconds.
+
+Runs 3 and 4 were on different days (2026-10-31 and 2026-11-01); the only code change between them is the `null`-tolerant tool schema, which does not change what the 120b model is asked to do.
