@@ -1,20 +1,64 @@
-# NestFinder
+<h1 align="center">NestFinder</h1>
 
-**Live demo: [nestfinder-woad.vercel.app](https://nestfinder-woad.vercel.app)** · broker demo login: `demo@nestfinder.test` / `demo1234`
+<p align="center">
+  <b>An AI flat finder for Bengaluru.</b><br/>
+  Tell it how you live, in English, Hindi or Hinglish. It finds the flats that fit, explains why,<br/>
+  checks whether the rent and deposit are fair, and helps you choose from your shortlist.
+</p>
 
-**An AI flat finder for Bengaluru.** Tell it how you live, in English, Hindi or Hinglish. It finds the flats that fit, explains why each one fits, checks whether the rent and deposit are fair, and helps you choose from your shortlist.
+<p align="center">
+  <a href="https://nestfinder-woad.vercel.app"><b>Live demo</b></a> ·
+  <a href="docs/demo.mp4"><b>Demo video (2:45)</b></a> ·
+  <a href="#9-run-it-on-your-computer"><b>Run locally</b></a> ·
+  Broker demo login: <code>demo@nestfinder.test</code> / <code>demo1234</code>
+</p>
 
-![NestFinder home page: a dark globe with the headline "Tell the AI how you live. It finds the flat."](docs/screenshots/hero-light.webp)
-
-> **Demo data.** The 120 listings and the brokers are sample data made for this project. The map, the 82 Namma Metro stations, the 25 localities and the 6 tech parks are real (from OpenStreetMap).
->
-> Designed and built by **Rudra Pratap Singh**.
-
-### Demo
+<p align="center">
+  <img alt="React 19" src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white">
+  <img alt="Tailwind CSS v4" src="https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white">
+  <img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-5FA04E?logo=nodedotjs&logoColor=white">
+  <img alt="Express 5" src="https://img.shields.io/badge/Express-5-000000?logo=express&logoColor=white">
+  <img alt="MongoDB Atlas" src="https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white">
+  <br/>
+  <img alt="Groq gpt-oss-120b" src="https://img.shields.io/badge/LLM-Groq_gpt--oss--120b-F55036">
+  <img alt="Tool calling agent" src="https://img.shields.io/badge/AI-tool_calling_agent-1E4FFF">
+  <img alt="Langfuse" src="https://img.shields.io/badge/tracing-Langfuse-0A0A0A">
+  <img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-425CC7?logo=opentelemetry&logoColor=white">
+  <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white">
+  <img alt="Render" src="https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=black">
+  <br/>
+  <img alt="Agent eval 20/20" src="https://img.shields.io/badge/agent_eval-20%2F20-0E8F63">
+  <img alt="Unit tests 26 passing" src="https://img.shields.io/badge/unit_tests-26_passing-0E8F63">
+  <img alt="Free tier only" src="https://img.shields.io/badge/cost-free_tier_only-6B7284">
+</p>
 
 ![The assistant answering "I work at Manyata Tech Park, budget 25k, I have a dog and want the metro nearby" with three scored flats](docs/demo-chat.gif)
 
-**[Watch the full 2:45 demo (MP4)](docs/demo.mp4)**: home page, the assistant in English and Hinglish, Fair Rent Check, Compare & Decide, the dark theme and the broker dashboard. Silent, with captions.
+<p align="center"><sub>Designed and built by <b>Rudra Pratap Singh</b>. The 120 listings and the brokers are sample data; the map, the 82 Namma Metro stations, 25 localities and 6 tech parks are real (OpenStreetMap).</sub></p>
+
+## At a glance
+
+| | |
+|---|---|
+| **What** | AI flat finder for Bengaluru: Match Score, Fair Rent Check, Compare & Decide, broker dashboard |
+| **Frontend** | React 19, Vite, Tailwind CSS v4, React Router, motion (scroll animation), cobe (WebGL globe) |
+| **Backend** | Node.js 24, Express 5, MongoDB Atlas + Mongoose, JWT auth in httpOnly cookies, Web Push |
+| **AI** | Groq `gpt-oss-120b` (fallback `gpt-oss-20b`): tool calling, streaming, strict JSON schemas |
+| **Quality** | 26 unit tests, a 20-case agent eval (20/20), every model call traced in Langfuse via OpenTelemetry |
+| **Hosting** | Vercel (frontend) + Render (API) + MongoDB Atlas M0, all on free tiers |
+| **Languages** | The chat understands and replies in English, Hindi and Hinglish |
+
+## Highlights
+
+- **A tool-calling agent written from scratch** (no LangChain): 5 tools, answers streamed word by word, at most 3 tool rounds, automatic repair of rejected tool calls, and a reply is never empty.
+- **"The AI talks, the code decides."** Match scores, rent medians and distances come from tested rules, so they are explainable and the model can't invent them.
+- **Evaluated, not just demoed.** A 20-message eval checks the assistant picks the right tools, including a prompt-injection attempt. The failures and the fixes are written down.
+- **Observable.** Every AI request is a trace in Langfuse (prompt, output, model, latency, tokens), with phone numbers masked first.
+- **Safe by design.** The AI can't book a visit on its own; you confirm it. Rate limits, bcrypt, httpOnly cookies.
+- **Production details.** Falls back to a second model when rate limited, wakes the sleeping free server on page load, and trusts exactly the proxy hops measured on the live deploy.
+
+![NestFinder home page: a dark globe with the headline "Tell the AI how you live. It finds the flat."](docs/screenshots/hero-light.webp)
 
 ---
 
