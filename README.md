@@ -10,6 +10,12 @@
 >
 > Designed and built by **Rudra Pratap Singh**.
 
+### Demo
+
+![The assistant answering "I work at Manyata Tech Park, budget 25k, I have a dog and want the metro nearby" with three scored flats](docs/demo-chat.gif)
+
+**[Watch the full 2:45 demo (MP4)](docs/demo.mp4)**: home page, the assistant in English and Hinglish, Fair Rent Check, Compare & Decide, the dark theme and the broker dashboard. Silent, with captions.
+
 ---
 
 ## Contents
