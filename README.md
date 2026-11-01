@@ -75,10 +75,13 @@
 9. [Run it on your computer](#9-run-it-on-your-computer)
 10. [API reference](#10-api-reference)
 11. [Testing and evaluation](#11-testing-and-evaluation)
-12. [Security and privacy](#12-security-and-privacy)
-13. [Limitations](#13-limitations)
-14. [What's next](#14-whats-next)
-15. [Glossary](#15-glossary)
+12. [What went wrong, and what I changed](#12-what-went-wrong-and-what-i-changed)
+13. [Security and privacy](#13-security-and-privacy)
+14. [Limitations](#14-limitations)
+15. [What's next](#15-whats-next)
+16. [Glossary](#16-glossary)
+
+The reasons behind the main technical choices are in **[DECISIONS.md](DECISIONS.md)**.
 
 ---
 
@@ -386,7 +389,7 @@ The listings are generated, not scraped. The generator uses a seeded random numb
 | Tests | `node:test` | built into Node, no extra framework |
 | Browser checks | puppeteer-core | end-to-end checks and these screenshots |
 
-LangChain was planned at the start but wasn't needed: the agent loop is about 70 lines and easier to explain and debug without a framework.
+LangChain was planned at the start but wasn't needed: the agent loop is about 70 lines and easier to explain and debug without a framework. The reasoning behind each major choice, and its trade-offs, is in [DECISIONS.md](DECISIONS.md).
 
 ---
 
@@ -543,7 +546,24 @@ What the eval does **not** check yet is whether the reply text is true to the to
 
 ---
 
-## 12. Security and privacy
+## 12. What went wrong, and what I changed
+
+Real problems from building and deploying NestFinder. Each one changed the code, and each fix was checked.
+
+| What went wrong | Why | What I changed | How I checked |
+|---|---|---|---|
+| "My office is in Whitefield" got an **empty reply** | The tool schema allowed only "ITPL Whitefield". Groq rejected the whole tool call and reported it as an error inside the stream, which my parser ignored. | Names became free text resolved in code (`areas.js`), stream errors are surfaced, the model gets up to 2 tries to repair a rejected call, and a reply is never empty | Tool-choice eval: 18/20 → 20/20 |
+| The assistant called a **noisy flat "quiet"** because the user asked for quiet | The model saw good and bad facts mixed together and leaned towards what the user wanted | Tool results split each flat into `fits` and `problems`; the prompt says to always mention the main problem | Reading the eval replies; a groundedness eval is the next step |
+| The **free AI quota ran out** in the middle of an eval | Each model gets 200K tokens a day on Groq's free tier, and one assistant turn uses 4–7K | Retry once on a smaller model after a 429; the eval reports "ran / not run" counts so skipped cases never look like passes | The 7 skipped cases ran the next day: 7/7 |
+| On the live site, **every visitor would have shared one rate limit** | Behind proxies, Express only sees the visitor's IP if it trusts the right number of hops. I had guessed 2. | Measured the hops on the live deploy with a temporary header endpoint (4: Vercel, Cloudflare, two inside Render), set `TRUST_PROXY=4`, removed the endpoint | Failed-login counters through Vercel and straight to Render now count against the same IP |
+| The **first visit after a quiet spell failed** with a 502 | Render's free server sleeps after 15 idle minutes and took about 23 s to wake; the proxy in front gives up sooner | The app starts waking the server on page load; on a 502/503/504 it polls `/api/health`, shows "Waking up the server…", then retries | Faked 15 s of 502s in Chrome: the reply arrived with no error |
+| **"Sarjapur" was placed in the wrong part of the city** | The free geocoder matched a different "Sarjapur" | Geocoded Sarjapur Road through Kasavanahalli, a neighbourhood on that road | Checked the point and distances on the map |
+
+The reasons behind the bigger design choices (rules vs AI, no LangChain, no RAG here, MongoDB, the Vercel rewrite) are in [DECISIONS.md](DECISIONS.md).
+
+---
+
+## 13. Security and privacy
 
 - **Passwords** are hashed with bcrypt. **Logins** use a JWT in an `httpOnly`, `sameSite=lax` cookie.
 - **Rate limits:** failed logins, registrations (5 an hour), public enquiries (10 per 15 minutes), the assistant (25 messages per 10 minutes) and the other AI endpoints.
@@ -555,7 +575,7 @@ What the eval does **not** check yet is whether the reply text is true to the to
 
 ---
 
-## 13. Limitations
+## 14. Limitations
 
 Being honest about these is part of the project.
 
@@ -569,7 +589,7 @@ Being honest about these is part of the project.
 
 ---
 
-## 14. What's next
+## 15. What's next
 
 1. A reply-groundedness eval with Langfuse datasets (does every number in a reply appear in the tool results?).
 2. Prompt Guard 2 in front of the chat and broker-written text.
@@ -579,7 +599,7 @@ Being honest about these is part of the project.
 
 ---
 
-## 15. Glossary
+## 16. Glossary
 
 | Term | Meaning here |
 |---|---|
