@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { AlertTriangle, Crown, Heart, Sparkles, X } from 'lucide-react'
+import { AlertTriangle, Crown, Heart, Scale, X } from 'lucide-react'
 import { loadPrefs, useShortlist } from '../context/ShortlistContext.jsx'
 import { sendJson } from '../lib/api.js'
 import { formatDate, rupees } from '../lib/format.js'
@@ -96,7 +96,7 @@ export default function Compare() {
 
       <section className="glass mt-6 rounded-2xl p-5">
         <div className="flex flex-wrap items-center gap-3">
-          <h2 className="mr-auto flex items-center gap-2 font-bold text-ink"><Sparkles size={18} className="text-signal" /> Help me decide</h2>
+          <h2 className="mr-auto flex items-center gap-2 font-bold text-ink"><Scale size={18} className="text-signal" /> Help me decide</h2>
           <button type="button" onClick={decide} disabled={decision.busy || items.length < 2} className={primaryButton}>
             {decision.busy ? 'Thinking…' : result ? 'Ask again' : 'Pick the best one for me'}
           </button>

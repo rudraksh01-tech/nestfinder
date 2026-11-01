@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Bot, CalendarCheck, CheckCircle2, SendHorizontal, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Bot, CalendarCheck, CheckCircle2, LoaderCircle, SendHorizontal } from 'lucide-react'
 import { errorMessage, sendJson, UNREACHABLE } from '../lib/api.js'
 import { rupees } from '../lib/format.js'
 import { fieldClass, primaryButton } from '../lib/ui.js'
@@ -238,7 +238,7 @@ export default function ChatPanel({ prefs, onPrefs }) {
                 {m.cards?.length > 0 && <div className="mb-2 space-y-2">{m.cards.map((c, j) => <ToolCard key={j} card={c} />)}</div>}
                 {m.content && <p className="whitespace-pre-line">{plain(m.content)}</p>}
                 {i === messages.length - 1 && status.busy && status.step && (
-                  <p className="flex items-center gap-2 text-muted"><Sparkles size={14} className="animate-pulse text-signal" /> {status.step}…</p>
+                  <p className="flex items-center gap-2 text-muted"><LoaderCircle size={14} className="animate-spin text-signal" /> {status.step}…</p>
                 )}
               </div>
             </li>
