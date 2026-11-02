@@ -29,6 +29,7 @@
   <img alt="Render" src="https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=black">
   <br/>
   <img alt="Agent eval 20/20" src="https://img.shields.io/badge/agent_eval-20%2F20-0E8F63">
+  <a href="https://github.com/rudraksh01-tech/nestfinder/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/rudraksh01-tech/nestfinder/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="Unit tests 26 passing" src="https://img.shields.io/badge/unit_tests-26_passing-0E8F63">
   <img alt="Free tier only" src="https://img.shields.io/badge/cost-free_tier_only-6B7284">
 </p>
@@ -45,7 +46,7 @@
 | **Frontend** | React 19, Vite, Tailwind CSS v4, React Router, motion (scroll animation), cobe (WebGL globe) |
 | **Backend** | Node.js 24, Express 5, MongoDB Atlas + Mongoose, JWT auth in httpOnly cookies, Web Push |
 | **AI** | Groq `gpt-oss-120b` (fallback `gpt-oss-20b`): tool calling, streaming, strict JSON schemas |
-| **Quality** | 26 unit tests, a 20-case agent eval (20/20), every model call traced in Langfuse via OpenTelemetry |
+| **Quality** | 26 unit tests and a client lint + build on every push (GitHub Actions), a 20-case agent eval (20/20), every model call traced in Langfuse via OpenTelemetry |
 | **Hosting** | Vercel (frontend) + Render (API) + MongoDB Atlas M0, all on free tiers |
 | **Languages** | The chat understands and replies in English, Hindi and Hinglish |
 
