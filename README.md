@@ -545,6 +545,8 @@ What the eval does **not** check yet is whether the reply text is true to the to
 
 **Browser checks:** the main flows were checked end to end in real Chrome with puppeteer-core, including push notifications through a real push service.
 
+**CI:** GitHub Actions runs the unit tests, oxlint and the client build on every push and pull request (`.github/workflows/ci.yml`). The agent eval is not in CI, because it calls the real model and uses the free daily quota.
+
 ---
 
 ## 12. What went wrong, and what I changed
